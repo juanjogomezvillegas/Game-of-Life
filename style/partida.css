@@ -1,0 +1,45 @@
+div.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+div.container > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+div.container > form > div#estadistiques {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    color: #092668;
+}
+div.container > form > table#tauler {
+    margin: 3px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+div.container > form > div#inputs {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+}
+div.container > form > div#inputs > input.boto {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 20px;
+    background-color: #092668;
+    color: #FFD300;
+}
+div.container > form > div#inputs > label {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #092668;
+}
