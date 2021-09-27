@@ -6,16 +6,7 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/llavor.css">
-    <script src="script/llavor.js">
-        var amplada = 0;
-        var alsada = 0;
-
-        amplada = document.getElementById("varAmplada").value;
-        alsada = document.getElementById("varAlsada").value;
-
-        alert(amplada);
-        alert(alsada);
-    </script>
+    <script src="script/llavor.js"></script>
 </head>
 <body>
     <?php 
