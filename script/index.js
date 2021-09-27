@@ -1,10 +1,12 @@
-function MidaTaula() {
-    var formulari = document.getElementById("formulariInicial");
-    var inputAmplada = formulari.getElementById("inputAmplada");
-    var inputAlsada = formulari.getElementById("inputAlsada");
+var amplada;
+var alsada;
 
-    alert(inputAmplada);
-    alert(inputAlsada);
+function MidaTaula() {
+    amplada = document.getElementById("inputAmplada").innerText;
+    alsada = document.getElementById("inputAlsada").innerText;
 }
+
+document.getElementById("1").innerText(amplada);
+document.getElementById("2").innerText(alsada);
 
 document.getElementById("botoSeguent").addEventListener("click", MidaTaula);

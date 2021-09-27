@@ -25,7 +25,10 @@
                     <td><?=$amplada?></td>
                     <td><?=$alsada?></td>
                 </tr>
-                <p></p>
+                <tr>
+                    <span id="1"></span>
+                    <span id="2"></span>
+                </tr>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
