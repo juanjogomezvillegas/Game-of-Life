@@ -21,9 +21,9 @@
             <table id="tauler">
                 <?php
                     $comptador = 1
-                    for ($i = 0; $i < $alsada; $i++) {
+                    for ($i = 1; $i <= $alsada; $i++) {
                         echo "<tr>";
-                        for ($j = 0; $j < $amplada; $j++) {
+                        for ($j = 1; $j <= $amplada; $j++) {
                             $nomCela = "Cela".$comptador;
                             echo "<td><input type="checkbox" name="$nomCela" class="celes"></td>";
                             $comptador++;
