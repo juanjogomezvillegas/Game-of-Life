@@ -30,4 +30,5 @@ div.container > form > input.boto {
 div.container > form > table.tauler > tr > td > input {
     display: flex;
     align-self: center;
+    background-color: black;
 }
