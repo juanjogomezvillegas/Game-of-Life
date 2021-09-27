@@ -24,7 +24,7 @@
                     <tr>
                         <?php for ($j = 1; $j < $amplada; $j++) { ?>
                             <?php $nomCela = "Cela" . $comptador; ?>
-                            <td><input type="checkbox" name="<?=$nomCela?>" value="" style="margin-left:50%;"></td>
+                            <td><input type="checkbox" name="<?=$nomCela?>" value=""></td>
                             <?php $comptador++; ?>
                         <?php } ?>
                     </tr>
