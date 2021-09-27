@@ -14,8 +14,8 @@
         $alsada = $_POST["alsada"];
 
     ?>
-    <span class="spanAmplada"><?=$amplada?></span>
-    <span class="spanAlsada"><?=$alsada?></span>
+    <span id="spanAmplada"><?=$amplada?></span>
+    <span id="spanAlsada"><?=$alsada?></span>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
