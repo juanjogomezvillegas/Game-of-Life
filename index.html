@@ -6,13 +6,14 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script src="script/index.js"></script>
 </head>
 <body>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
-    <div class="container">
-        <form action="llavor.php" method="POST" id="formulariInicial">
+    <div class="container" id="container">
+        <form action="llavor.php" method="POST" name="formulariInicial">
             <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="" id="inputAmplada" class="text">
             <br>
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="" id="inputAlsada" class="text">
