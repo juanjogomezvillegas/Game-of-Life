@@ -21,11 +21,11 @@
             <table id="tauler">
                 <?php
                     for ($i = 1; $i <= $alsada; $i++) { 
-                        echo "<tr>"
+                        echo "<tr>";
                         for ($i = 1; $i <= $amplada; $i++) { 
-                            echo "<td> 1 </td>"
+                            echo "<td> 1 </td>";
                         }
-                        echo "</tr>"
+                        echo "</tr>";
                     }
                 ?>
             </table>
