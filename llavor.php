@@ -20,9 +20,9 @@
             ?>
             <table id="tauler">
                 <?php
-                    for ($i = 1; $i <= $alsada; $i++) { 
+                    for ($i = 0; $i < $alsada; $i++) { 
                         echo "<tr>";
-                        for ($i = 1; $i <= $amplada; $i++) { 
+                        for ($i = 0; $i < $amplada; $i++) { 
                             echo "<td> 1 </td>";
                         }
                         echo "</tr>";
