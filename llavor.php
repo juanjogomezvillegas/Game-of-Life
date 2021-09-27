@@ -25,7 +25,7 @@
                         echo "<tr>";
                         for ($j = 1; $j < $amplada; $j++) {
                             $nomCela = "Cela" . $comptador;
-                            echo "<td><input type=\"checkbox\" name=\"" . $nomCela . "\" value=\"\" style=\"display: flex; justify-content: center;\"></td>";
+                            echo "<td><input type=\"checkbox\" name=\"" . $nomCela . "\" value=\"\" style=\"margin-left:50%;\"></td>";
                             $comptador++;
                         }
                         echo "</tr>";
