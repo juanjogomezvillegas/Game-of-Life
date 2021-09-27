@@ -18,7 +18,7 @@
     </header>
     <div class="container">
         <h2>Selecciona les Caselles Vives</h2>
-        <form action="" method="POST">
+        <form action="partida.php" method="POST">
             <table id="tauler">
                 <tr>
                     <td><?=$amplada?></td>
