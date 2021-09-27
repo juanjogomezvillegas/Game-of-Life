@@ -19,18 +19,16 @@
                 $alsada = $_POST["alsada"];
             ?>
             <table id="tauler">
-                <?php
-                    $comptador = 1;
-                    for ($i = 1; $i <= $alsada; $i++) {
-                        <tr>
-                        for ($j = 1; $j < $amplada; $j++) {
-                            $nomCela = "Cela" . $comptador;
-                            <td><input type="checkbox" name="$nomCela" value="" style="margin-left:50%;"></td>
-                            $comptador++;
-                        }
-                        </tr>
-                    }
-                ?>
+                <?php $comptador = 1; ?>
+                <?php for ($i = 1; $i <= $alsada; $i++) { ?>
+                    <tr>
+                        <?php for ($j = 1; $j < $amplada; $j++) { ?>
+                            <?php $nomCela = "Cela" . $comptador; ?>
+                            <td><input type="checkbox" name="<?=$nomCela?>" value="" style="margin-left:50%;"></td>
+                            <?php $comptador++; ?>
+                        <?php } ?>
+                    </tr>
+                <?php } ?>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
