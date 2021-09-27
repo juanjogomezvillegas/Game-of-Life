@@ -20,10 +20,13 @@
             ?>
             <table id="tauler">
                 <?php
+                    $comptador = 1
                     for ($i = 0; $i < $alsada; $i++) { 
                         echo "<tr>";
-                        for ($i = 0; $i < $amplada; $i++) { 
-                            echo "<td> 1 </td>";
+                        for ($j = 0; $j < $amplada; $j++) {
+                            $nomCela = "Cela".$comptador;
+                            echo "<td><input type="checkbox" name="$nomCela" value=""></td>";
+                            $comptador++;
                         }
                         echo "</tr>";
                     }
