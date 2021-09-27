@@ -6,22 +6,20 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/llavor.css">
-    <script language="javascript" src="script/llavor.js"></script>
 </head>
 <body>
-    <?php 
-        $amplada = $_POST["amplada"];
-        $alsada = $_POST["alsada"];
-
-    ?>
-    <a id="varAmplada"><?=$amplada?></a>
-    <a id="varAlsada"><?=$alsada?></a>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
         <h2>Selecciona les Caselles Vives</h2>
-        <form action="partida.php" method="POST" id="formulari">
+        <form action="partida.html" method="POST" id="formulari">
+            <?php
+                $amplada = $_POST["amplada"];
+                $alsada = $_POST["alsada"];
+
+                echo $amplada;
+            ?>
             <table id="tauler">
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
