@@ -27,8 +27,3 @@ div.container > form > input.boto {
     background-color: #092668;
     color: #FFD300;
 }
-div.container > form > table.tauler > tr > td > input {
-    display: flex;
-    align-self: center;
-    background-color: black;
-}
