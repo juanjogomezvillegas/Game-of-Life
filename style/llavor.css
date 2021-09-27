@@ -27,3 +27,7 @@ div.container > form > input.boto {
     background-color: #092668;
     color: #FFD300;
 }
+div.container > form > table.tauler > input.celes {
+    display: flex;
+    justify-content: center;
+}
