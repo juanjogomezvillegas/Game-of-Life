@@ -20,13 +20,10 @@
         <h2>Selecciona les Caselles Vives</h2>
         <form action="" method="POST">
             <table id="tauler">
-                <script>
-                    var amplada = <?=$amplada?>;
-                    var alsada = <?=$alsada?>;
-
-                    document.write(amplada);
-                    document.write(alsada);
-                </script>
+                <tr>
+                    <td><?=$amplada?></td>
+                    <td><?=$alsada?></td>
+                </tr>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
