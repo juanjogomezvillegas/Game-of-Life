@@ -8,13 +8,24 @@
     <link rel="stylesheet" type="text/css" href="style/llavor.css">
 </head>
 <body>
+    <?php 
+        $amplada = $_POST["amplada"];
+        $alsada = $_POST["alsada"];
+
+    ?>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
         <h2>Selecciona les Caselles Vives</h2>
         <form action="" method="POST">
-            <table id="tauler"></table>
+            <table id="tauler">
+                <?php 
+                    echo $amplada;
+                    echo $alsada;
+
+                ?>
+            </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
     </div>
