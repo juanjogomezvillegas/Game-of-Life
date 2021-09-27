@@ -24,8 +24,8 @@
                     for ($i = 1; $i <= $alsada; $i++) {
                         echo "<tr>";
                         for ($j = 1; $j < $amplada; $j++) {
-                            $nomCela = "Cela".$comptador;
-                            echo "<td><input type='checkbox' name="$nomCela" class='celes'></td>";
+                            $nomCela = "Cela" . $comptador;
+                            echo "<td><input type=\"checkbox\" name=\"" . $nomCela . "\" class=\"celes\"></td>";
                             $comptador++;
                         }
                         echo "</tr>";
