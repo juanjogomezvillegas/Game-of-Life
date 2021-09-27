@@ -17,10 +17,17 @@
             <?php
                 $amplada = $_POST["amplada"];
                 $alsada = $_POST["alsada"];
-
-                echo $amplada;
             ?>
             <table id="tauler">
+                <?php
+                    for ($i = 1; $i <= $alsada; $i++) { 
+                        echo "<tr>"
+                        for ($i = 1; $i <= $amplada; $i++) { 
+                            echo "<td> 1 </td>"
+                        }
+                        echo "</tr>"
+                    }
+                ?>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
