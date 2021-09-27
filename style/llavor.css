@@ -29,5 +29,5 @@ div.container > form > input.boto {
 }
 div.container > form > table.tauler > input.celes {
     display: flex;
-    align-self: center;
+    align-content: center;
 }
