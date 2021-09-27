@@ -16,7 +16,6 @@
     ?>
     <p id="spanAmplada"><?=$amplada?></p>
     <p id="spanAlsada"><?=$alsada?></p>
-    <p id="suma"></p>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
