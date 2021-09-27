@@ -6,7 +6,7 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/llavor.css">
-    <script src="script/index.js"></script>
+    <script src="script/llavor.js"></script>
 </head>
 <body>
     <?php 
