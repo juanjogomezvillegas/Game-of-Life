@@ -1,8 +1,8 @@
 var amplada;
 var alsada;
 
-amplada = document.getElementById("spanAmplada").innerHTML;
-alsada = document.getElementById("spanAlsada").innerText;
+amplada = document.getElementById("spanAmplada").textContent;
+alsada = document.getElementById("spanAlsada").textContent;
 
 alert(amplada);
 alert(alsada);
