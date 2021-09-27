@@ -42,6 +42,9 @@ footer > div > p {
     justify-content: flex-end;
     padding: 20px;
 }
-#pAmplada, #pAlsada {
+#pAmplada {
+    display: none;
+}
+#pAlsada {
     display: none;
 }
