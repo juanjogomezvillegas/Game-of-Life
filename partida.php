@@ -12,7 +12,7 @@
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
-        <form action="" method="POST">
+        <form action="" method="POST" id="formulari">
             <div id="estadistiques">
                 <p>Cel·les Vives: </p>
                 <p>Cel·les Mortes: </p>

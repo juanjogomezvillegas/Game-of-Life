@@ -6,6 +6,7 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/llavor.css">
+    <script src="script/index.js"></script>
 </head>
 <body>
     <?php 
@@ -18,14 +19,13 @@
     </header>
     <div class="container">
         <h2>Selecciona les Caselles Vives</h2>
-        <form action="partida.php" method="POST">
+        <form action="partida.php" method="POST" id="formulari">
             <table id="tauler">
                 <tr>
                     <td><?=$amplada?></td>
-                </tr>
-                <tr>
                     <td><?=$alsada?></td>
                 </tr>
+                <p></p>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
