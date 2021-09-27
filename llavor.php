@@ -14,6 +14,8 @@
         $alsada = $_POST["alsada"];
 
     ?>
+    <span class="spanAmplada"><?=$amplada?></span>
+    <span class="spanAlsada"><?=$alsada?></span>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
@@ -21,14 +23,6 @@
         <h2>Selecciona les Caselles Vives</h2>
         <form action="partida.php" method="POST" id="formulari">
             <table id="tauler">
-                <tr>
-                    <td><?=$amplada?></td>
-                    <td><?=$alsada?></td>
-                </tr>
-                <tr>
-                    <span id="1"></span>
-                    <span id="2"></span>
-                </tr>
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>

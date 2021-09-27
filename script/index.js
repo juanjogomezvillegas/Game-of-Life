@@ -1,12 +1,8 @@
 var amplada;
 var alsada;
 
-function MidaTaula() {
-    amplada = document.getElementById("inputAmplada").innerText;
-    alsada = document.getElementById("inputAlsada").innerText;
-}
+amplada = document.getElementsByClassName("spanAmplada");
+alsada = document.getElementsByClassName("spanAlsada");
 
-document.getElementById("1").innerText(amplada);
-document.getElementById("2").innerText(alsada);
-
-document.getElementById("botoSeguent").addEventListener("click", MidaTaula);
+alert(amplada);
+alert(alsada);
