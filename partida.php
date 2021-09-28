@@ -28,9 +28,10 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
 
-                    document.write(amplada);
-                    document.write("");
-                    document.write(alsada);
+                    var paragraf = document.createElement("p");
+                    var contingut = document.createTextNode(amplada + " " + alsada);
+                    paragraf.appendChild(contingut);
+                    document.body.appendChild(paragraf);
                 </script>
             </table>
             <div id="inputs">
