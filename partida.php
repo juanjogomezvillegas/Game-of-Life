@@ -47,14 +47,5 @@
             </div>
         </form>
     </div>
-    <footer>
-        <div>
-            <p>Versio: 1.0</p>
-        </div>
-        <div>
-            <p>Juan José Gómez Villegas</p>
-            <p>DAW2</p>
-        </div>
-    </footer>
 </body>
 </html>

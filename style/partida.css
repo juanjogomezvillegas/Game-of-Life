@@ -1,12 +1,11 @@
 div.container {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 div.container > form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
 }
 div.container > form > div#estadistiques {
     display: flex;
@@ -16,7 +15,7 @@ div.container > form > div#estadistiques {
     color: #092668;
 }
 div.container > form > table#tauler {
-    margin: 3px;
+    margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
