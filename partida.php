@@ -30,10 +30,14 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var paragraf = document.createElement("p");
-                    var contingut = document.createTextNode(amplada + " " + alsada);
-                    paragraf.appendChild(contingut);
-                    arrel.appendChild(paragraf);
+                    for (var i = 1; i <= alsada; i++) {
+                        var fila = document.createElement("tr");
+                        for (var i = 1; i <= amplada; i++) {
+                            var columna = document.createElement("td");
+                            fila.appendChild(columna);
+                        }
+                        arrel.appendChild(fila);
+                    }
                 </script>
             </table>
             <div id="inputs">
