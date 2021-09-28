@@ -22,7 +22,7 @@ div.container > form > table#tauler {
     height: 100%;
     border: 1px solid black;
 }
-div.container > form > table#tauler {
+div.container > form > table#tauler > tr > td {
     border: 1px solid black;
 }
 div.container > form > div#inputs {
