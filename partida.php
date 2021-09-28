@@ -28,10 +28,12 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
 
+                    var arrel = document.getElementById("tauler");
+
                     var paragraf = document.createElement("p");
                     var contingut = document.createTextNode(amplada + " " + alsada);
                     paragraf.appendChild(contingut);
-                    document.body.div.form.table.appendChild(paragraf);
+                    arrel.appendChild(paragraf);
                 </script>
             </table>
             <div id="inputs">
