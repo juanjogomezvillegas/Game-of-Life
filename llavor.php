@@ -18,8 +18,8 @@
                 $amplada = $_POST["amplada"];
                 $alsada = $_POST["alsada"];
             ?>
-            <input type="number" name="amplada" value="<?=$amplada?>" class="ocult">
-            <input type="number" name="alsada" value="<?=$alsada?>" class="ocult">
+            <input type="number" name="amplada" id="inputAmplada" value="<?=$amplada?>" class="ocult">
+            <input type="number" name="alsada" id="inputAlsada" value="<?=$alsada?>" class="ocult">
             <table id="tauler">
                 <?php $comptador = 1; ?>
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
