@@ -17,12 +17,14 @@ div.container > form > div#estadistiques {
 }
 div.container > form > table#tauler {
     margin: 3px;
-    padding: 1px;
+    padding: 0;
     width: 100%;
     height: 100%;
     border: 1px solid black;
 }
 div.container > form > table#tauler > tr > td {
+    margin: 0;
+    padding: 1%;
     border: 1px solid black;
 }
 div.container > form > div#inputs {
