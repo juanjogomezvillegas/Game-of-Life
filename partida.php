@@ -24,7 +24,7 @@
                 <p>Velocitat: </p>
             </div>
             <table id="tauler">
-                <script src="script/tauler.js">window.addEventListener("load", tauler(<?=$amplada?>, <?=$alsada?>));</script>
+                <script src="script/tauler.js">tauler(<?=$amplada?>, <?=$alsada?>);</script>
             </table>
             <div id="inputs">
                 <input type="button" name="play" value="Play" class="boto">
