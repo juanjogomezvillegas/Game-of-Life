@@ -26,7 +26,7 @@
                     <tr>
                         <?php for ($j = 1; $j < $amplada; $j++) { ?>
                             <?php $nomCela = "Cela" . $comptador; ?>
-                            <td><input type="checkbox" name="Celes[]" id="<?=$nomCela?>" value="<?=$comptador?>"></td>
+                            <td><input type="checkbox" name="Celes[]" id="<?=$nomCela?>" value="<?=$comptador?>" class="celes"></td>
                             <?php $comptador++; ?>
                         <?php } ?>
                     </tr>
