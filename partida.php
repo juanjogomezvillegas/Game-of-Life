@@ -32,7 +32,7 @@
 
                     for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
-                        for (var i = 1; i <= amplada; i++) {
+                        for (var j = 1; j <= amplada; j++) {
                             var columna = document.createElement("td");
                             fila.appendChild(columna);
                         }
