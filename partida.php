@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" href="style/partida.css">
 </head>
 <body>
+    <?php
+        $amplada = $_POST["amplada"];
+        $alsada = $_POST["alsada"];
+    ?>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
@@ -21,7 +25,12 @@
             </div>
             <table id="tauler">
                 <script>
-                    document.write("Prova");
+                    var amplada = <?=$amplada?>;
+                    var alsada = <?=$alsada?>;
+
+                    document.write(amplada);
+                    document.write("");
+                    document.write(alsada);
                 </script>
             </table>
             <div id="inputs">
