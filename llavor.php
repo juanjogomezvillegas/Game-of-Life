@@ -13,7 +13,7 @@
     </header>
     <div class="container">
         <h2>Selecciona les Caselles Vives</h2>
-        <form action="partida.html" method="POST" id="formulari">
+        <form action="partida.php" method="POST" id="formulari">
             <?php
                 $amplada = $_POST["amplada"];
                 $alsada = $_POST["alsada"];
