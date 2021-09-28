@@ -27,6 +27,6 @@ div.container > form > input.boto {
     background-color: #092668;
     color: #FFD300;
 }
-div.container > form > table > tr > td {
+div.container > form > table > tr > td > input {
     margin-left: 50%;
 }
