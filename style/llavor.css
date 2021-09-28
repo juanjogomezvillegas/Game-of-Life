@@ -27,6 +27,6 @@ div.container > form > input.boto {
     background-color: #092668;
     color: #FFD300;
 }
-div.container > form > table > tr > td > input.celes {
+div.container > form > table#tauler > tr > td > input.celes {
     margin-left: 50%;
 }
