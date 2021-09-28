@@ -6,7 +6,6 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/partida.css">
-    <script src="script/Partida.js"></script>
 </head>
 <body>
     <header>
@@ -20,7 +19,9 @@
                 <p>Passos: </p>
                 <p>Velocitat: </p>
             </div>
-            <table id="tauler"></table>
+            <table id="tauler">
+                <script src="script/tauler.js"></script>
+            </table>
             <div id="inputs">
                 <input type="button" name="play" value="Play" class="boto">
                 <input type="button" name="pause" value="Pause" class="boto">

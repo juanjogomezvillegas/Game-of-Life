@@ -42,6 +42,6 @@ footer > div > p {
     justify-content: flex-end;
     padding: 20px;
 }
-#varAmplada, #varAlsada {
+.ocult {
     display: none;
 }
