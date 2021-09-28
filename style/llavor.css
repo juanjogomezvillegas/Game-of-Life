@@ -27,7 +27,7 @@ div.container > form > input.boto {
     background-color: #092668;
     color: #FFD300;
 }
-div.container > form > table > tr > td > input {
+div.container > form > table > tr > td {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
