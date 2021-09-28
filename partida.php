@@ -20,7 +20,9 @@
                 <p>Velocitat: </p>
             </div>
             <table id="tauler">
-                <script src="script/tauler.js"></script>
+                <script>
+                    document.write("Prova");
+                </script>
             </table>
             <div id="inputs">
                 <input type="button" name="play" value="Play" class="boto">
