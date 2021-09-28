@@ -15,15 +15,15 @@
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
-    <div class="container" name="container">
-        <form action="" method="POST" id="formulariPartida" name="formulariPartida">
+    <div class="container">
+        <form action="" method="POST" id="formulariPartida">
             <div id="estadistiques">
                 <p>Cel·les Vives: </p>
                 <p>Cel·les Mortes: </p>
                 <p>Passos: </p>
                 <p>Velocitat: </p>
             </div>
-            <table id="tauler" name="tauler">
+            <table id="tauler">
                 <script>
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
@@ -31,7 +31,7 @@
                     var paragraf = document.createElement("p");
                     var contingut = document.createTextNode(amplada + " " + alsada);
                     paragraf.appendChild(contingut);
-                    document.body.container.formulariPartida.tauler.appendChild(paragraf);
+                    document.body.div.form.table.appendChild(paragraf);
                 </script>
             </table>
             <div id="inputs">
