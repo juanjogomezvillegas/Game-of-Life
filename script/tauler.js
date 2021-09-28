@@ -1,15 +1,12 @@
-var tauler = new Array($_POST["alsada"]);
+var tauler = new Array(10);
 
 for (var i = 0; i < tauler.length; i++) {
-    tauler[i] = new Array ([$_POST["amplada"]]);
+    tauler[i] = new Array (10);
 }
 
-var comptador = 1;
 for (var i = 0; i < tauler.length; i++) {
     for (var j = 0; j < tauler[i].length; j++) {
-        var nomCela = "Cela"+comptador;
-        tauler[i][j] = $_POST[nomCela];
-        comptador++;
+        tauler[i][j] = 5;
     }
 }
 
