@@ -29,5 +29,5 @@ div.container > form > input.boto {
 }
 div.container > form > table > tr > td {
     display: flex;
-    justify-content: center;
+    align-self: center;
 }
