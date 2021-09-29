@@ -31,15 +31,34 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
                     
-                    var celes1 = <?=json_encode($celes);?>;
+                    var celestauler = new Array(alsada);
+                    for (var i = 0; i < celestauler.length; i++) {
+                        celestauler[i] = new Array(amplada);
+                    }
 
-                    for (var i = 0; i < celes1.length; i++) {
-                        for (var j = 0; j < celes1[i].length; j++) {
-                            alert(celes1[i][j]);
+                    var comptador = 1;
+                    for (var i = 0; i < celestauler.length; i++) {
+                        for (var j = 0; j < celestauler[i].length; j++) {
+                            for (var k = 0; k < <?=count($celes)?>; k++) {
+                                for (var l = 0; l < <?=count($celes[?>l<?=])?>; l++) {
+                                    if (<?=$celes[?>k<?=][?>l<?=]?> == comptador) {
+                                        celestauler[i][j] = 1;
+                                    } else {
+                                        celestauler[i][j] = 0;
+                                    }
+                                }
+                            }
+                            comptador++;
                         }
                     }
 
                     var arrel = document.getElementById("tauler");
+
+                    for (var i = 0; i < celestauler.length; i++) {
+                        for (var j = 0; j < celestauler[i].length; j++) {
+                            document.write(celestauler[i][j]);
+                        }
+                    }
 
                     for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
@@ -58,11 +77,11 @@
             </div>
         </form>
         <?php
-            /*for ($i = 0; $i <= $alsada; $i++) {
+            for ($i = 0; $i <= $alsada; $i++) {
                 for ($j = 0; $j <= $amplada; $j++) {
                     echo $celes[$i][$j]." ";
                 }
-            }*/
+            }
         ?>
     </div>
 </body>
