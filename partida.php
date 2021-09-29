@@ -31,9 +31,12 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
                     
-                    var celes2 = new Array($alsada);
-                    for (var i = 0; i < celes2.length; i++) {
-                        celes2[i] = new Array($amplada);
+                    var celes1 = <?=json_encode($celes);?>;
+
+                    for (var i = 0; i < celes1.length; i++) {
+                        for (var j = 0; j < celes1[i].length; j++) {
+                            document.write(celes1[i][j]);
+                        }
                     }
 
                     var arrel = document.getElementById("tauler");
@@ -55,11 +58,11 @@
             </div>
         </form>
         <?php
-            for ($i = 0; $i <= $alsada; $i++) {
+            /*for ($i = 0; $i <= $alsada; $i++) {
                 for ($j = 0; $j <= $amplada; $j++) {
                     echo $celes[$i][$j]." ";
                 }
-            }
+            }*/
         ?>
     </div>
 </body>
