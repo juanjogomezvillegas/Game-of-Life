@@ -25,9 +25,7 @@
             </div>
             <table id="tauler">
                 <script src="script/tauler.js">
-                    window.addEventListener("load", function() {
-                        tauler(<?=$amplada?>,<?=$alsada?>);
-                    });
+                    window.addEventListener("load", tauler(<?=$amplada?>,<?=$alsada?>));
                 </script>
             </table>
             <div id="inputs">
