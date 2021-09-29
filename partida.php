@@ -40,13 +40,9 @@
                     var arrel = document.getElementById("tauler");
 
                     for (var i = 1; i <= alsada; i++) {
-                        <?=$i?> = i;
                         var fila = document.createElement("tr");
                         for (var j = 1; j <= amplada; j++) {
-                            <?=$j?> = j;
                             var columna = document.createElement("td");
-                            var text = document.createTextNode("<?=$_POST["celes[$i][$j]"]?>");
-                            columna.appendChild(text);
                             fila.appendChild(columna);
                         }
                         arrel.appendChild(fila);
@@ -61,12 +57,9 @@
         </form>
         <?php
             for ($i = 0; $i <= $alsada; $i++) {
-                echo $i." ";
                 for ($j = 0; $j <= $amplada; $j++) {
-                    echo $j." - ";
-                    //echo $_POST["celes[$i][$j]"];
+                    echo $_POST["celes[$i][$j]"];
                 }
-                echo "\n";
             }
         ?>
     </div>
