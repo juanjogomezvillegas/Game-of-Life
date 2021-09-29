@@ -26,7 +26,20 @@
             </div>
             <table id="tauler">
                 <script type="text/javascript">
-                    tauler(<?=$amplada?>,<?=$alsada?>);
+                    //tauler(<?=//$amplada?>,<?=//$alsada?>);
+
+                    var amplada = <?=$amplada?>;
+                    var alsada = <?=$alsada?>;
+                    var arrel = document.getElementById("tauler");
+
+                    for (var i = 1; i <= alsada; i++) {
+                    var fila = document.createElement("tr");
+                    for (var j = 1; j <= amplada; j++) {
+                            var columna = document.createElement("td");
+                            fila.appendChild(columna);
+                        }
+                        arrel.appendChild(fila);
+                    }
                 </script>
             </table>
             <div id="inputs">
