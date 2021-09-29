@@ -57,9 +57,12 @@
         </form>
         <?php
             for ($i = 0; $i <= $alsada; $i++) {
+                echo $i." ";
                 for ($j = 0; $j <= $amplada; $j++) {
-                    echo $_POST["celes[$i][$j]"];
+                    echo $j." - ";
+                    //echo $_POST["celes[$i][$j]"];
                 }
+                echo "\n";
             }
         ?>
     </div>
