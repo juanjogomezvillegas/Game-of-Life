@@ -50,8 +50,8 @@
             </div>
         </form>
         <?php
-            for ($i = 0; $i <= $alsada; $i++) {
-                for ($j = 0; $j <= $amplada; $j++) {
+            for ($i = 0; $i < $alsada; $i++) {
+                for ($j = 0; $j < $amplada; $j++) {
                     echo $celes[$i][$j]." ";
                 }
             }
