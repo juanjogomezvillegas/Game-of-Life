@@ -2,7 +2,7 @@ var amplada;
 var alsada;
 var arrel = document.getElementById("tauler");
 
-function tauler(amplada, alsada) {
+function tauler(amplada,alsada) {
     this.amplada = amplada;
     this.alsada = alsada;
 
