@@ -6,7 +6,7 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/partida.css">
-    <script type="text/javascript" src="script/tauler.js"></script>
+    <!--<script src="script/tauler.js"></script>-->
 </head>
 <body>
     <?php
@@ -25,7 +25,7 @@
                 <p>Velocitat: </p>
             </div>
             <table id="tauler">
-                <script type="text/javascript">
+                <script>
                     //tauler(<?=//$amplada?>,<?=//$alsada?>);
 
                     var amplada = <?=$amplada?>;
