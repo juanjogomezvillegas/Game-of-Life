@@ -38,7 +38,7 @@
                             if (<?=$celes?>[i][j] != 1) {
                                 celes2[i][j] = 0;
                             } else {
-                                celes2[i][j] = <?$celes=?>[i][j];
+                                celes2[i][j] = <?=$celes?>[i][j];
                             }
                         }
                     }
