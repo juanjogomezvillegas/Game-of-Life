@@ -11,11 +11,25 @@
     <?php
         $amplada = $_POST["amplada"];
         $alsada = $_POST["alsada"];
+
+        $celes = $array();
+        $comptador = 1;
+        for ($i = 1; $i <= $alsada * $amplada; $i++) {
+            if ($comptador == $_POST["Cela".$comptador]) {
+                array_push($celes, $_POST["Cela".$comptador]);
+            }
+            $comptador++;
+        }
     ?>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
+        <?php
+            for ($celes as $actual) {
+                echo $actual."\n";
+            }
+        ?>
         <form action="" method="POST" id="formulariPartida">
             <div id="estadistiques">
                 <p>Cel·les Vives: </p>
