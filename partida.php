@@ -15,9 +15,7 @@
         $celes = $array();
         $comptador = 1;
         for ($i = 1; $i <= $alsada * $amplada; $i++) {
-            if ($comptador == $_POST["Cela".$comptador]) {
-                array_push($celes, $_POST["Cela".$comptador]);
-            }
+            array_push($celes, $_POST["Cela".$comptador]);
             $comptador++;
         }
     ?>
