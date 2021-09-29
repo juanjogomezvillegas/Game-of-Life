@@ -35,7 +35,7 @@
 
                     for (var i = 0; i < celes1.length; i++) {
                         for (var j = 0; j < celes1[i].length; j++) {
-                            document.write(celes1[i][j]);
+                            alert(celes1[i][j]);
                         }
                     }
 
