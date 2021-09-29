@@ -18,9 +18,9 @@
     </header>
     <div class="container">
         <?php
-            for ($i = 0; $i < $celes.sizeof; $i++) {
-                for ($j = 0; $j < $celes[$i].sizeof; $j++) {
-                    print_r($celes[$i][$j]);
+            for ($i = 1; $i <= $alsada; $i++) {
+                for ($j = 1; $j <= $amplada; $j++) {
+                    print_r($_POST[$celes[$i][$j]]);
                 }
             }
         ?>
