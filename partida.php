@@ -6,7 +6,6 @@
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/partida.css">
-    <!--<script src="script/tauler.js"></script>-->
 </head>
 <body>
     <?php
@@ -26,15 +25,14 @@
             </div>
             <table id="tauler">
                 <script>
-                    //tauler(<?=//$amplada?>,<?=//$alsada?>);
-
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
+                    
                     var arrel = document.getElementById("tauler");
 
                     for (var i = 1; i <= alsada; i++) {
-                    var fila = document.createElement("tr");
-                    for (var j = 1; j <= amplada; j++) {
+                        var fila = document.createElement("tr");
+                        for (var j = 1; j <= amplada; j++) {
                             var columna = document.createElement("td");
                             fila.appendChild(columna);
                         }
