@@ -40,9 +40,12 @@
                     var arrel = document.getElementById("tauler");
 
                     for (var i = 1; i <= alsada; i++) {
+                        <?=$i?> = i;
                         var fila = document.createElement("tr");
                         for (var j = 1; j <= amplada; j++) {
+                            <?=$j?> = j;
                             var columna = document.createElement("td");
+                            var text = document.createTextNode("<?=$_POST["celes[$i][$j]"]?>");
                             fila.appendChild(columna);
                         }
                         arrel.appendChild(fila);
