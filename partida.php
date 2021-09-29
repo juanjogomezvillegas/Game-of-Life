@@ -1,6 +1,14 @@
 <?php
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
+
+    /*$celes[];
+
+    for ($i = 1; $i <= $alsada; $i++) {
+        for ($j = 1; $j <= $amplada; $j++) {
+            array_push($celes, $_POST["celes[$i][$j]"]);
+        }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +25,6 @@
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
-        <p><?php
-            for ($i = 1; $i <= $alsada; $i++) {
-                for ($j = 1; $j <= $amplada; $j++) {
-                    echo $_POST["celes[$i][$j]"];
-                }
-            }
-        ?></p>
         <form action="" method="POST" id="formulariPartida">
             <div id="estadistiques">
                 <p>Cel·les Vives: </p>
@@ -54,6 +55,13 @@
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>
+        <?php
+            for ($i = 1; $i <= $alsada; $i++) {
+                for ($j = 1; $j <= $amplada; $j++) {
+                    echo $_POST["celes[$i][$j]"];
+                }
+            }
+        ?>
     </div>
 </body>
 </html>
