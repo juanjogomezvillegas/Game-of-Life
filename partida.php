@@ -31,21 +31,21 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
                     
-                    var celes = new Array[$alsada][$amplada];
+                    var celes2 = new Array[$alsada][$amplada];
 
-                    for (var i = 0; i < celes.length; i++) {
-                        for (var j = 0; j < celes[i].length; j++) {
+                    for (var i = 0; i < celes2.length; i++) {
+                        for (var j = 0; j < celes2[i].length; j++) {
                             if (<?=$celes?>[i][j] != 1) {
-                                celes[i][j] = 0;
+                                celes2[i][j] = 0;
                             } else {
-                                celes[i][j] = <?$celes=?>[i][j];
+                                celes2[i][j] = <?$celes=?>[i][j];
                             }
                         }
                     }
 
-                    for (var i = 0; i < celes.length; i++) {
-                        for (var j = 0; j < celes[i].length; j++) {
-                            document.write(celes[i][j]+" ");
+                    for (var i = 0; i < celes2.length; i++) {
+                        for (var j = 0; j < celes2[i].length; j++) {
+                            document.write(celes2[i][j]+" ");
                         }
                     }
 
