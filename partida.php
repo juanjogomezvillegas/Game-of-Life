@@ -1,14 +1,6 @@
 <?php
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
-
-    $celes = $array();
-    
-    $comptador = 1;
-    for ($i = 1; $i <= $alsada * $amplada; $i++) {
-        array_push($celes, $_POST["Cela".$comptador]);
-        $comptador++;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +18,10 @@
     </header>
     <div class="container">
         <?php
-            foreach ($celes as $actual) {
-                print_r($actual);
+            for ($i = 0; $i < $celes.sizeof; $i++) {
+                for ($j = 0; $j < $celes[$i].sizeof; $j++) {
+                    print_r($celes[$i][$j]);
+                }
             }
         ?>
         <form action="" method="POST" id="formulariPartida">
