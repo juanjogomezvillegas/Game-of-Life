@@ -17,13 +17,13 @@
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="container">
-        <?php
+        <p><?php
             for ($i = 1; $i <= $alsada; $i++) {
                 for ($j = 1; $j <= $amplada; $j++) {
-                    print_r($_POST["celes[$i][$j]"]);
+                    echo $_POST["celes[$i][$j]"];
                 }
             }
-        ?>
+        ?></p>
         <form action="" method="POST" id="formulariPartida">
             <div id="estadistiques">
                 <p>Cel·les Vives: </p>
