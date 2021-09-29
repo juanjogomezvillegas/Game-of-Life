@@ -20,7 +20,7 @@
         <?php
             for ($i = 1; $i <= $alsada; $i++) {
                 for ($j = 1; $j <= $amplada; $j++) {
-                    echo $celes[$i][$j];
+                    print_r($_POST["celes[$i][$j]"]);
                 }
             }
         ?>
