@@ -31,21 +31,15 @@
                     var amplada = <?=$amplada?>;
                     var alsada = <?=$alsada?>;
                     
-                    var celes2 = new Array[$alsada][$amplada];
-
+                    var celes2 = new Array($alsada);
                     for (var i = 0; i < celes2.length; i++) {
-                        for (var j = 0; j < celes2[i].length; j++) {
-                            if (<?=$celes?>[i][j] != 1) {
-                                celes2[i][j] = 0;
-                            } else {
-                                celes2[i][j] = <?=$celes?>[i][j];
-                            }
-                        }
+                        celes2[i] = new Array($amplada);
                     }
 
                     for (var i = 0; i < celes2.length; i++) {
                         for (var j = 0; j < celes2[i].length; j++) {
-                            document.write(celes2[i][j]+" ");
+                            celes2[i][j] = <?=$celes?>[i][j];
+                            document.write(celes2[i][j]);
                         }
                     }
 
