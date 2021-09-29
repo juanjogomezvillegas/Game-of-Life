@@ -46,6 +46,7 @@
                             <?=$j?> = j;
                             var columna = document.createElement("td");
                             var text = document.createTextNode("<?=$_POST["celes[$i][$j]"]?>");
+                            columna.appendChild(text);
                             fila.appendChild(columna);
                         }
                         arrel.appendChild(fila);
