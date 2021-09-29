@@ -56,9 +56,8 @@
             </div>
         </form>
         <?php
-            for ($i = 1; $i <= $alsada; $i++) {
-                for ($j = 1; $j <= $amplada; $j++) {
-                    echo $i." ".$j;
+            for ($i = 0; $i <= $alsada; $i++) {
+                for ($j = 0; $j <= $amplada; $j++) {
                     echo $_POST["celes[$i][$j]"];
                 }
             }
