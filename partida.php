@@ -43,7 +43,6 @@
                         var fila = document.createElement("tr");
                         for (var j = 1; j <= amplada; j++) {
                             var columna = document.createElement("td");
-                            columna.innerText($_POST["celes[<?=$i?>][<?=$j?>]"]));
                             fila.appendChild(columna);
                         }
                         arrel.appendChild(fila);
@@ -59,6 +58,7 @@
         <?php
             for ($i = 1; $i <= $alsada; $i++) {
                 for ($j = 1; $j <= $amplada; $j++) {
+                    echo $i." ".$j;
                     echo $_POST["celes[$i][$j]"];
                 }
             }
