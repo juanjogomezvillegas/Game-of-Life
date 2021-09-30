@@ -38,8 +38,8 @@
             </div>
             <table id="tauler">
                 <script>
-                    var amplada = document.getElementById("pAmplada");
-                    var alsada = document.getElementById("pAlsada");
+                    var amplada = document.getElementById("pAmplada").value;
+                    var alsada = document.getElementById("pAlsada").value;
 
                     var arrel = document.getElementById("tauler");
 
