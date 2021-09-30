@@ -48,7 +48,7 @@
                     var arrayCelesVives = varCelesVives.split(" ");
 
                     for (var i = 0; i < arrayCelesVives.length; i++) {
-                        document.getElementById("divProva").innerHTML(arrayCelesVives[i] + " ");
+                        document.getElementById("divProva").innerHTML = arrayCelesVives[i] + " ";
                     }
 
                     /*for (var i = 1; i <= alsada; i++) {
