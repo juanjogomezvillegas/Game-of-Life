@@ -1,18 +1,19 @@
 <?php
-    function MostrarArray($arrayCeles, $alsada, $amplada) {
-        for ($i = 0; $i <= $alsada; $i++) {
-            for ($j = 0; $j <= $amplada; $j++) {
-                echo $arrayCeles[$i][$j]." ";
-            }
-        }
-    }
-
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
 
     $arrayCeles = $_POST["celes"];
 
-    $varCeles = MostrarArray($arrayCeles, $alsada, $amplada);
+    $varCeles;
+    for ($i = 0; $i <= $alsada; $i++) {
+        for ($j = 0; $j <= $amplada; $j++) {
+            if ($i == 0 and $j == 0) {
+                $varCeles = $arrayCeles[$i][$j]." ";
+            } else {
+                $varCeles .= $arrayCeles[$i][$j]." ";
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
