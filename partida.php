@@ -32,7 +32,7 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.body.arrayCeles.value;
+                    var celes = document.arrayCeles.value;
 
                     document.write(celes);
 
@@ -54,7 +54,7 @@
             </div>
         </form>
     </div>
-    <div name="arrayCeles">
+    <p name="arrayCeles">
         <?php
             for ($i = 0; $i <= $alsada; $i++) {
                 for ($j = 0; $j <= $amplada; $j++) {
@@ -62,6 +62,6 @@
                 }
             }
         ?>
-    </div>
+    </p>
 </body>
 </html>
