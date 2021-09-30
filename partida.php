@@ -4,14 +4,7 @@
 
     $tauler = $_POST["tauler"];
 
-    //$varTauler = "";
-    /*for ($i = 0; $i < $tauler; $i++) {
-        for ($j = 0; $j < $tauler[$i]; $j++) {
-            echo $tauler[$i][$j] . " ";
-        }
-    }*/
-
-    //echo $varTauler;
+    print_r($tauler);
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +33,7 @@
                 <?php for ($i = 0; $i < $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 0; $j < $amplada; $j++) { ?>
-                            <td></td>
+                            <td>1</td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
