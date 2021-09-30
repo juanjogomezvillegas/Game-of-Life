@@ -12,7 +12,8 @@
             }
         }
     }
-    $mortes = ($amplada * $alsada) - $vives;
+    $mortes = $alsada * $amplada;
+    $mortes = $mortes - $vives;
 ?>
 
 <!DOCTYPE html>
