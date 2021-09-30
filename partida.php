@@ -34,7 +34,7 @@
 
                     var celes = document.getElementById("arrayCeles");
 
-                    document.write(celes.innerHTML);
+                    document.write(celes.value);
 
 
                     /*for (var i = 1; i <= alsada; i++) {
