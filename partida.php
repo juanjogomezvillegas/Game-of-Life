@@ -52,8 +52,8 @@
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>
-        <p id="prova"></p>
-        <p id="arrayCeles">
+        <div id="prova"></div>
+        <div id="arrayCeles">
             <?php
                 for ($i = 0; $i <= $alsada; $i++) {
                     for ($j = 0; $j <= $amplada; $j++) {
@@ -61,7 +61,7 @@
                     }
                 }
             ?>
-        </p>
+        </div>
     </div>
 </body>
 </html>
