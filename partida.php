@@ -38,20 +38,20 @@
             </div>
             <table id="tauler">
                 <script>
-                    var amplada = <?=$amplada?>;
-                    var alsada = <?=$alsada?>;
+                    var amplada = document.getElementById("pAmplada");
+                    var alsada = document.getElementById("pAlsada");
 
                     var arrel = document.getElementById("tauler");
 
-                    var varCelesVives = <?=$varCeles?>;
+                    arrel.innerHTML = amplada + " " + alsada;
+
+                    /*var varCelesVives = <?=$varCeles?>;
                     
                     var arrayCelesVives = varCelesVives.split(" ");
 
                     for (var i = 0; i < arrayCelesVives.length; i++) {
                         document.getElementById("divProva").innerHTML = arrayCelesVives[i] + " ";
-                    }
-
-                    console.log("Hola");
+                    }*/
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
@@ -70,6 +70,8 @@
             </div>
         </form>
     </div>
-    <p id="divProva"></p>
+    <p id="pAmplada" class="ocult"><?=$amplada?></p>
+    <p id="pAlsada" class="ocult"><?=$alsada?></p>
+    <p id="varCeles" class="ocult"><?=$varCeles?></p>
 </body>
 </html>
