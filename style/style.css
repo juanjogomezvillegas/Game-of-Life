@@ -50,6 +50,16 @@ footer > div > p {
 }
 .celes {
     margin-left: 50%;
+    text-align: center;
+    border: 1px solid black;
+}
+.viva {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+.morta {
+    background-color: #000000;
+    color: #000000;
 }
 
 /*
@@ -167,12 +177,4 @@ div.containerPartida > form > div#inputs > label {
     margin-left: 100px;
     margin-right: 100px;
     color: #092668;
-}
-.viva {
-    background-color: #ffffff;
-    color: #ffffff;
-}
-.morta {
-    background-color: #000000;
-    color: #000000;
 }
