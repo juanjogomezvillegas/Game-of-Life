@@ -54,8 +54,8 @@
         </form>
         <p id="arrayCeles">
             <?php
-                for ($i = 0; $i < count($celes); $i++) {
-                    for ($j = 0; $j < count($celes[$i]); $j++) {
+                for ($i = 0; $i <= $alsada; $i++) {
+                    for ($j = 0; $j <= $amplada; $j++) {
                         echo $celes[$i][$j]." ";
                     }
                 }
