@@ -43,10 +43,12 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.getElementById("arrayCeles").textContent;
+                    var varCelesVives = <?=$varCeles?>;
+                    var arrayCelesVives = varCelesVives.split(" ");
 
-                    document.write(celes);
-
+                    for (var i = 0; i < arrayCelesVives.length; i++) {
+                        document.write(arrayCelesVives[i] + " ");
+                    }
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
@@ -65,8 +67,5 @@
             </div>
         </form>
     </div>
-    <p id="arrayCeles">
-        <?=$varCeles?>
-    </p>
 </body>
 </html>
