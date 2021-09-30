@@ -55,12 +55,12 @@ footer > div > p {
     border: 1px solid black;
 }
 .viva {
-    background-color: #ffffff;
-    color: #ffffff;
-}
-.morta {
     background-color: #000000;
     color: #000000;
+}
+.morta {
+    background-color: #ffffff;
+    color: #ffffff;
 }
 
 /*
