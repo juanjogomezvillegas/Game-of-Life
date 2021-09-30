@@ -1,15 +1,18 @@
 <?php
+    function MostrarArray($arrayCeles, $alsada, $amplada) {
+        for ($i = 0; $i <= $alsada; $i++) {
+            for ($j = 0; $j <= $amplada; $j++) {
+                echo $arrayCeles[$i][$j]." ";
+            }
+        }
+    }
+
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
 
     $arrayCeles = $_POST["celes"];
 
-    $varCeles = "";
-    for ($i = 0; $i <= $alsada; $i++) {
-        for ($j = 0; $j <= $amplada; $j++) {
-            $varCeles += $arrayCeles[$i][$j]." ";
-        }
-    }
+    $varCeles = MostrarArray($arrayCeles, $alsada, $amplada);
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +65,7 @@
         </form>
     </div>
     <p id="arrayCeles">
-        <?=$varCeles;?>
+        <?=$varCeles?>
     </p>
 </body>
 </html>
