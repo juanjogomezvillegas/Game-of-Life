@@ -4,14 +4,14 @@
 
     $tauler = $_POST["tauler"];
 
-    $varTauler = "";
+    //$varTauler = "";
     for ($i = 0; $i < count($tauler); $i++) {
         for ($j = 0; $j < count($tauler[$i]); $j++) {
-            $varTauler .= $tauler[$i][$j]." ";
+            echo $tauler[$i][$j]." ";
         }
     }
 
-    echo $varTauler;
+    //echo $varTauler;
 ?>
 
 <!DOCTYPE html>
