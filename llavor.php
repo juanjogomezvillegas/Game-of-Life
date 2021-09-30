@@ -23,7 +23,7 @@
             <table id="tauler">
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
-                        <?php for ($j = 1; $j < $amplada; $j++) { ?>
+                        <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <td><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" class="celes"></td>
                         <?php } ?>
                     </tr>
