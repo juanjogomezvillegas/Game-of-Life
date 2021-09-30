@@ -3,7 +3,6 @@
     $alsada = $_POST["alsada"];
 
     $tauler = $_POST["tauler"];
-    print_r($tauler);
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
+    <p id="pAmplada" class="ocult"><?=$amplada?></p>
+    <p id="pAlsada" class="ocult"><?=$alsada?></p>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
@@ -28,16 +29,13 @@
             </div>
             <table id="tauler">
                 <script>
-                    /*var amplada = document.getElementById("pAmplada").innerHTML;
+                    var amplada = document.getElementById("pAmplada").innerHTML;
                     var alsada = document.getElementById("pAlsada").innerHTML;
 
-                    var arrel = document.getElementById("tauler");
+                    alert(amplada);
+                    alert(alsada);
 
-                    arrel.innerHTML = amplada + " " + alsada;
-
-                    var varCelesVives = <?=$varCeles?>;
-                    
-                    var arrayCelesVives = varCelesVives.split(" ");
+                    /*var arrel = document.getElementById("tauler");
 
                     for (var i = 0; i < arrayCelesVives.length; i++) {
                         document.getElementById("divProva").innerHTML = arrayCelesVives[i] + " ";
