@@ -12,9 +12,6 @@
             }
         }
     }
-    $mortes = count($tauler);
-    //$mortes = $alsada * $amplada;
-    //$mortes = $mortes - $vives;
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +32,7 @@
         <form name="formulariPartida" action="" method="POST">
             <div id="estadistiques">
                 <p>Cel·les Vives: <?=$vives?></p>
-                <p>Cel·les Mortes: <?=$mortes?></p>
+                <p>Cel·les Mortes: <?=($alsada * $amplada) - $vives?></p>
                 <p>Passos: </p>
                 <p>Velocitat: </p>
             </div>
