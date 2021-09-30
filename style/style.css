@@ -168,3 +168,11 @@ div.containerPartida > form > div#inputs > label {
     margin-right: 100px;
     color: #092668;
 }
+.viva {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+.morta {
+    background-color: #000000;
+    color: #000000;
+}

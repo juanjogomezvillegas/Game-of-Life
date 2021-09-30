@@ -37,21 +37,13 @@
                 <p>Velocitat: </p>
             </div>
             <table id="tauler">
-                <script>
-                    var amplada = document.getElementById("pAmplada").innerHTML;
-                    var alsada = document.getElementById("pAlsada").innerHTML;
-
-                    var arrel = document.getElementById("tauler");
-
-                    for (var i = 1; i <= alsada; i++) {
-                        var fila = document.createElement("tr");
-                        for (var j = 1; j <= amplada; j++) {
-                            var columna = document.createElement("td");
-                            fila.appendChild(columna);
-                        }
-                        arrel.appendChild(fila);
-                    }
-                </script>
+                <?php for ($i = 0; $i < $alsada; $i++) { ?>
+                    <tr>
+                        <?php for ($j = 0; $j < $amplada; $j++) { ?>
+                            <td></td>
+                        <?php } ?>
+                    </tr>
+                <?php } ?>
             </table>
             <div id="inputs">
                 <input type="button" name="play" value="Play" class="boto">
