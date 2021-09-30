@@ -51,6 +51,8 @@
                         document.getElementById("divProva").innerHTML = arrayCelesVives[i] + " ";
                     }
 
+                    console.log("Hola");
+
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
                         for (var j = 1; j <= amplada; j++) {
