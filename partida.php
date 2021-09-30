@@ -47,11 +47,9 @@
                     
                     var arrayCelesVives = varCelesVives.split(" ");
 
-                    document.write(<?=$varCeles?>);
-
-                    /*for (var i = 0; i < arrayCelesVives.length; i++) {
+                    for (var i = 0; i < arrayCelesVives.length; i++) {
                         document.write(arrayCelesVives[i] + " ");
-                    }*/
+                    }
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
