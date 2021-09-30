@@ -50,6 +50,7 @@ footer > div > p {
 }
 .celes {
     margin-left: 50%;
+    padding: 1%;
     text-align: center;
     border: 1px solid black;
 }
@@ -150,11 +151,6 @@ div.containerPartida > form > table#tauler {
     padding: 0;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
-}
-div.containerPartida > form > table#tauler > tr > td {
-    margin: 0;
-    padding: 1%;
     border: 1px solid black;
 }
 div.containerPartida > form > div#inputs {

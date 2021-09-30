@@ -28,9 +28,9 @@
                 <p>Velocitat: </p>
             </div>
             <table id="tauler">
-                <?php for ($i = 0; $i < $alsada; $i++) { ?>
+                <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
-                        <?php for ($j = 0; $j < $amplada; $j++) { ?>
+                        <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <td class="celes"><?=$tauler[$i][$j]?></td>
                         <?php } ?>
                     </tr>
