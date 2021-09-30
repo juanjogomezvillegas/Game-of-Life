@@ -2,18 +2,8 @@
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
 
-    $arrayCeles = $_POST["celes"];
-
-    $varCeles;
-    for ($i = 0; $i <= $alsada; $i++) {
-        for ($j = 0; $j <= $amplada; $j++) {
-            if ($i == 0 and $j == 0) {
-                $varCeles = $arrayCeles[$i][$j]." ";
-            } else {
-                $varCeles .= $arrayCeles[$i][$j]." ";
-            }
-        }
-    }
+    $tauler = $_POST["tauler"];
+    print_r($tauler);
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +28,14 @@
             </div>
             <table id="tauler">
                 <script>
-                    var amplada = document.getElementById("pAmplada").innerHTML;
+                    /*var amplada = document.getElementById("pAmplada").innerHTML;
                     var alsada = document.getElementById("pAlsada").innerHTML;
 
                     var arrel = document.getElementById("tauler");
 
                     arrel.innerHTML = amplada + " " + alsada;
 
-                    /*var varCelesVives = <?=$varCeles?>;
+                    var varCelesVives = <?=$varCeles?>;
                     
                     var arrayCelesVives = varCelesVives.split(" ");
 
@@ -70,8 +60,5 @@
             </div>
         </form>
     </div>
-    <p id="pAmplada" class="ocult"><?=$amplada?></p>
-    <p id="pAlsada" class="ocult"><?=$alsada?></p>
-    <p id="varCeles" class="ocult"><?=$varCeles?></p>
 </body>
 </html>

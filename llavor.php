@@ -21,13 +21,10 @@
             <input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="ocult">
             <input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="ocult">
             <table id="tauler">
-                <?php $comptador = 1; ?>
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j < $amplada; $j++) { ?>
-                            <?php $nomCela = "Cela" . $comptador; ?>
-                            <td><input type="checkbox" name="celes[<?=$i?>][<?=$j?>]" value="<?=$comptador?>" id="<?=$nomCela?>" class="celes"></td>
-                            <?php $comptador++; ?>
+                            <td><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" id="<?=$nomCela?>" class="celes"></td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
