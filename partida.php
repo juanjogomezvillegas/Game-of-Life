@@ -68,6 +68,6 @@
             </div>
         </form>
     </div>
-    <div id="divProva"></div>
+    <p id="divProva"></p>
 </body>
 </html>
