@@ -2,7 +2,14 @@
     $amplada = $_POST["amplada"];
     $alsada = $_POST["alsada"];
 
-    $celes = $_POST["celes"];
+    $arrayCeles = $_POST["celes"];
+
+    $varCeles = "";
+    for ($i = 0; $i <= $alsada; $i++) {
+        for ($j = 0; $j <= $amplada; $j++) {
+            $varCeles += $arrayCeles[$i][$j]." ";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -55,13 +62,7 @@
         </form>
     </div>
     <p id="arrayCeles">
-        <?php
-            for ($i = 0; $i <= $alsada; $i++) {
-                for ($j = 0; $j <= $amplada; $j++) {
-                    echo $celes[$i][$j]." ";
-                }
-            }
-        ?>
+        <?=$varCeles;?>
     </p>
 </body>
 </html>
