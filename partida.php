@@ -32,9 +32,9 @@
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <?php if ($tauler[$i][$j] == "on") { ?>
-                                <td class="celes viva"></td>
+                                <td class="celesPartida viva"></td>
                             <?php } else { ?>
-                                <td class="celes morta"></td>
+                                <td class="celesPartida morta"></td>
                             <?php } ?>
                         <?php } ?>
                     </tr>
