@@ -45,9 +45,7 @@
                 <?php for ($i = 0; $i < $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 0; $j < $amplada; $j++) { ?>
-                            <?php if ($tauler[$i][$j] == ) { ?>
-                                <td class="celes">1</td>
-                            <?php } ?>
+                            <td class="celes">1</td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
