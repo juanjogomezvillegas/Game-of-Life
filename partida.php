@@ -3,6 +3,18 @@
     $alsada = $_POST["alsada"];
 
     $tauler = $_POST["tauler"];
+
+    $vives = 0;
+    $mortes = 0;
+    for ($i = 1; $i <= $alsada; $i++) {
+        for ($j = 1; $j <= $amplada; $j++) {
+            if ($tauler[$i][$j] == "on") {
+                $vives++;
+            } else {
+                $mortes++;
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +34,8 @@
     <div class="containerPartida">
         <form name="formulariPartida" action="" method="POST">
             <div id="estadistiques">
-                <p>Cel·les Vives: </p>
-                <p>Cel·les Mortes: </p>
+                <p>Cel·les Vives: <?=$vives?></p>
+                <p>Cel·les Mortes: <?=$mortes?></p>
                 <p>Passos: </p>
                 <p>Velocitat: </p>
             </div>
