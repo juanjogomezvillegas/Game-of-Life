@@ -32,9 +32,9 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.getElementById("arrayCeles");
+                    var celes = document.getElementById("arrayCeles").textContent;
 
-                    document.write(celes.textContent);
+                    document.write(celes);
 
 
                     /*for (var i = 1; i <= alsada; i++) {
