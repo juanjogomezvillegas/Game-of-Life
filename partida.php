@@ -32,7 +32,7 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.getElementById("arrayCeles").value;
+                    var celes = document.getElementById("arrayCeles").innerHTML;
 
                     document.write(celes);
 
