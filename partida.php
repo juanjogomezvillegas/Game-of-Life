@@ -12,8 +12,9 @@
             }
         }
     }
-    $mortes = $alsada * $amplada;
-    $mortes = $mortes - $vives;
+    $mortes = count($tauler);
+    //$mortes = $alsada * $amplada;
+    //$mortes = $mortes - $vives;
 ?>
 
 <!DOCTYPE html>
