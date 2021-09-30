@@ -5,16 +5,14 @@
     $tauler = $_POST["tauler"];
 
     $vives = 0;
-    $mortes = 0;
     for ($i = 1; $i <= $alsada; $i++) {
         for ($j = 1; $j <= $amplada; $j++) {
             if ($tauler[$i][$j] == "on") {
                 $vives++;
-            } else {
-                $mortes++;
             }
         }
     }
+    $mortes = ($amplada * $alsada) - $vives;
 ?>
 
 <!DOCTYPE html>
