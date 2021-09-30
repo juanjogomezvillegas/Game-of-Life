@@ -3,20 +3,6 @@
     $alsada = $_POST["alsada"];
 
     $tauler = $_POST["tauler"];
-
-    foreach ($tauler as $actual) {
-        $taulerJoc = trim(filter_var($actual, FILTER_SANITIZE_STRING));
-        if ($taulerJoc != "") {
-            $taulerJoc = "1";
-        } else {
-            $taulerJoc = "0";
-        }
-    }
-
-    echo "tauler ";
-    print_r($tauler);
-    echo "taulerJoc ";
-    print_r($taulerJoc);
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +31,7 @@
                 <?php for ($i = 0; $i < $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 0; $j < $amplada; $j++) { ?>
-                            <td class="celes">1</td>
+                            <td class="celes"><?=$tauler[$i][$j]?></td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
