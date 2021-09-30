@@ -24,9 +24,6 @@ h2 {
     text-align: center;
     color: #092668;
 }
-.ocult {
-    display: none;
-}
 footer {
     display: flex;
     flex-direction: row;
@@ -47,6 +44,12 @@ footer > div > p {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
+}
+.ocult {
+    display: none;
+}
+.celes {
+    margin-left: 50%;
 }
 
 /*
@@ -111,9 +114,6 @@ div.containerLlavor > form > input.boto {
     border-radius: 20px;
     background-color: #092668;
     color: #FFD300;
-}
-.celes {
-    margin-left: 50%;
 }
 
 /*

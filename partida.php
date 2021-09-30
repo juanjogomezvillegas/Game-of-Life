@@ -33,7 +33,7 @@
                 <?php for ($i = 0; $i < $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 0; $j < $amplada; $j++) { ?>
-                            <td>1</td>
+                            <td class="celes">1</td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
