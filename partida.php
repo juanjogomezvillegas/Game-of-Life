@@ -32,9 +32,10 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.getElementById("arrayCeles").innerHTML;
+                    var celes = document.body.arrayCeles.value;
 
-                    document.getElementById("prova").innerHTML = celes;
+                    document.write(celes);
+
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
@@ -52,16 +53,15 @@
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>
-        <div id="prova"></div>
-        <div id="arrayCeles">
-            <?php
-                for ($i = 0; $i <= $alsada; $i++) {
-                    for ($j = 0; $j <= $amplada; $j++) {
-                        echo $celes[$i][$j]." ";
-                    }
+    </div>
+    <div name="arrayCeles">
+        <?php
+            for ($i = 0; $i <= $alsada; $i++) {
+                for ($j = 0; $j <= $amplada; $j++) {
+                    echo $celes[$i][$j]." ";
                 }
-            ?>
-        </div>
+            }
+        ?>
     </div>
 </body>
 </html>
