@@ -5,8 +5,8 @@
     $tauler = $_POST["tauler"];
 
     //$varTauler = "";
-    for ($i = 0; $i < count($tauler); $i++) {
-        for ($j = 0; $j < count($tauler[$i]); $j++) {
+    for ($i = 0; $i < $tauler; $i++) {
+        for ($j = 0; $j < $tauler[$i]; $j++) {
             echo $tauler[$i][$j]." ";
         }
     }
