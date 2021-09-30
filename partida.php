@@ -44,11 +44,14 @@
                     var arrel = document.getElementById("tauler");
 
                     var varCelesVives = <?=$varCeles?>;
-                    var arrayCelesVives = varCelesVives.split(" ");
+                    
+                    document.write(varCelesVives);
+                    
+                    /*var arrayCelesVives = varCelesVives.split(" ");
 
                     for (var i = 0; i < arrayCelesVives.length; i++) {
                         document.write(arrayCelesVives[i] + " ");
-                    }
+                    }*/
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
