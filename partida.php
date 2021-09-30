@@ -34,7 +34,7 @@
 
                     var celes = document.getElementById("arrayCeles").innerHTML;
 
-                    document.write(celes);
+                    document.getElementById("prova").innerHTML = celes;
 
                     /*for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
@@ -52,6 +52,7 @@
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>
+        <p id="prova"></p>
         <p id="arrayCeles">
             <?php
                 for ($i = 0; $i <= $alsada; $i++) {
