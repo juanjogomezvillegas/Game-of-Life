@@ -32,23 +32,16 @@
                     var amplada = document.getElementById("pAmplada").innerHTML;
                     var alsada = document.getElementById("pAlsada").innerHTML;
 
-                    alert(amplada);
-                    alert(alsada);
+                    var arrel = document.getElementById("tauler");
 
-                    /*var arrel = document.getElementById("tauler");
-
-                    for (var i = 0; i < arrayCelesVives.length; i++) {
-                        document.getElementById("divProva").innerHTML = arrayCelesVives[i] + " ";
-                    }*/
-
-                    /*for (var i = 1; i <= alsada; i++) {
+                    for (var i = 1; i <= alsada; i++) {
                         var fila = document.createElement("tr");
                         for (var j = 1; j <= amplada; j++) {
                             var columna = document.createElement("td");
                             fila.appendChild(columna);
                         }
                         arrel.appendChild(fila);
-                    }*/
+                    }
                 </script>
             </table>
             <div id="inputs">
