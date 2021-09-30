@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/index.css">
 </head>
 <body>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
-    <div class="container" id="container">
-        <form action="llavor.php" method="POST" name="formulariInicial">
+    <div class="containerIndex">
+        <form name="formulariInicial" action="llavor.php" method="POST">
             <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="" id="inputAmplada" class="text"><!--5 i 100-->
             <br>
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="" id="inputAlsada" class="text"><!--5 i 10-->
             <br>
-            <input type="submit" name="seguent" value="Següent" class="boto" id="botoSeguent">
+            <input type="submit" name="seguent" value="Següent" id="botoSeguent" class="boto">
         </form>
     </div>
     <footer>
