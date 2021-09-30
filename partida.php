@@ -32,7 +32,7 @@
 
                     var arrel = document.getElementById("tauler");
 
-                    var celes = document.getElementById("arrayCeles");
+                    var celes = document.getElementById("arrayCeles").value;
 
                     document.write(celes);
 
@@ -52,7 +52,7 @@
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>
-        <p id="arrayCeles" class="ocult">
+        <p id="arrayCeles">
             <?php
                 for ($i = 0; $i < count($celes); $i++) {
                     for ($j = 0; $j < count($celes[$i]); $j++) {
