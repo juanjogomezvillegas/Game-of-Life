@@ -45,7 +45,7 @@
 
                     var varCelesVives = <?=$varCeles?>;
                     
-                    document.write(varCelesVives);
+                    alert(varCelesVives);
                     
                     /*var arrayCelesVives = varCelesVives.split(" ");
 
