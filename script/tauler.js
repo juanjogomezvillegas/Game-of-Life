@@ -1,7 +1,9 @@
 var tauler = document.getElementById("tauler");
 
-var celes = tauler.getElementsByClassName("celesPartida");
+var celes = tauler.innerHTML;
 
-for (var i in celes) {
+alert(celes);
+
+/*for (var i in celes) {
     alert(i);
-}
+}*/
