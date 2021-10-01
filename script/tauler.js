@@ -43,12 +43,13 @@ window.onload = function() {
                 }
             }
             if (comptadorVius == 3) {
-                celesTauler[i][j].setAttribute("class", "celesPartida viva");
+                celesTauler[i][j].innerHTML = "1";
             } else {
-                celesTauler[i][j].setAttribute("class", "celesPartida morta");
+                celesTauler[i][j].innerHTML = "0";
             }
         }
     }
+    PintaTauler(celesTauler);
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
