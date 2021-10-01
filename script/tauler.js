@@ -18,6 +18,7 @@ window.onload = function() {
 
     for (var i = 0; i < files.length; i++) {
         celes[i] = files[i].getElementsByTagName("td");
+        console.table(celes[i]);
     }
 
     //PintaTauler(celes);
