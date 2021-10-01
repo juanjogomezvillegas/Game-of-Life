@@ -1,5 +1,5 @@
-var tauler = document.getElementById("tauler");
+var celes = document.getElementsByTagName("td");
 
-var celes = tauler.getElementsByTagName("td");
-
-alert(celes);
+for (var i in celes) {
+    alert(i);
+}
