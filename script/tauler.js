@@ -1,4 +1,5 @@
 var tauler;
+var files;
 var celes;
 var amplada;
 var generacio;
@@ -13,11 +14,15 @@ window.onload = function() {
 
     tauler = document.getElementById("tauler");
 
-    celes = tauler.getElementsByTagName("td");
+    files = tauler.getElementsByTagName("tr");
+
+    for (var i = 0; i < files.length; i++) {
+        celes[i] = files[i].getElementsByTagName("td");
+    }
+
+    //PintaTauler(celes);
 
     console.table(celes);
-
-    PintaTauler(celes);
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
@@ -38,6 +43,5 @@ function PintaTauler(celes) {
         } else {
             celes[i].setAttribute("class", "celesPartida morta");
         }
-        celes[i].innerHTML = i;
     }
 };
