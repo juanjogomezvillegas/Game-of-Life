@@ -1,5 +1,7 @@
 var arrel = document.getElementById("tauler");
 
-var files = arrel.getElementsByTagName("tr");
+var celes = arrel.getElementsByTagName("td").innerHTML;
 
-alert(files.length);
+for (var i = 0; i < celes.length; i++) {
+    alert(celes[i]);
+}
