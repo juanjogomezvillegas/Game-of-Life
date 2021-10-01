@@ -1,17 +1,16 @@
+var tauler;
+var celes;
+var generacio;
+var numGeneracio;
+
 window.onload = function(){
-    /*var tauler = document.getElementById("tauler");
+    generacio = document.getElementById("generacio");
+    numGeneracio = 0;
+    generacio.innerHTML = "Generació: "+numGeneracio;
 
-    var files = tauler.getElementsByTagName("tr");
+    tauler = document.getElementById("tauler");
 
-    var celes = null;
-
-    for (var i = 0; i < files.length; i++) {
-        celes = files[i].getElementsByTagName("td");
-    }*/
-
-    var tauler = document.getElementById("tauler");
-
-    var celes = tauler.getElementsByTagName("td");
+    celes = tauler.getElementsByTagName("td");
 
     for (var i = 0; i < celes.length; i++) {
         if (celes[i].innerHTML == "1") {
