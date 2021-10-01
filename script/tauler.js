@@ -1,5 +1,14 @@
-var arrel = document.getElementById("tauler");
+var tauler = document.getElementById("tauler");
 
-var files = arrel.getElementsByTagName("tr");
+var files = tauler.getElementsByTagName("tr");
 
-console.log(Array.isArray(files));
+var celes;
+for (var i in files) {
+    celes = i.getElementsByTagName("td");
+}
+
+for (var i in celes) {
+    if (i.innerHTML == 1) {
+        alert("Hola");
+    }
+}

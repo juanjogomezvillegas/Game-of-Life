@@ -41,7 +41,7 @@
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <?php if ($tauler[$i][$j] == "on") { ?>
+                            <?php if (isset($tauler[$i][$j])) { ?>
                                 <td class="celesPartida viva">1</td>
                             <?php } else { ?>
                                 <td class="celesPartida morta">0</td>
