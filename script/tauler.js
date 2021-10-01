@@ -36,5 +36,6 @@ function PintaTauler(celes) {
         } else {
             celes[i].setAttribute("class", "celesPartida morta");
         }
+        celes[i].innerHTML = i;
     }
 };
