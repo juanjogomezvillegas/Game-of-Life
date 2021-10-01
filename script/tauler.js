@@ -26,16 +26,25 @@ window.onload = function() {
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
     
-    alert(amplada);
-    /*for (var i = 0; i < celes.length; i++) {
+    for (var i = 0; i < celes.length; i++) {
         if (i == 0) {
-            //
+            if (celes[i++].innerHTML == "1" && celes[i += amplada].innerHTML == "1" && celes[i += amplada + 1].innerHTML == "1") {
+                celes[i] = "1";
+                celes[i].setAttribute("class", "celesPartida viva");
+            } else {
+                celes[i] = "0";
+                celes[i].setAttribute("class", "celesPartida morta");
+            }
         } else if (i == celes.length-1) {
-            //
-        } else {
-            //
+            if (celes[i--].innerHTML == "1" && celes[i += amplada].innerHTML == "1" && celes[i += amplada - 1].innerHTML == "1") {
+                celes[i] = "1";
+                celes[i].setAttribute("class", "celesPartida viva");
+            } else {
+                celes[i] = "0";
+                celes[i].setAttribute("class", "celesPartida morta");
+            }
         }
-    }*/
+    }
 };
 
 function play() {
