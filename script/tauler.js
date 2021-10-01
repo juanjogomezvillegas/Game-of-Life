@@ -20,9 +20,11 @@ window.onload = function() {
     }
     console.table(celesTauler);
 
-    /*for (var i = 0; i < files.length; i++) {◘
-        for (var j = 0; j < files[i]; j++)
-    }*/
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            console.log(celesTauler[i][j]);
+        }
+    }
 
     //PintaTauler(celes);
 
