@@ -37,7 +37,7 @@ function pause() {
 function PintaTauler(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            if (celesTauler[i][j] == "1") {
+            if (celesTauler[i][j].innerHTML == "1") {
                 celesTauler[i][j].setAttribute("class", "celesPartida viva");
             } else {
                 celesTauler[i][j].setAttribute("class", "celesPartida morta");
