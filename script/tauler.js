@@ -1,5 +1,4 @@
 var tauler;
-var files;
 var celes;
 var amplada;
 var generacio;
@@ -14,13 +13,8 @@ window.onload = function() {
 
     tauler = document.getElementById("tauler");
 
-    files = tauler.getElementsByTagName("tr");
+    celes = tauler.getElementsByTagName("td");
 
-    for (var i = 0; i < files.length; i++) {
-        celes[i] = tauler.getElementsByTagName("td");
-    }
-
-    console.table(files);
     console.table(celes);
 
     PintaTauler(celes);
