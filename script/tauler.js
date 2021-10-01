@@ -20,6 +20,9 @@ window.onload = function() {
         celes[i] = tauler.getElementsByTagName("td");
     }
 
+    console.table(files);
+    console.table(celes);
+
     PintaTauler(celes);
 
     document.getElementById("bPlay").addEventListener("click", play);
