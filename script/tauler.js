@@ -2,4 +2,4 @@ var arrel = document.getElementById("tauler");
 
 var files = arrel.getElementsByTagName("tr");
 
-alert(Array.isArray(files));
+console.log(Array.isArray(files));
