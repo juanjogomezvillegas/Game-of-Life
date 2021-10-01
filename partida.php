@@ -57,5 +57,6 @@
             </div>
         </form>
     </div>
+    <p id="ampladaTauler"><?=$amplada?></p>
 </body>
 </html>
