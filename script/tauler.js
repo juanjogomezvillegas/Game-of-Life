@@ -15,10 +15,11 @@ window.onload = function() {
     tauler = document.getElementById("tauler");
 
     files = tauler.getElementsByTagName("tr");
+    console.log(files);
 
     for (var i = 0; i < files.length; i++) {
-        celes[i] = files[i].getElementsByTagName("td");
-        console.table(celes[i]);
+        celes = files[i].getElementsByTagName("td");
+        console.log(celes);
     }
 
     //PintaTauler(celes);
