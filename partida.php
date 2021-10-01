@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="script/tauler.js"></script>
 </head>
 <body>
     <p id="pAmplada" class="ocult"><?=$amplada?></p>
@@ -41,9 +42,9 @@
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <?php if ($tauler[$i][$j] == "on") { ?>
-                                <td class="celesPartida viva"></td>
+                                <td class="celesPartida viva">1</td>
                             <?php } else { ?>
-                                <td class="celesPartida morta"></td>
+                                <td class="celesPartida morta">0</td>
                             <?php } ?>
                         <?php } ?>
                     </tr>
