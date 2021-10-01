@@ -13,7 +13,11 @@ window.onload = function() {
 
     tauler = document.getElementById("tauler");
 
-    celes = tauler.getElementsByTagName("td");
+    celes = tauler.getElementsByTagName("tr");
+
+    for (var i = 0; i < celes.length; i++) {
+        celes[i] = tauler.getElementsByTagName("td");
+    }
 
     PintaTauler(celes);
 
@@ -31,11 +35,22 @@ function pause() {
 
 function PintaTauler(celes) {
     for (var i = 0; i < celes.length; i++) {
+        for (var j = 0; j < celes[i].length; i++) {
+            if (celes[i][j].innerHTML == "1") {
+                celes[i][j].setAttribute("class", "celesPartida viva");
+            } else {
+                celes[i][j].setAttribute("class", "celesPartida morta");
+            }
+            celes[i].innerHTML = i;
+        }
+    }
+
+    /*for (var i = 0; i < celes.length; i++) {
         if (celes[i].innerHTML == "1") {
             celes[i].setAttribute("class", "celesPartida viva");
         } else {
             celes[i].setAttribute("class", "celesPartida morta");
         }
         celes[i].innerHTML = i;
-    }
+    }*/
 };
