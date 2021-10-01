@@ -23,9 +23,11 @@ window.onload = function() {
         }
     }
 
-    document.getElementById("bPlay").addEventListener("click", play);
+    document.getElementById("bPlay").addEventListener("click", play(celes));
     document.getElementById("bPause").addEventListener("click", pause);
-    
+};
+
+function play(celes) {
     for (var i = 0; i < celes.length; i++) {
         if (i == 0) {
             if (celes[i++].innerHTML == "1" && celes[i += amplada].innerHTML == "1" && celes[i += amplada + 1].innerHTML == "1") {
@@ -45,10 +47,6 @@ window.onload = function() {
             }
         }
     }
-};
-
-function play() {
-    alert("Play");
 }
 
 function pause() {
