@@ -10,19 +10,19 @@ Estils del Joc
 html, body {
     display: flex;
     flex-direction: column;
-    background-color: #CFD6D6;
+    background-color: #040F2A;
 }
 h1 {
-    margin: 25px;
-    font-size: 35px;
+    margin: 20px;
+    font-size: 40px;
     text-align: center;
-    color: #092668;
+    color: #EBC302;
 }
 h2 {
     margin: 15px;
     font-size: 25px;
     text-align: center;
-    color: #092668;
+    color: #EBC302;
 }
 footer {
     display: flex;
@@ -30,10 +30,10 @@ footer {
     justify-content: space-between;
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
-    background-color: #051845;
-    color: #FFD300;
+    background-color: #1C1D20;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px 10px #000000;
 }
 footer > div {
     display: flex;
@@ -43,7 +43,7 @@ footer > div {
 footer > div > p {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 15px;
 }
 .ocult {
     display: none;
@@ -61,8 +61,11 @@ footer > div > p {
 Estils de la Portada
 */
 div.containerIndex {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #071A47;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px 8px;
 }
 div.containerIndex > form {
     display: flex;
@@ -72,19 +75,20 @@ div.containerIndex > form {
 }
 div.containerIndex > form > label {
     margin-bottom: 10px;
-    color: #092668;
+    color: #EBC302;
 }
 div.containerIndex > form > input.text {
     margin-bottom: 50px;
-    border-radius: 10px;
-    background-color: #E1E9E1;
+    border-radius: 5px;
+    background-color: #7FA6FF;
+    color: #000000;
 }
 div.containerIndex > form > input.boto {
     padding: 10px;
     padding-left: 35px;
     padding-right: 35px;
-    border-radius: 20px;
-    background-color: #092668;
+    border-radius: 10px;
+    background-color: #1240AB;
     color: #FFD300;
 }
 
@@ -92,21 +96,23 @@ div.containerIndex > form > input.boto {
 Estils de la Llavor
 */
 div.containerLlavor {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #071A47;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 8px;
 }
 div.containerLlavor > form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
+    margin-bottom: 30px;
 }
 div.containerLlavor > form > table#tauler {
     margin: 5px;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
 }
 div.containerLlavor > form > input.boto {
     display: flex;
@@ -116,8 +122,8 @@ div.containerLlavor > form > input.boto {
     padding: 10px;
     padding-left: 35px;
     padding-right: 35px;
-    border-radius: 20px;
-    background-color: #092668;
+    border-radius: 10px;
+    background-color: #1240AB;
     color: #FFD300;
 }
 .celesLlavor {
@@ -129,8 +135,11 @@ div.containerLlavor > form > input.boto {
 Estils de la Partida
 */
 div.containerPartida {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #071A47;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 8px;
 }
 div.containerPartida > form {
     display: flex;
@@ -141,8 +150,9 @@ div.containerPartida > form > div#estadistiques {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    margin-bottom: 20px;
-    color: #092668;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: #FFD300;
 }
 div.containerPartida > form > table#tauler {
     margin: 0;
@@ -155,22 +165,24 @@ div.containerPartida > form > div#inputs {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
+    padding: 20px;
 }
 div.containerPartida > form > div#inputs > input.boto {
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
+    padding: 10px;
     padding-left: 35px;
     padding-right: 35px;
-    border-radius: 20px;
-    background-color: #092668;
+    border-radius: 10px;
+    background-color: #1240AB;
     color: #FFD300;
 }
 div.containerPartida > form > div#inputs > label {
     margin-top: 20px;
     margin-left: 100px;
     margin-right: 100px;
-    color: #092668;
+    color: #FFD300;
 }
 .celesPartida {
     padding: 1%;
