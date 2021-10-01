@@ -9,7 +9,9 @@ window.onload = function(){
         celes = files[i].getElementsByTagName("td");
     }*/
 
-    var celes = document.getElementsByTagName("td");
+    var tauler = document.getElementById("tauler");
+
+    var celes = tauler.getElementsByTagName("td");
 
     for (var i = 0; i < celes.length; i++) {
         if (celes[i].innerHTML == "1") {
