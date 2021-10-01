@@ -1,3 +1,9 @@
+@keyframes keyTauler {
+    0% {background-color: #067806; color: #067806;}
+    25% {background-color: #618D08; color: #618D08;}
+    50% {background-color: #790647; color: #790647;}
+    100% {background-color: #970808; color: #970808;}
+}
 /*
 Estils del Joc
 */
@@ -51,12 +57,7 @@ footer > div > p {
 .viva {
     background-color: #067806;
     color: #067806;
-    transition: background-color 1s, color 1s;
-}
-.viva:hover {
-    background-color: #780649;
-    color: #780649;
-    transition: background-color 1s, color 1s;
+    animation: keyTauler 1s infinite;
 }
 .morta {
     background-color: #1C1D20;
