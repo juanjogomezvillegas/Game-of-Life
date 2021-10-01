@@ -1,4 +1,5 @@
 var tauler;
+var files;
 var celes;
 var amplada;
 var generacio;
@@ -13,9 +14,9 @@ window.onload = function() {
 
     tauler = document.getElementById("tauler");
 
-    celes = tauler.getElementsByTagName("tr");
+    files = tauler.getElementsByTagName("tr");
 
-    for (var i = 0; i < celes.length; i++) {
+    for (var i = 0; i < files.length; i++) {
         celes[i] = tauler.getElementsByTagName("td");
     }
 
