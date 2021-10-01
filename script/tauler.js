@@ -1,26 +1,24 @@
-var tauler;
-var files;
-var celes;
-var amplada;
-var generacio;
-var numGeneracio;
-
 window.onload = function() {
-    amplada = document.getElementById("ampladaTauler").innerHTML;
+    var amplada = document.getElementById("ampladaTauler").innerHTML;
+    var alsada = document.getElementById("alsadaTauler").innerHTML;
 
-    generacio = document.getElementById("generacio");
-    numGeneracio = 0;
+    var generacio = document.getElementById("generacio");
+    var numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
 
-    tauler = document.getElementById("tauler");
+    var tauler = document.getElementById("tauler");
 
-    files = tauler.getElementsByTagName("tr");
-    console.log(files);
+    var files = tauler.getElementsByTagName("tr");
+
+    var celes;
+
+    var celesTauler = new Array(files.length);
 
     for (var i = 0; i < files.length; i++) {
         celes = files[i].getElementsByTagName("td");
-        console.log(celes);
+        celesTauler[i] = celes;
     }
+    console.table(celesTauler);
 
     /*for (var i = 0; i < files.length; i++) {◘
         for (var j = 0; j < files[i]; j++)

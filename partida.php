@@ -24,8 +24,6 @@
     <script src="script/tauler.js"></script>
 </head>
 <body>
-    <p id="pAmplada" class="ocult"><?=$amplada?></p>
-    <p id="pAlsada" class="ocult"><?=$alsada?></p>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
@@ -57,6 +55,7 @@
             </div>
         </form>
     </div>
-    <p id="ampladaTauler"><?=$amplada?></p>
+    <p id="ampladaTauler" class="ocult"><?=$amplada?></p>
+    <p id="alsadaTauler" class="ocult"><?=$alsada?></p>
 </body>
 </html>
