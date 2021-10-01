@@ -1,14 +1,9 @@
-var tauler = document.getElementById("tauler");
+var tauler = document.body.getElementById("tauler");
 
-var files = tauler.getElementsByTagName("tr");
-
-var celes;
-for (var i in files) {
-    celes = i.getElementsByTagName("td");
-}
+var celes = tauler.getElementsByTagName("td");
 
 for (var i in celes) {
-    if (i.innerHTML == 1) {
+    if (i == 1) {
         alert("Hola");
     }
 }
