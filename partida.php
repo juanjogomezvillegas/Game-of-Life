@@ -52,8 +52,8 @@
                 <?php } ?>
             </table>
             <div id="inputs">
-                <input type="button" name="play" value="Play" class="boto">
-                <input type="button" name="pause" value="Pause" class="boto">
+                <input type="button" name="play" value="Play" class="boto" id="bPlay">
+                <input type="button" name="pause" value="Pause" class="boto" id="bPause">
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="100" id="inputvelocitat"></label>
             </div>
         </form>

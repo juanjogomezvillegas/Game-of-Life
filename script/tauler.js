@@ -19,4 +19,15 @@ window.onload = function(){
             celes[i].setAttribute("class", "celesPartida morta");
         }
     }
+
+    document.getElementById("bPlay").addEventListener("click", play);
+    document.getElementById("bPause").addEventListener("click", pause);
 };
+
+function play() {
+    alert("Play");
+}
+
+function pause() {
+    alert("Pause");
+}
