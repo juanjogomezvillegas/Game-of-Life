@@ -22,6 +22,34 @@ window.onload = function() {
 
     PintaTauler(celesTauler);
 
+    var comptadorVius = 0;
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            comptadorVius = 0;
+            if ((i == 0 || i == celesTauler.length-1) && (j == 0 || j == celesTauler.length-1)) {
+                console.log(celesTauler[i][j]);
+            } else {
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVius++;
+                }
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVius++;
+                }
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVius++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVius++;
+                }
+            }
+            if (comptadorVius == 3) {
+                celesTauler[i][j].setAttribute("class", "celesPartida viva");
+            } else {
+                celesTauler[i][j].setAttribute("class", "celesPartida morta");
+            }
+        }
+    }
+
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
 };
