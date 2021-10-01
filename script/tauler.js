@@ -1,4 +1,4 @@
-var tauler = document.body.getElementById("tauler");
+var tauler = document.getElementById("tauler");
 
 var celes = tauler.getElementsByTagName("td");
 
