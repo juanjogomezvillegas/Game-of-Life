@@ -20,13 +20,7 @@ window.onload = function() {
     }
     console.table(celesTauler);
 
-    for (var i = 0; i < celesTauler.length; i++) {
-        for (var j = 0; j < celesTauler[i].length; j++) {
-            console.log(celesTauler[i][j]);
-        }
-    }
-
-    //PintaTauler(celes);
+    PintaTauler(celesTauler);
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
@@ -40,12 +34,14 @@ function pause() {
     alert("Pause");
 };
 
-function PintaTauler(celes) {
-    for (var i = 0; i < celes.length; i++) {
-        if (celes[i].innerHTML == "1") {
-            celes[i].setAttribute("class", "celesPartida viva");
-        } else {
-            celes[i].setAttribute("class", "celesPartida morta");
+function PintaTauler(celesTauler) {
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            if (celesTauler[i][j] == "1") {
+                celesTauler[i][j].setAttribute("class", "celesPartida viva");
+            } else {
+                celesTauler[i][j].setAttribute("class", "celesPartida morta");
+            }
         }
     }
 };
