@@ -17,12 +17,12 @@ window.onload = function() {
     files = tauler.getElementsByTagName("tr");
     console.log(files);
 
-    /*for (var i = 0; i < files.length; i++) {
+    for (var i = 0; i < files.length; i++) {
         celes = files[i].getElementsByTagName("td");
         console.log(celes);
     }
 
-    for (var i = 0; i < files.length; i++) {◘
+    /*for (var i = 0; i < files.length; i++) {◘
         for (var j = 0; j < files[i]; j++)
     }*/
 
