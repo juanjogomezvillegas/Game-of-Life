@@ -17,14 +17,16 @@ window.onload = function() {
     files = tauler.getElementsByTagName("tr");
     console.log(files);
 
-    for (var i = 0; i < files.length; i++) {
+    /*for (var i = 0; i < files.length; i++) {
         celes = files[i].getElementsByTagName("td");
         console.log(celes);
     }
 
-    //PintaTauler(celes);
+    for (var i = 0; i < files.length; i++) {◘
+        for (var j = 0; j < files[i]; j++)
+    }*/
 
-    console.table(celes);
+    //PintaTauler(celes);
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
