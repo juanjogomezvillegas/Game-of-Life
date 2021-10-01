@@ -42,9 +42,9 @@
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <?php if (isset($tauler[$i][$j])) { ?>
-                                <td class="celesPartida viva">1</td>
+                                <td>1</td>
                             <?php } else { ?>
-                                <td class="celesPartida morta">0</td>
+                                <td>0</td>
                             <?php } ?>
                         <?php } ?>
                     </tr>

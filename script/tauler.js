@@ -10,11 +10,10 @@ window.onload = function(){
     }
 
     for (var i = 0; i < celes.length; i++) {
-        alert(celes[i].innerHTML);
-        /*if (celes[i].innerHTML == "1") {
-            -
+        if (celes[i].innerHTML == "1") {
+            celes[i].setAttribute("class", "celesPartida viva");
         } else {
-            -
-        }*/
+            celes[i].setAttribute("class", "celesPartida morta");
+        }
     }
 };
