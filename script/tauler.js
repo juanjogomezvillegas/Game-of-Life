@@ -1,9 +1,9 @@
 var tauler = document.getElementById("tauler");
+var files = tauler.getElementsByTagName("tr");
+var celes = null;
 
-var celes = tauler.innerHTML;
+for (var i = 0; i < files.length; i++) {
+    celes = files[i].getElementsByTagName("td");
 
-alert(celes);
-
-/*for (var i in celes) {
-    alert(i);
-}*/
+    alert(celes[i].innerHTML);
+}
