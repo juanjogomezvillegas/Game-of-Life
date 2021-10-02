@@ -30,8 +30,8 @@ window.onload = function() {
 
 function play() {
     var comptadorVeins = 0;
-    for (var i = 0; i < celesTauler.length; i++) {
-        for (var j = 0; j < celesTauler[i].length; j++) {
+    for (var i = parseInt(0); i < celesTauler.length; i++) {
+        for (var j = parseInt(0); j < celesTauler[i].length; j++) {
             if (j++ >= 0 && j-- >= 0 && j++ < celesTauler[i].length && j-- < celesTauler[i].length) {
                 if (celesTauler[i][j--].innerHTML == "1") {
                     comptadorVeins++;
