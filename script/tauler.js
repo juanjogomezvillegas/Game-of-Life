@@ -21,10 +21,10 @@ window.onload = function() {
     console.table(celesTauler);
 
     PintaTauler(celesTauler);
-
-    document.getElementById("bPlay").addEventListener("click", play(celesTauler));
-    document.getElementById("bPause").addEventListener("click", pause);
 };
+
+document.getElementById("bPlay").addEventListener("click", play(celesTauler));
+document.getElementById("bPause").addEventListener("click", pause);
 
 function play(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
