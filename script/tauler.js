@@ -32,29 +32,45 @@ function play() {
     var comptaveins = 0;
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            if (celesTauler[i][j--] == "1") {
-                comptaveins++;
+            if (celesTauler[i][j--] != undefined) {
+                if (celesTauler[i][j--] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i][j++] == "1") {
-                comptaveins++;
+            if (celesTauler[i][j++] != undefined) {
+                if (celesTauler[i][j++] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i--][j] == "1") {
-                comptaveins++;
+            if (celesTauler[i--][j] != undefined) {
+                if (celesTauler[i--][j] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i++][j] == "1") {
-                comptaveins++;
+            if (celesTauler[i++][j] != undefined) {
+                if (celesTauler[i++][j] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i--][j--] == "1") {
-                comptaveins++;
+            if (celesTauler[i--][j--] != undefined) {
+                if (celesTauler[i--][j--] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i--][j++] == "1") {
-                comptaveins++;
+            if (celesTauler[i--][j++] != undefined) {
+                if (celesTauler[i--][j++] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i++][j--] == "1") {
-                comptaveins++;
+            if (celesTauler[i++][j--] != undefined) {
+                if (celesTauler[i++][j--] == "1") {
+                    comptaveins++;
+                }
             }
-            if (celesTauler[i++][j++] == "1") {
-                comptaveins++;
+            if (celesTauler[i++][j++] != undefined) {
+                if (celesTauler[i++][j++] == "1") {
+                    comptaveins++;
+                }
             }
             console.log(comptaveins);
             comptaveins = 0;
