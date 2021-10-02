@@ -22,30 +22,19 @@ window.onload = function() {
 
     PintaTauler(celesTauler);
 
-    var comptadorVius = 0;
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            comptadorVius = 0;
-            if ((i == 0 || i == celesTauler.length-1) && (j == 0 || j == celesTauler.length-1)) {
+            if (celesTauler[i][j--] != undefined) {
                 console.log(celesTauler[i][j]);
-            } else {
-                if (celesTauler[i][j--].innerHTML == "1") {
-                    comptadorVius++;
-                }
-                if (celesTauler[i][j++].innerHTML == "1") {
-                    comptadorVius++;
-                }
-                if (celesTauler[i--][j].innerHTML == "1") {
-                    comptadorVius++;
-                }
-                if (celesTauler[i++][j].innerHTML == "1") {
-                    comptadorVius++;
-                }
             }
-            if (comptadorVius == 3) {
-                celesTauler[i][j].innerHTML = "1";
-            } else {
-                celesTauler[i][j].innerHTML = "0";
+            if (celesTauler[i][j++] != undefined) {
+                console.log(celesTauler[i][j]);
+            }
+            if (celesTauler[i--][j] != undefined) {
+                console.log(celesTauler[i][j]);
+            }
+            if (celesTauler[i++][j] != undefined) {
+                console.log(celesTauler[i][j]);
             }
         }
     }
