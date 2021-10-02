@@ -22,9 +22,17 @@ window.onload = function() {
 
     PintaTauler(celesTauler);
 
+    document.getElementById("bPlay").addEventListener("click", play(celesTauler));
+    document.getElementById("bPause").addEventListener("click", pause);
+};
+
+function play(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            if (celesTauler[i][j--] != undefined) {
+            if (celesTauler[i][j].innerHTML == "0") {
+                celesTauler[i][j].innerHTML = "1";
+            }
+            /*if (celesTauler[i][j--] != undefined) {
                 console.log(celesTauler[i][j]);
             }
             if (celesTauler[i][j++] != undefined) {
@@ -35,17 +43,10 @@ window.onload = function() {
             }
             if (celesTauler[i++][j] != undefined) {
                 console.log(celesTauler[i][j]);
-            }
+            }*/
         }
     }
     PintaTauler(celesTauler);
-
-    document.getElementById("bPlay").addEventListener("click", play);
-    document.getElementById("bPause").addEventListener("click", pause);
-};
-
-function play(celes) {
-    alert("Play");
 };
 
 function pause() {
