@@ -26,10 +26,10 @@ window.onload = function() {
 };
 
 function play(celesTauler) {
-    console.table(celesTauler);
-    /*for (var i = 0; i < celesTauler.length; i++) {
+    for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            if (celesTauler[i][j--] != undefined) {
+            alert(celesTauler[i][j].innerHTML);
+            /*if (celesTauler[i][j--] != undefined) {
                 console.log(celesTauler[i][j]);
             }
             if (celesTauler[i][j++] != undefined) {
@@ -40,10 +40,10 @@ function play(celesTauler) {
             }
             if (celesTauler[i++][j] != undefined) {
                 console.log(celesTauler[i][j]);
-            }
+            }*/
         }
     }
-    PintaTauler(celesTauler);*/
+    //PintaTauler(celesTauler);
 };
 
 function pause() {
