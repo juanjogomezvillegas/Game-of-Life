@@ -31,9 +31,9 @@ window.onload = function() {
 function play() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler.length; i++) {
-        console.log(celesTauler[i]);
-        /*for (var j = 0; j < celesTauler[i].length; j++) {
-            if (j++ >= 0 && j-- >= 0 && j++ < celesTauler[i].length && j-- < celesTauler[i].length) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            console.log(celesTauler[i][j]);
+            /*if (j++ >= 0 && j-- >= 0 && j++ < celesTauler[i].length && j-- < celesTauler[i].length) {
                 if (celesTauler[i][j--].innerHTML == "1") {
                     comptadorVeins++;
                 }
@@ -64,8 +64,8 @@ function play() {
                 }
             }
             console.log(comptadorVeins);
-            comptadorVeins = 0;
-        }*/
+            comptadorVeins = 0;*/
+        }
     }
     //PintaTauler(celesTauler);
 };
