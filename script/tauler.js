@@ -29,51 +29,141 @@ window.onload = function() {
 };
 
 function play() {
-    var comptaveins = 0;
+    var comptadorVeins = 0;
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            if (celesTauler[i][j--] != undefined) {
-                if (celesTauler[i][j--] == "1") {
-                    comptaveins++;
+            if (i == 0 && j == 0) {
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if (i == celesTauler[i].length-1 && j == 0) {
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if (i == 0 && j == celesTauler[i].length-1) {
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if (i == celesTauler[i].length-1 && j == celesTauler[i].length-1) {
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if ((i >= 1 && i <= celesTauler[i].length-2) && j == 0) {
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if ((i >= 1 && i <= celesTauler[i].length-2) && j == celesTauler[i].length-1) {
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if (i == 0 && ((j >= 1 && j <= celesTauler[i].length-2))) {
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else if (i == celesTauler[i].length-1 && ((j >= 1 && j <= celesTauler[i].length-2))) {
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } else {               
+                if (celesTauler[i][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i--][j++].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j--].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+                if (celesTauler[i++][j++].innerHTML == "1") {
+                    comptadorVeins++;
                 }
             }
-            if (celesTauler[i][j++] != undefined) {
-                if (celesTauler[i][j++] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i--][j] != undefined) {
-                if (celesTauler[i--][j] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i++][j] != undefined) {
-                if (celesTauler[i++][j] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i--][j--] != undefined) {
-                if (celesTauler[i--][j--] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i--][j++] != undefined) {
-                if (celesTauler[i--][j++] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i++][j--] != undefined) {
-                if (celesTauler[i++][j--] == "1") {
-                    comptaveins++;
-                }
-            }
-            if (celesTauler[i++][j++] != undefined) {
-                if (celesTauler[i++][j++] == "1") {
-                    comptaveins++;
-                }
-            }
-            console.log(comptaveins);
-            comptaveins = 0;
+            console.log(comptadorVeins);
+            comptadorVeins = 0;
         }
     }
     //PintaTauler(celesTauler);
