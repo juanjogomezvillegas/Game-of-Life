@@ -29,6 +29,14 @@ window.onload = function() {
 };
 
 function play() {
+    i = setInterval(CanvisTauler(), 1000);
+};
+
+function pause() {
+    clearInterval(i);
+};
+
+function CanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
@@ -68,11 +76,7 @@ function play() {
         }
     }
     //PintaTauler(celesTauler);
-};
-
-function pause() {
-    alert("Pause");
-};
+}
 
 function PintaTauler(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
