@@ -2,6 +2,8 @@ var tauler;
 var files;
 var celes;
 var celesTauler;
+var velocitat = 1000;
+var x;
 
 window.onload = function() {
     var amplada = document.getElementById("ampladaTauler").innerHTML;
@@ -29,11 +31,11 @@ window.onload = function() {
 };
 
 function play() {
-    i = setInterval(CanvisTauler(), 1000);
+    x = setInterval(CanvisTauler(), velocitat);
 };
 
 function pause() {
-    clearInterval(i);
+    clearInterval(x);
 };
 
 function CanvisTauler() {
