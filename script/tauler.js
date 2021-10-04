@@ -2,14 +2,16 @@ var tauler;
 var files;
 var celes;
 var celesTauler;
+var generacio;
+var numGeneracio;
 var velocitat;
 var x;
 
 window.onload = function() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
 
-    var generacio = document.getElementById("generacio");
-    var numGeneracio = 0;
+    generacio = document.getElementById("generacio");
+    numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
 
     tauler = document.getElementById("tauler");
@@ -77,6 +79,8 @@ function CanvisTauler() {
         }
     }
     //PintaTauler(celesTauler);
+    numGeneracio++;
+    generacio.innerHTML = "Generació: "+numGeneracio;
 }
 
 function PintaTauler(celesTauler) {
