@@ -46,48 +46,15 @@ function pause() {
 };
 
 function CanvisTauler() {
+    var celesTauler2 = new Array(amplada);
     var comptadorVeins = 0;
-    for (var i = 0; i < alsada; i++) {
-        for (var j = 0; j < amplada; j++) {
+    for (var i = 1; i <= alsada; i++) {
+        celesTauler2[i] = celesTauler[i];
+    }
 
-            for (var x = 0; x < celesTauler.length; x++) {
-                for (var y = 0; y < celesTauler[x].length; y++) {
-                    /*var index1;
-                    var index2;
-                    if (x < 0 && x > amplada-1) {
-                        index1 = amplada-1;
-                    } else {
-                        index1 = x;
-                    }
-                    if (y < 0 && y > alsada-1) {
-                        index2 = alsada-1;
-                    } else {
-                        index2 = y;
-                    }
-                    if (!(index1 == amplada && index2 == alsada)) {
-                        if (celesTauler[x+index1][y+index2].innerHTML == 1) {
-                            comptadorVeins++;
-                        }
-                    }*/
-                    if (celesTauler[x+amplada][y+alsada].innerHTML == "1") {
-                        comptadorVeins++;
-                    }
-
-                    if (celesTauler[x][y].innerHTML == "1") {
-                        if (comptadorVeins < 2) {
-                            celesTauler[x][y].innerHTML = "0";
-                        } else if (comptadorVeins > 3) {
-                            celesTauler[x][y].innerHTML = "0";
-                        } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
-                            celesTauler[x][y].innerHTML = "1";
-                        }
-                    } else {
-                        if (comptadorVeins == 3) {
-                            celesTauler[x][y].innerHTML = "1";
-                        }
-                    }
-                }
-            }
+    for (var i = 0 ; i < celesTauler2.length; i++) {
+        for (var j = 0; j < celesTauler2[i].length; j++) {
+            console.log(celesTauler2[i][j]);
         }
     }
     PintaTauler(celesTauler);
