@@ -211,9 +211,22 @@ Estils de la Llavor
         border-radius: 10px;
         box-shadow: 5px 5px 8px 8px;
     }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        margin-right: 100px;
+        padding: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
 }
 /* SMARTPHONE AND TABS */
-@media screen and (min-width: 1001px) and (max-width: 1023px) {
+@media screen and (min-width: 851px) and (max-width: 1023px) {
     div.containerLlavor {
         margin-left: 10px;
         margin-right: 10px;
@@ -221,15 +234,40 @@ Estils de la Llavor
         border-radius: 10px;
         box-shadow: 5px 5px 8px 8px;
     }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        margin-right: 75px;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
 }
 /* MOBILE */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     div.containerLlavor {
         margin-left: 5px;
         margin-right: 5px;
         background-color: #071A47;
         border-radius: 5px;
         box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: center;
+        margin-top: 50px;
+        padding: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
     }
 }
 div.containerLlavor > form {
@@ -240,19 +278,6 @@ div.containerLlavor > form {
 }
 div.containerLlavor > form > table#tauler {
     width: 50%;
-}
-div.containerLlavor > form > input.boto {
-    display: flex;
-    align-self: flex-end;
-    margin-top: 50px;
-    margin-right: 100px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 10px;
-    background-color: #1240AB;
-    color: #FFD300;
-    transition: background-color 1s, color 1s;
 }
 div.containerLlavor > form > input.boto:hover {
     background-color: #018D8D;
@@ -275,9 +300,33 @@ Estils de la Partida
         border-radius: 10px;
         box-shadow: 5px 5px 8px 8px;
     }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: #FFD300;
+    }
 }
 /* SMARTPHONE AND TABS */
-@media screen and (min-width: 1001px) and (max-width: 1023px) {
+@media screen and (min-width: 851px) and (max-width: 1023px) {
     div.containerPartida {
         margin-left: 10px;
         margin-right: 10px;
@@ -285,15 +334,62 @@ Estils de la Partida
         border-radius: 10px;
         box-shadow: 5px 5px 8px 8px;
     }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 20px;
+        color: #FFD300;
+    }
 }
 /* MOBILE */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     div.containerPartida {
         margin-left: 5px;
         margin-right: 5px;
         background-color: #071A47;
         border-radius: 5px;
         box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 10px;
+        color: #FFD300;
     }
 }
 div.containerPartida > form {
@@ -312,34 +408,10 @@ div.containerPartida > form > div#estadistiques {
 div.containerPartida > form > table#tauler {
     width: 50%;
 }
-div.containerPartida > form > div#inputs {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    padding: 20px;
-}
-div.containerPartida > form > div#inputs > input.boto {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 10px;
-    background-color: #1240AB;
-    color: #FFD300;
-    transition: background-color 1s, color 1s;
-}
 div.containerPartida > form > div#inputs > input.boto:hover {
     background-color: #018D8D;
     color: #003200;
     transition: background-color 1s, color 1s;
-}
-div.containerPartida > form > div#inputs > label {
-    margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    color: #FFD300;
 }
 .celesPartida {
     text-align: center;
