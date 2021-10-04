@@ -6,7 +6,7 @@ var velocitat;
 var x;
 
 window.onload = function() {
-    velocitat = document.getElementById("inputvelocitat").innerHTML;
+    velocitat = document.getElementById("inputvelocitat").innerText;
 
     console.log(velocitat);
 
