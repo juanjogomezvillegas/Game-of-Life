@@ -148,9 +148,8 @@ div.containerLlavor > form {
     align-items: center;
     margin-bottom: 30px;
 }
-div.containerLlavor > form > table#tauler {
+div.containerLlavor > form > table#tauler > tr > td > input {
     margin: 5px;
-    padding: 5px;
 }
 div.containerLlavor > form > input.boto {
     display: flex;
