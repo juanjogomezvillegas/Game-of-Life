@@ -61,7 +61,7 @@ function setCanvisTauler() {
 
     var comptadorVeins = 0;
     for (var k = 0; k < celesTauler2.length; k++) {
-        for (var l = 0; l < celesTauler2[i].length; l++) {
+        for (var l = 0; l < celesTauler2[k].length; l++) {
             if (k == 0 && l == 0) {
                 if (celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
                     comptadorVeins++;
