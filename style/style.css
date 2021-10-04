@@ -149,7 +149,7 @@ div.containerLlavor > form {
     margin-bottom: 30px;
 }
 div.containerLlavor > form > table#tauler {
-    width: 85%;
+    width: 50%;
 }
 div.containerLlavor > form > input.boto {
     display: flex;
@@ -197,11 +197,7 @@ div.containerPartida > form > div#estadistiques {
     color: #FFD300;
 }
 div.containerPartida > form > table#tauler {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    width: 50%;
 }
 div.containerPartida > form > div#inputs {
     display: flex;
@@ -233,7 +229,5 @@ div.containerPartida > form > div#inputs > label {
     color: #FFD300;
 }
 .celesPartida {
-    padding: 1%;
     text-align: center;
-    border: 1px solid black;
 }
