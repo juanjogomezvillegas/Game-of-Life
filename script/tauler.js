@@ -126,7 +126,7 @@ function setPintaTauler() {
 function setComptarCelesVives() {
     var celesVives = getCelesVives();
     document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+celesVives;
-    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+(amplada * alsada) - celesVives;
+    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+celesTauler.length - celesVives;
 };
 
 function getCelesVives() {
