@@ -38,7 +38,7 @@ window.onload = function() {
 };
 
 function play() {
-    jocdevida = setInterval(CanvisTauler(), velocitat);
+    jocdevida = setInterval(CanvisTauler, velocitat);
 };
 
 function pause() {
