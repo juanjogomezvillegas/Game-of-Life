@@ -131,8 +131,8 @@ function setComptarCelesVives() {
 
 function getCelesVives() {
     var celesVives = 0;
-    for (var i = 1; i <= alsada; i++) {
-        for (var j = 1; j <= amplada; j++) {
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
             if (celesTauler[i][j].innerHTML == "1") {
                 celesVives++;
             }
