@@ -47,6 +47,14 @@ function pause() {
 };
 
 function setCanvisTauler() {
+    var celesTauler2 = new Array(0);
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            celesTauler2[i].push(celesTauler[i][j]);
+        }
+    }
+    console.table(celesTauler2);
+
     var comptadorVeins = 0;
     for (var k = 0; k < celesTauler.length; k++) {
         for (var l = 0; l < celesTauler[k].length; l++) {
