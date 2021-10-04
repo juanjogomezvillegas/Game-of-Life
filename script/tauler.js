@@ -16,6 +16,7 @@ window.onload = function() {
     numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
 
+    velocitat = parseInt(document.getElementById("inputvelocitat").value);
     document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
 
     tauler = document.getElementById("tauler");
@@ -76,4 +77,5 @@ function PintaTauler(celesTauler) {
 
 function SelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
+    document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
 };
