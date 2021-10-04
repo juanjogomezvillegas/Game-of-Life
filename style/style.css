@@ -9,7 +9,7 @@
 Estils del Joc
 */
 /* DESKTOP */
-@media screen and (min-width: 1001px) and (max-width: 1024px) {
+@media screen and (min-width: 1001px) {
     footer {
         display: flex;
         flex-direction: row;
@@ -81,7 +81,7 @@ Estils del Joc
     }
     footer > div > a:hover {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         padding: 15px;
         text-decoration: none;
         color: #EBC302;
