@@ -1,3 +1,5 @@
+var alsada;
+var amplada;
 var tauler;
 var files;
 var celes;
@@ -8,6 +10,9 @@ var velocitat;
 var x;
 
 window.onload = function() {
+    alsada = document.getElementById("alsadaTauler").value
+    amplada = document.getElementById("ampladaTauler").value;
+
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
 
     generacio = document.getElementById("generacio");
@@ -41,44 +46,47 @@ function pause() {
 
 function CanvisTauler() {
     var comptadorVeins = 0;
-    for (var i = 0; i < celesTauler.length; i++) {
-        for (var j = 0; j < celesTauler[i].length; j++) {
-            console.log(celesTauler[i][j]);
-            /*if (j++ >= 0 && j-- >= 0 && j++ < celesTauler[i].length && j-- < celesTauler[i].length) {
-                if (celesTauler[i][j--].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-                if (celesTauler[i][j++].innerHTML == "1") {
-                    comptadorVeins++;
+    for (var i = 0; i < alsada; i++) {
+        for (var j = 0; j < amplada; j++) {
+
+            for (var x = 0; x < celesTauler.length; x++) {
+                for (var y = 0; y < celesTauler[x].length; y++) {
+                    var index1;
+                    var index2;
+                    if (x < 0 && x > amplada-1) {
+                        index1 = amplada-1;
+                    } else {
+                        index1 = x;
+                    }
+                    if (y < 0 && y > alsada-1) {
+                        index2 = alsada-1;
+                    } else {
+                        index2 = y;
+                    }
+                    if (!(index1 == amplada && index2 == alsada)) {
+                        if (celesTauler[x+index1][y+index2].innerHTML == 1) {
+                            comptadorVeins++;
+                        }
+                    }
+
+                    if (celesTauler[x][y].innerHTML == 1) {
+                        if (comptadorVeins < 2) {
+                            celesTauler[x][y].innerHTML = 0;
+                        } else if (comptadorVeins > 3) {
+                            celesTauler[x][y].innerHTML = 0;
+                        } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
+                            celesTauler[x][y].innerHTML = 1;
+                        }
+                    } else {
+                        if (comptadorVeins == 3) {
+                            celesTauler[x][y].innerHTML = 1;
+                        }
+                    }
                 }
             }
-            if (i++ >= 0 && i-- >= 0 && i++ < celesTauler.length && i-- < celesTauler.length) {
-                if (celesTauler[i--][j].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-                if (celesTauler[i++][j].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            }
-            if (i++ >= 0 && i-- >= 0 && j++ >= 0 && j-- >= 0 && i++ < celesTauler.length && i-- < celesTauler.length && j++ < celesTauler[i].length && j-- < celesTauler[i].length) {
-                if (celesTauler[i--][j--].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-                if (celesTauler[i--][j++].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-                if (celesTauler[i++][j--].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-                if (celesTauler[i++][j++].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            }
-            console.log(comptadorVeins);
-            comptadorVeins = 0;*/
         }
     }
-    //PintaTauler(celesTauler);
+    PintaTauler(celesTauler);
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 }
