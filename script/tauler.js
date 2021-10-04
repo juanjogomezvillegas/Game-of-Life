@@ -18,6 +18,8 @@ window.onload = function() {
     numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
 
+    document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
+
     tauler = document.getElementById("tauler");
 
     files = tauler.getElementsByTagName("tr");

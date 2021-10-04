@@ -33,7 +33,7 @@
                 <p id="generacio"></p>
                 <p>Cel·les Vives: <?=$vives?></p>
                 <p>Cel·les Mortes: <?=($alsada * $amplada) - $vives?></p>
-                <p>Velocitat: </p>
+                <p id="velocitat"></p>
             </div>
             <table id="tauler">
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
