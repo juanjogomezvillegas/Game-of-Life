@@ -124,9 +124,8 @@ function setPintaTauler() {
 };
 
 function setComptarCelesVives() {
-    var celesVives = getCelesVives();
-    document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+celesVives;
-    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+celesTauler.length - celesVives;
+    document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+getCelesVives();
+    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+getCelesMortes();
 };
 
 function getCelesVives() {
@@ -139,6 +138,18 @@ function getCelesVives() {
         }
     }
     return celesVives;
+};
+
+function getCelesMortes() {
+    var celesMortes = 0;
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            if (celesTauler[i][j].innerHTML == "0") {
+                celesMortes++;
+            }
+        }
+    }
+    return celesMortes;
 };
 
 function setSelectorVelocitat() {
