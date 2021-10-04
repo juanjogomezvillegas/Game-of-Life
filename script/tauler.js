@@ -124,7 +124,7 @@ function setPintaTauler(celesTauler) {
 };
 
 function setComptarCelesVives() {
-    var celesVives = CelesVives(celesTauler);
+    var celesVives = getCelesVives(celesTauler);
     document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
     document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
 };
