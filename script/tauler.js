@@ -47,15 +47,40 @@ function pause() {
 
 function CanvisTauler() {
     var celesTauler2 = new Array(celesTauler.length);
-    var comptadorVeins = 0;
     for (var i = 0; i < celesTauler.length; i++) {
         celesTauler2[i] = new Array();
         celesTauler2[i].push(celesTauler[i]);
     }
 
-    for (var i = 0 ; i < celesTauler2.length; i++) {
-        for (var j = 0; j < celesTauler2[i].length; j++) {
-            console.log(celesTauler2[i][j]);
+    var comptadorVeins = 0;
+    for (var i = 0 ; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            
+            for (var k = 0; k < celesTauler2.length; k++) {
+                for (var l = 0; l < celesTauler2[k].length; l++) {
+                    if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
+                        celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k+1][l] || 
+                        celesTauler[i][j] == celesTauler2[k-1][l-1] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
+                        if (celesTauler[i][j].innerHTML == "1") {
+                            comptadorVeins++;
+                        }
+                    }
+                }
+            }
+            if (celesTauler[i][j].innerHTML == "1") {
+                if (comptadorVeins < 2) {
+                    celesTauler[i][j].innerHTML = "0";
+                } else if (comptadorVeins > 3) {
+                    celesTauler[i][j].innerHTML = "0";
+                } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
+                    celesTauler[i][j].innerHTML = "1";
+                }
+            } else {
+                if (comptadorVeins == 3) {
+                    celesTauler[i][j].innerHTML = "1";
+                }
+            }
+            comptadorVeins = 0;
         }
     }
     PintaTauler(celesTauler);
