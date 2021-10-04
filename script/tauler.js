@@ -12,8 +12,6 @@ window.onload = function() {
     alsada = document.getElementById("alsadaTauler").value
     amplada = document.getElementById("ampladaTauler").value;
 
-    velocitat = parseInt(document.getElementById("inputvelocitat").value);
-
     generacio = document.getElementById("generacio");
     numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
@@ -35,6 +33,7 @@ window.onload = function() {
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
+    document.getElementById("inputvelocitat").addEventListener("click", SelectorVelocitat);
 };
 
 function play() {
@@ -73,4 +72,8 @@ function PintaTauler(celesTauler) {
             }
         }
     }
+};
+
+function SelectorVelocitat() {
+    velocitat = parseInt(document.getElementById("inputvelocitat").value);
 };
