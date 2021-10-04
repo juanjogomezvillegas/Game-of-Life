@@ -58,11 +58,15 @@ function CanvisTauler() {
             
             for (var k = 0; k < celesTauler2.length; k++) {
                 for (var l = 0; l < celesTauler2[k].length; l++) {
-                    if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
+                    if (celesTauler2[k][l-1] != undefined || celesTauler2[k][l+1] != undefined || 
+                        celesTauler2[k-1][l] != undefined || celesTauler2[k+1][l] != undefined || 
+                        celesTauler2[k-1][l-1] != undefined || celesTauler2[k+1][l+1] != undefined) {
+                        if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
                         celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k+1][l] || 
                         celesTauler[i][j] == celesTauler2[k-1][l-1] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
-                        if (celesTauler[i][j].innerHTML == "1") {
-                            comptadorVeins++;
+                            if (celesTauler[i][j].innerHTML == "1") {
+                                comptadorVeins++;
+                            }
                         }
                     }
                 }
