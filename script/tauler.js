@@ -63,12 +63,12 @@ function setCanvisTauler() {
                         if (celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
                             comptadorVeins++;
                         }
-                    } else if (k > 0 && k < celesTauler2[k].length-1) {
+                    } else if ((k > 0 && k < celesTauler2.length-1) && (l > 0 && l < celesTauler2[k].length)) {
                         if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || 
                             celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
                                 comptadorVeins++;
                             }
-                    } else if (k < celesTauler2[k].length-1) {
+                    } else if (k == celesTauler2.length-1 && l == celesTauler2[k].length-1) {
                         if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1") {
                             comptadorVeins++;
                         }
