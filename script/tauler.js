@@ -93,7 +93,7 @@ function CanvisTauler() {
     PintaTauler(celesTauler);
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
-}
+};
 
 function PintaTauler(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
