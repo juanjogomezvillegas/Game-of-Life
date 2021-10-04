@@ -29,11 +29,9 @@ window.onload = function() {
         celesTauler[i] = celes;
     }
 
-    var celesVives = CelesVives(celesTauler);
-    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
-    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
-
     setPintaTauler(celesTauler);
+
+    setComptarCelesVives();
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
@@ -106,11 +104,9 @@ function setCanvisTauler() {
                 }
             }
             setPintaTauler(celesTauler);
+            setComptarCelesVives(celesTauler);
         }
     }
-    var celesVives = CelesVives(celesTauler);
-    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
-    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
@@ -125,6 +121,12 @@ function setPintaTauler(celesTauler) {
             }
         }
     }
+};
+
+function setComptarCelesVives() {
+    var celesVives = CelesVives(celesTauler);
+    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
+    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
 };
 
 function getCelesVives(celesTauler) {
