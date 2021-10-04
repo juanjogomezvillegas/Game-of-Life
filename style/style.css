@@ -149,8 +149,7 @@ div.containerLlavor > form {
     margin-bottom: 30px;
 }
 div.containerLlavor > form > table#tauler {
-    width: 100%;
-    height: 100%;
+    width: 75%;
 }
 div.containerLlavor > form > input.boto {
     display: flex;
@@ -172,7 +171,6 @@ div.containerLlavor > form > input.boto:hover {
 }
 .celesLlavor {
     text-align: center;
-    border: 1px solid black;
 }
 
 /*
