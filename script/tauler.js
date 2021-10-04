@@ -7,7 +7,6 @@ var celesTauler;
 var generacio;
 var numGeneracio;
 var velocitat;
-var x;
 
 window.onload = function() {
     alsada = document.getElementById("alsadaTauler").value
