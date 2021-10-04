@@ -38,11 +38,11 @@ window.onload = function() {
 };
 
 function play() {
-    x = setInterval(CanvisTauler(), velocitat);
+    jocdevida = setInterval(CanvisTauler(), velocitat);
 };
 
 function pause() {
-    clearInterval(x);
+    clearInterval(jocdevida);
 };
 
 function CanvisTauler() {
