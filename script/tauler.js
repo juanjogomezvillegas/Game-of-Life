@@ -2,11 +2,11 @@ var tauler;
 var files;
 var celes;
 var celesTauler;
-var velocitat = 1000;
+var velocitat;
 var x;
 
 window.onload = function() {
-    console.log(document.getElementById("inputvelocitat").nodeValue);
+    velocitat = parseInt(document.getElementById("inputvelocitat").value);
 
     var generacio = document.getElementById("generacio");
     var numGeneracio = 0;
