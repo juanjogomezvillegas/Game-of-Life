@@ -55,7 +55,7 @@ function CanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0 ; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            
+            comptadorVeins = 0;
             for (var k = 0; k < celesTauler2.length; k++) {
                 for (var l = 0; l > 0 && l < celesTauler2[k].length; l++) {
                     if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
@@ -80,10 +80,9 @@ function CanvisTauler() {
                     celesTauler[i][j].innerHTML = "1";
                 }
             }
+            PintaTauler(celesTauler);
         }
-        comptadorVeins = 0;
     }
-    PintaTauler(celesTauler);
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
