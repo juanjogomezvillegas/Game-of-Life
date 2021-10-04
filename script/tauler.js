@@ -50,7 +50,7 @@ function setCanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0 ; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            comptadorVeins = 0;
+
             for (var k = 0; k < celesTauler.length; k++) {
                 for (var l = 0; l < celesTauler[k].length; l++) {
                     if (k == 0 && l == 0) {
@@ -114,6 +114,7 @@ function setCanvisTauler() {
             }
             setPintaTauler();
             setComptarCelesVives();
+            comptadorVeins = 0;
         }
     }
     numGeneracio++;
