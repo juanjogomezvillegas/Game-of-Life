@@ -54,7 +54,7 @@ function CanvisTauler() {
 
     var comptadorVeins = 0;
     for (var i = 0 ; i < celesTauler.length; i++) {
-        for (var j = 0; j > 0 && j < celesTauler[i].length; j++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
             
             for (var k = 0; k < celesTauler2.length; k++) {
                 for (var l = 0; l > 0 && l < celesTauler2[k].length; l++) {
@@ -80,8 +80,8 @@ function CanvisTauler() {
                     celesTauler[i][j].innerHTML = "1";
                 }
             }
-            comptadorVeins = 0;
         }
+        comptadorVeins = 0;
     }
     PintaTauler(celesTauler);
     numGeneracio++;
