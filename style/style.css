@@ -229,5 +229,6 @@ div.containerPartida > form > div#inputs > label {
     color: #FFD300;
 }
 .celesPartida {
+    padding: 5px;
     text-align: center;
 }
