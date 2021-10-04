@@ -13,10 +13,10 @@ function validarFormulari() {
     amplada = document.getElementById("inputAmplada");
 
     if (amplada == "" || amplada == " ") {
-        history.back;
+        location.assign(indexUrl);
     }
 
     if (alsada == "" || alsada == " ") {
-        history.back
+        location.assign(indexUrl);
     }
 };
