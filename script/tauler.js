@@ -29,7 +29,7 @@ window.onload = function() {
         celesTauler[i] = celes;
     }
 
-    setPintaTauler(celesTauler);
+    setPintaTauler();
 
     setComptarCelesVives();
 
@@ -39,11 +39,11 @@ window.onload = function() {
 };
 
 function play() {
-    jocdevida = setInterval(setCanvisTauler, velocitat);
+    jocdelavida = setInterval(setCanvisTauler, velocitat);
 };
 
 function pause() {
-    clearInterval(jocdevida);
+    clearInterval(jocdelavida);
 };
 
 function setCanvisTauler() {
@@ -103,15 +103,15 @@ function setCanvisTauler() {
                     celesTauler[i][j].innerHTML = "1";
                 }
             }
-            setPintaTauler(celesTauler);
-            setComptarCelesVives(celesTauler);
+            setPintaTauler();
+            setComptarCelesVives();
         }
     }
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
 
-function setPintaTauler(celesTauler) {
+function setPintaTauler() {
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
             if (celesTauler[i][j].innerHTML == "1") {
@@ -126,7 +126,7 @@ function setPintaTauler(celesTauler) {
 function setComptarCelesVives() {
     var celesVives = getCelesVives();
     document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+celesVives;
-    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+getCelesMortes(celesVives);
+    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+(amplada * alsada) - celesVives;
 };
 
 function getCelesVives() {
@@ -139,11 +139,6 @@ function getCelesVives() {
         }
     }
     return celesVives;
-};
-
-function getCelesMortes(celesVives) {
-    var celesMortes = (alsada * amplada) - celesVives;
-    return celesMortes;
 };
 
 function setSelectorVelocitat() {
