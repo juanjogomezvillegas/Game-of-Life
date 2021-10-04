@@ -67,8 +67,18 @@ function CanvisTauler() {
                                 }
                             }
                     }
-                } else {
+                } else if (k > 0 && k < celesTauler2[k].length-1) {
                     for (var l = 0; l < celesTauler2[k].length; l++) {
+                        if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
+                            celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k+1][l] || 
+                            celesTauler[i][j] == celesTauler2[k-1][l-1] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
+                                if (celesTauler[i][j].innerHTML == "1") {
+                                    comptadorVeins++;
+                                }
+                            }
+                    }
+                } else if (k > celesTauler2[k].length-2) {
+                    for (var l = 0; l < celesTauler2[k].length-1; l++) {
                         if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
                             celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k+1][l] || 
                             celesTauler[i][j] == celesTauler2[k-1][l-1] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
