@@ -96,6 +96,7 @@ function setCanvisTauler() {
                             comptadorVeins++;
                         }
                     }
+                    console.log(comptadorVeins);
                 }
             }
             if (celesTauler[i][j].innerHTML == "1") {
