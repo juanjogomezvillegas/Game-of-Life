@@ -58,29 +58,18 @@ function setCanvisTauler() {
         for (var j = 0; j < celesTauler[i].length; j++) {
             comptadorVeins = 0;
             for (var k = 0; k < celesTauler2.length; k++) {
-                if (k == 0) {
-                    var k = 0;
-                    var l = 0;
-                    if (celesTauler[i][j] == celesTauler2[k][l+1] || celesTauler[i][j] == celesTauler2[k+1][l] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
-                            if (celesTauler[i][j].innerHTML == "1") {
+                for (var l = 0; l < celesTauler2[k].length; l++) {
+                    if (k == 0 && l== 0) {
+                        if (celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
+                            comptadorVeins++;
+                        }
+                    } else if (k > 0 && k < celesTauler2[k].length-1) {
+                        if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || 
+                            celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
                                 comptadorVeins++;
                             }
-                        }
-                } else if (k > 0 && k < celesTauler2[k].length-1) {
-                    for (var l = 0; l < celesTauler2[k].length; l++) {
-                        if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k][l+1] || 
-                            celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k+1][l] || 
-                            celesTauler[i][j] == celesTauler2[k-1][l-1] || celesTauler[i][j] == celesTauler2[k+1][l+1]) {
-                                if (celesTauler[i][j].innerHTML == "1") {
-                                    comptadorVeins++;
-                                }
-                            }
-                    }
-                } else if (k == celesTauler2[k].length-1) {
-                    var k = 0;
-                    var l = 0;
-                    if (celesTauler[i][j] == celesTauler2[k][l-1] || celesTauler[i][j] == celesTauler2[k-1][l] || celesTauler[i][j] == celesTauler2[k-1][l-1]) {
-                        if (celesTauler[i][j].innerHTML == "1") {
+                    } else if (k < celesTauler2[k].length-1) {
+                        if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1") {
                             comptadorVeins++;
                         }
                     }
