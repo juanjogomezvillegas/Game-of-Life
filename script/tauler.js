@@ -47,7 +47,7 @@ function pause() {
 };
 
 function setCanvisTauler() {
-    var celesTauler2 = new Array(0);
+    var celesTauler2 = new Array();
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
             celesTauler2.push(celesTauler[i][j]);
