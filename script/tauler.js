@@ -16,8 +16,7 @@ window.onload = function() {
     numGeneracio = 0;
     generacio.innerHTML = "Generació: "+numGeneracio;
 
-    velocitat = parseInt(document.getElementById("inputvelocitat").value);
-    document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
+    setSelectorVelocitat();
 
     tauler = document.getElementById("tauler");
 
@@ -30,22 +29,26 @@ window.onload = function() {
         celesTauler[i] = celes;
     }
 
-    PintaTauler(celesTauler);
+    var celesVives = CelesVives(celesTauler);
+    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
+    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
+
+    setPintaTauler(celesTauler);
 
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
-    document.getElementById("inputvelocitat").addEventListener("click", SelectorVelocitat);
+    document.getElementById("inputvelocitat").addEventListener("click", setSelectorVelocitat);
 };
 
 function play() {
-    jocdevida = setInterval(CanvisTauler, velocitat);
+    jocdevida = setInterval(setCanvisTauler, velocitat);
 };
 
 function pause() {
     clearInterval(jocdevida);
 };
 
-function CanvisTauler() {
+function setCanvisTauler() {
     var celesTauler2 = new Array(celesTauler.length);
     for (var i = 0; i < celesTauler.length; i++) {
         celesTauler2[i] = new Array();
@@ -102,14 +105,17 @@ function CanvisTauler() {
                     celesTauler[i][j].innerHTML = "1";
                 }
             }
-            PintaTauler(celesTauler);
+            setPintaTauler(celesTauler);
         }
     }
+    var celesVives = CelesVives(celesTauler);
+    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
+    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
 
-function PintaTauler(celesTauler) {
+function setPintaTauler(celesTauler) {
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
             if (celesTauler[i][j].innerHTML == "1") {
@@ -121,7 +127,24 @@ function PintaTauler(celesTauler) {
     }
 };
 
-function SelectorVelocitat() {
+function getCelesVives(celesTauler) {
+    var celesVives = 0;
+    for (var i = 1; i <= alsada; i++) {
+        for (var j = 1; j <= amplada; j++) {
+            if (celesTauler[i][j].innerHTML == "1") {
+                celesVives++;
+            }
+        }
+    }
+    return celesVives;
+};
+
+function getCelesMortes(celesVives) {
+    var celesMortes = (alsada * amplada) - celesVives;
+    return celesMortes;
+};
+
+function setSelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
     document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
 };
