@@ -106,11 +106,11 @@ function setCanvisTauler() {
                     celesTauler[k][l].innerHTML = "1";
                 }
             }
-            setPintaTauler();
-            setComptarCelesVives();
             comptadorVeins = 0;
         }
     }
+    setPintaTauler();
+    setComptarCelesVives();
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
