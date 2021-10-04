@@ -51,10 +51,14 @@ function setCanvisTauler() {
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
             celesTauler2[i] = new Array(celesTauler[i].length);
-            celesTauler2[i][j] = celesTauler[i][j];
         }
     }
-    console.table(celesTauler2);
+    for (var i = 0; i < celesTauler.length; i++) {
+        for (var j = 0; j < celesTauler[i].length; j++) {
+            celesTauler2[i][j] = celesTauler[i][j];
+            console.log(celesTauler2[i][j]);
+        }
+    }
 
     var comptadorVeins = 0;
     for (var k = 0; k < celesTauler.length; k++) {
