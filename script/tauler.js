@@ -59,17 +59,17 @@ function setCanvisTauler() {
             comptadorVeins = 0;
             for (var k = 0; k < celesTauler2.length; k++) {
                 for (var l = 0; l < celesTauler2[k].length; l++) {
-                    if (k == 0 && l== 0) {
-                        if (celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
+                    if (l == 0) {
+                        if (celesTauler2[k][k].item(l+1).innerHTML == "1" || celesTauler2[k+1][k+1].item(l).innerHTML == "1" || celesTauler2[k+1][k+1].item(l+1).innerHTML == "1") {
                             comptadorVeins++;
                         }
-                    } else if ((k > 0 && k < celesTauler2.length-1) && (l > 0 && l < celesTauler2[k].length)) {
-                        if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k][l+1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || 
-                            celesTauler2[k+1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1" || celesTauler2[k+1][l+1].innerHTML == "1") {
+                    } else if (l > 0 && l < celesTauler2[k].length) {
+                        if (celesTauler2[k][k].item(l-1).innerHTML == "1" || celesTauler2[k][k].item(l+1).innerHTML == "1" || celesTauler2[k-1][k-1].item(l-1).innerHTML == "1" || 
+                            celesTauler2[k+1][k+1].item(l+1).innerHTML == "1" || celesTauler2[k-1][k-1].item(l).innerHTML == "1" || celesTauler2[k+1][k+1].item(l).innerHTML == "1") {
                                 comptadorVeins++;
                             }
                     } else if (k == celesTauler2.length-1 && l == celesTauler2[k].length-1) {
-                        if (celesTauler2[k][l-1].innerHTML == "1" || celesTauler2[k-1][l].innerHTML == "1" || celesTauler2[k-1][l-1].innerHTML == "1") {
+                        if (celesTauler2[k][k].item(l-1).innerHTML == "1" || celesTauler2[k-1][k-1].item(l).innerHTML == "1" || celesTauler2[k-1][k-1].item(l-1).innerHTML == "1") {
                             comptadorVeins++;
                         }
                     }
