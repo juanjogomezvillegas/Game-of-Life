@@ -46,10 +46,11 @@ function pause() {
 };
 
 function CanvisTauler() {
-    var celesTauler2 = new Array(amplada);
+    var celesTauler2 = new Array(celesTauler.length);
     var comptadorVeins = 0;
-    for (var i = 1; i <= alsada; i++) {
-        celesTauler2[i] = celesTauler[i];
+    for (var i = 0; i < celesTauler.length; i++) {
+        celesTauler2[i] = new Array();
+        celesTauler2[i].push(celesTauler[i]);
     }
 
     for (var i = 0 ; i < celesTauler2.length; i++) {
