@@ -58,7 +58,7 @@ function setCanvisTauler() {
                             comptadorVeins++;
                         }
                     } else if (k == 0 && l == celesTauler[k].length-1) {
-                        if (celesTauler[k-1][l].innerHTML == "1" || celesTauler[k][l-1].innerHTML == "1" || celesTauler[k+1][l-1].innerHTML == "1") {
+                        if (celesTauler[k+1][l].innerHTML == "1" || celesTauler[k][l-1].innerHTML == "1" || celesTauler[k+1][l-1].innerHTML == "1") {
                             comptadorVeins++;
                         }
                     } else if (k == celesTauler.length-1 && l == 0) {
