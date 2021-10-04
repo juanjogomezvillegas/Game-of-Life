@@ -50,7 +50,7 @@ function CanvisTauler() {
 
             for (var x = 0; x < celesTauler.length; x++) {
                 for (var y = 0; y < celesTauler[x].length; y++) {
-                    var index1;
+                    /*var index1;
                     var index2;
                     if (x < 0 && x > amplada-1) {
                         index1 = amplada-1;
@@ -66,19 +66,22 @@ function CanvisTauler() {
                         if (celesTauler[x+index1][y+index2].innerHTML == 1) {
                             comptadorVeins++;
                         }
+                    }*/
+                    if (celesTauler[x+amplada][y+alsada].innerHTML == "1") {
+                        comptadorVeins++;
                     }
 
-                    if (celesTauler[x][y].innerHTML == 1) {
+                    if (celesTauler[x][y].innerHTML == "1") {
                         if (comptadorVeins < 2) {
-                            celesTauler[x][y].innerHTML = 0;
+                            celesTauler[x][y].innerHTML = "0";
                         } else if (comptadorVeins > 3) {
-                            celesTauler[x][y].innerHTML = 0;
+                            celesTauler[x][y].innerHTML = "0";
                         } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
-                            celesTauler[x][y].innerHTML = 1;
+                            celesTauler[x][y].innerHTML = "1";
                         }
                     } else {
                         if (comptadorVeins == 3) {
-                            celesTauler[x][y].innerHTML = 1;
+                            celesTauler[x][y].innerHTML = "1";
                         }
                     }
                 }
