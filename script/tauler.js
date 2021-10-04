@@ -2,12 +2,13 @@ var tauler;
 var files;
 var celes;
 var celesTauler;
-var velocitat = 1000;
+var velocitat;
 var x;
 
 window.onload = function() {
-    var amplada = document.getElementById("ampladaTauler").innerHTML;
-    var alsada = document.getElementById("alsadaTauler").innerHTML;
+    velocitat = document.getElementById("inputvelocitat").innerHTML;
+
+    console.log(velocitat);
 
     var generacio = document.getElementById("generacio");
     var numGeneracio = 0;
