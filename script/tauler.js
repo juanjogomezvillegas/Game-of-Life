@@ -93,17 +93,17 @@ function setCanvisTauler() {
                     comptadorVeins++;
                 }
             }
-            if (celesTauler[i][j].innerHTML == "1") {
+            if (celesTauler[k][l].innerHTML == "1") {
                 if (comptadorVeins < 2) {
-                    celesTauler[i][j].innerHTML = "0";
+                    celesTauler[k][l].innerHTML = "0";
                 } else if (comptadorVeins > 3) {
-                    celesTauler[i][j].innerHTML = "0";
+                    celesTauler[k][l].innerHTML = "0";
                 } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
-                    celesTauler[i][j].innerHTML = "1";
+                    celesTauler[k][l].innerHTML = "1";
                 }
             } else {
                 if (comptadorVeins == 3) {
-                    celesTauler[i][j].innerHTML = "1";
+                    celesTauler[k][l].innerHTML = "1";
                 }
             }
             setPintaTauler();
