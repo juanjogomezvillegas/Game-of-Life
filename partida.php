@@ -22,8 +22,8 @@
         <form name="formulariPartida" action="" method="POST">
             <div id="estadistiques">
                 <p id="generacio"></p>
-                <p id="celesVives">Cel·les Vives: <?=$vives?></p>
-                <p id="celesMortes">Cel·les Mortes: <?=($alsada * $amplada) - $vives?></p>
+                <p id="celesVives"></p>
+                <p id="celesMortes"></p>
                 <p id="velocitat"></p>
             </div>
             <table id="tauler">

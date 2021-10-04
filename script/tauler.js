@@ -124,12 +124,12 @@ function setPintaTauler(celesTauler) {
 };
 
 function setComptarCelesVives() {
-    var celesVives = getCelesVives(celesTauler);
-    document.getElementById("celesVives").innerHTML = getCelesVives(celesTauler);
-    document.getElementById("celesMortes").innerHTML = getCelesMortes(celesVives);
+    var celesVives = getCelesVives();
+    document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+celesVives;
+    document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+getCelesMortes(celesVives);
 };
 
-function getCelesVives(celesTauler) {
+function getCelesVives() {
     var celesVives = 0;
     for (var i = 1; i <= alsada; i++) {
         for (var j = 1; j <= amplada; j++) {
