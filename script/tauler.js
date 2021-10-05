@@ -57,7 +57,7 @@ function pause() {
 };
 
 function setCanvisTauler() {
-    /*var celesTauler2 = new Array(celesTauler.length);
+    var celesTauler2 = new Array(celesTauler.length);
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
             celesTauler2[i] = new Array(celesTauler[i].length);
@@ -67,8 +67,8 @@ function setCanvisTauler() {
         for (var j = 0; j < celesTauler[i].length; j++) {
             celesTauler2[i][j] = celesTauler[i][j];
         }
-    }*/
-    var celesTauler2 = celesTauler;
+    }
+    //var celesTauler2 = celesTauler;
 
     console.table(celesTauler2);
 
