@@ -48,10 +48,12 @@ window.onload = function() {
 
 function play() {
     jocdelavida = setInterval(setCanvisTauler, velocitat);
+    tempsdejoc = setInterval(setTemps, 1000);
 };
 
 function pause() {
     clearInterval(jocdelavida);
+    clearInterval(tempsdejoc);
 };
 
 function setCanvisTauler() {
@@ -132,7 +134,6 @@ function setCanvisTauler() {
         setPintaTauler();
         setComptarCelesVives();
     }
-    setTemps();
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
