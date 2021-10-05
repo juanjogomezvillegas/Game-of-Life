@@ -1,6 +1,6 @@
 <?php
-    $amplada = $_POST["amplada"];
-    $alsada = $_POST["alsada"];
+    $amplada = trim($_POST["amplada"]);
+    $alsada = trim($_POST["alsada"]);
 
     $tauler = $_POST["tauler"];
 ?>

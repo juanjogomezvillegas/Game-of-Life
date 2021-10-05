@@ -1,0 +1,47 @@
+<?php
+$fitxa = json_decode($_COOKIE["fitxa"], true);
+
+$alsada = trim($fitxa["alsada"]);
+$amplada = trim($fitxa["amplada"]);
+
+?>
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Joc de la Vida</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="script/formInicial.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="titol">El Joc de la Vida</h1>
+    </header>
+    <div class="containerIndex">
+        <form id="formulariInicial" method="POST">
+            <?php if (isset($alsada) && isset($amplada)) { ?>
+                <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="" id="inputAlsada" class="text">
+                <br>
+                <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="" id="inputAmplada" class="text">
+            <?php } else { ?>
+                <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">
+                <br>
+                <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada"s class="text">
+            <?php } ?>
+            <br>
+            <input type="submit" name="seguent" value="Següent" id="botoSeguent" class="boto">
+        </form>
+    </div>
+    <footer>
+        <div>
+            <a href="info.html">Informació i Autors</a>
+        </div>
+        <div>
+            <p>Juan José Gómez Villegas</p>
+            <p>DAW2</p>
+        </div>
+    </footer>
+</body>
+</html>

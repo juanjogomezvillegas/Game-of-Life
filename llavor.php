@@ -1,6 +1,11 @@
 <?php
-    $amplada = $_POST["amplada"];
-    $alsada = $_POST["alsada"];
+    $amplada = trim($_POST["amplada"]);
+    $alsada = trim($_POST["alsada"]);
+
+    $fitxa["alsada"] = $alsada;
+    $fitxa["amplada"] = $amplada;
+
+    setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
 ?>
 
 <!DOCTYPE html>
