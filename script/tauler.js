@@ -113,6 +113,7 @@ function setCanvisTauler() {
                 }
             } catch (error) {}
 
+            console.log(comptadorVeins, i, j);
             if (celesTauler2[i][j].innerHTML == "1") {
                 if (comptadorVeins < 2 && comptadorVeins > 3) {
                     celesTauler[i][j].innerHTML = "0";
@@ -126,7 +127,6 @@ function setCanvisTauler() {
                     celesTauler[i][j].innerHTML = "0";
                 }
             }
-            celesTauler[i][j].innerHTML = "0";
             comptadorVeins = 0;
         }
     }
