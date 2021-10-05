@@ -7,6 +7,8 @@ var llavorUrl;
 window.onload = function() {
     form = document.getElementById("formulariInicial");
 
+    console.log(form);
+
     document.getElementById("botoSeguent").addEventListener("click", validarFormulari);
 };
 
