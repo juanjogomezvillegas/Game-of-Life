@@ -72,7 +72,7 @@ function setCanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler2.length; i++) {
         for (var j = 0; j < celesTauler2[i].length; j++) {
-            if (i == 0 && j == 0) {
+            /*if (i == 0 && j == 0) {
                 if (celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i+1][j+1].innerHTML == "1") {
                     comptadorVeins++;
                 }
@@ -114,7 +114,47 @@ function setCanvisTauler() {
                 celesTauler2[i-1][j+1].innerHTML == "1" || celesTauler2[i+1][j-1].innerHTML == "1") {
                     comptadorVeins++;
                 }
-            }
+            }*/
+            try {
+                if (celesTauler2[i][j-1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i][j+1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i-1][j].innerHTML == "1") {
+                    comptadorVeins++
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i+1][j].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i-1][j-1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i+1][j+1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i-1][j+1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
+            try {
+                if (celesTauler2[i+1][j-1].innerHTML == "1") {
+                    comptadorVeins++;
+                }
+            } catch (error) {}
 
             if (celesTauler2[i][j].innerHTML == "1") {
                 if (comptadorVeins <= 1) {
