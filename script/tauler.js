@@ -65,7 +65,7 @@ function setCanvisTauler() {
     }
     for (var i = 0; i < celesTauler.length; i++) {
         for (var j = 0; j < celesTauler[i].length; j++) {
-            celesTauler2[i][j] = Object.assign({}, celesTauler[i][j]);
+            celesTauler2[i][j] = celesTauler[i][j].cloneNode(true);
         }
     }
 
