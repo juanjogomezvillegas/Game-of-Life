@@ -70,6 +70,8 @@ function setCanvisTauler() {
     }*/
     var celesTauler2 = celesTauler;
 
+    console.table(celesTauler2);
+
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler2.length; i++) {
         for (var j = 0; j < celesTauler2[i].length; j++) {
