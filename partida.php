@@ -43,7 +43,7 @@
             <div id="inputs">
                 <input type="button" name="play" value="Play" class="boto" id="bPlay">
                 <input type="button" name="pause" value="Pause" class="boto" id="bPause">
-                <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="500" max="10000" default="2000" id="inputvelocitat"></label>
+                <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="500" max="3000" default="1000" id="inputvelocitat"></label>
             </div>
         </form>
     </div>
