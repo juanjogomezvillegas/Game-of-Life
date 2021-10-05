@@ -126,6 +126,7 @@ function setCanvisTauler() {
                     celesTauler[i][j].innerHTML = "0";
                 }
             }
+            celesTauler[i][j].innerHTML = "0";
             comptadorVeins = 0;
         }
     }
