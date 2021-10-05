@@ -157,11 +157,9 @@ function setCanvisTauler() {
             } catch (error) {}
 
             if (celesTauler2[i][j].innerHTML == "1") {
-                if (comptadorVeins <= 1) {
+                if (comptadorVeins < 2 && comptadorVeins > 3) {
                     celesTauler[i][j].innerHTML = "0";
-                } else if (comptadorVeins >= 4) {
-                    celesTauler[i][j].innerHTML = "0";
-                } else if (comptadorVeins >= 2 && comptadorVeins <= 3) {
+                } else if (comptadorVeins == 2 && comptadorVeins == 3) {
                     celesTauler[i][j].innerHTML = "1";
                 }
             } else {
