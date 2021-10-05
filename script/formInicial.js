@@ -7,8 +7,6 @@ var llavorUrl;
 window.onload = function() {
     form = document.getElementById("formulariInicial");
 
-    console.log(form);
-
     document.getElementById("botoSeguent").addEventListener("click", validarFormulari);
 };
 
@@ -16,6 +14,8 @@ function validarFormulari() {
     alsada = document.getElementById("inputAlsada");
     amplada = document.getElementById("inputAmplada");
 
+
+    console.log(form);
     if ((amplada == "" || amplada == " ") && (alsada == "" || alsada == " ")) {
         form.setAttribute("action", "index.html");
     } else {
