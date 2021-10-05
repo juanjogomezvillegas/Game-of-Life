@@ -7,10 +7,18 @@ var celesTauler;
 var generacio;
 var numGeneracio;
 var velocitat;
+var hores;
+var minuts;
+var segons;
 
 window.onload = function() {
     alsada = document.getElementById("alsadaTauler").value
     amplada = document.getElementById("ampladaTauler").value;
+
+    hores = 0;
+    minuts = 0;
+    segons = 0;
+    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
 
     generacio = document.getElementById("generacio");
     numGeneracio = 0;
@@ -124,6 +132,7 @@ function setCanvisTauler() {
         setPintaTauler();
         setComptarCelesVives();
     }
+    setTemps();
     numGeneracio++;
     generacio.innerHTML = "Generació: "+numGeneracio;
 };
@@ -138,6 +147,19 @@ function setPintaTauler() {
             }
         }
     }
+};
+
+function setTemps() {
+    segons++;
+    if (segons == 59) {
+        segons = 0;
+        minuts++;
+        if (minuts == 59) {
+            minuts = 0;
+            hores++;
+        }
+    }
+    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
 };
 
 function setComptarCelesVives() {

@@ -21,6 +21,7 @@
     <div class="containerPartida">
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
+                <p id="temps"></p>
                 <p id="generacio"></p>
                 <p id="celesVives"></p>
                 <p id="celesMortes"></p>
