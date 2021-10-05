@@ -19,7 +19,7 @@
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="containerPartida">
-        <form name="formulariPartida" action="" method="POST">
+        <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
                 <p id="generacio"></p>
                 <p id="celesVives"></p>

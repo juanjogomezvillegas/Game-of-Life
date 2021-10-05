@@ -17,7 +17,7 @@
     </header>
     <div class="containerLlavor">
         <h2>Selecciona les Caselles Vives</h2>
-        <form name="formulariLlavor" action="partida.php" method="POST">
+        <form id="formulariLlavor" action="partida.php" method="POST">
             <input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="ocult">
             <input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="ocult">
             <table id="tauler">

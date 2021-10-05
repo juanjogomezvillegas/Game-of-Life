@@ -1,14 +1,11 @@
+var form;
 var amplada;
 var alsada;
 var indexUrl;
 var llavorUrl;
 
 window.onload = function() {
-    indexUrl = window.location.href;
-
-    llavorUrl = indexUrl.replace("index.html", "llavor.php");
-
-    console.log(llavorUrl);
+    form = document.getElementById("formulariInicial");
 
     document.getElementById("botoSeguent").addEventListener("click", validarFormulari);
 };
@@ -18,8 +15,8 @@ function validarFormulari() {
     amplada = document.getElementById("inputAmplada");
 
     if ((amplada == "" || amplada == " ") && (alsada == "" || alsada == " ")) {
-        window.location.replace(indexUrl);
+        form.setAttribute("action", "index.html");
     } else {
-        window.location.replace(llavorUrl);
+        form.setAttribute("action", "llavor.php");
     }
 };
