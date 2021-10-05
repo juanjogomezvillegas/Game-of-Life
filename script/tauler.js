@@ -122,6 +122,8 @@ function setCanvisTauler() {
             } else {
                 if (comptadorVeins == 3) {
                     celesTauler[i][j].innerHTML = "1";
+                } else {
+                    celesTauler[i][j].innerHTML = "0";
                 }
             }
             comptadorVeins = 0;
