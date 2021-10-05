@@ -72,49 +72,6 @@ function setCanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler2.length; i++) {
         for (var j = 0; j < celesTauler2[i].length; j++) {
-            /*if (i == 0 && j == 0) {
-                if (celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i+1][j+1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if (i == 0 && j == celesTauler2[i].length-1) {
-                if (celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j-1].innerHTML == "1" || celesTauler2[i+1][j-1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if (i == celesTauler2.length-1 && j == 0) {
-                if (celesTauler2[i-1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i-1][j+1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if (i == celesTauler2.length-1 && j == celesTauler2[i].length-1) {
-                if (celesTauler2[i-1][j].innerHTML == "1" || celesTauler2[i][j-1].innerHTML == "1" || celesTauler2[i-1][j-1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if ((i > 0 && i < celesTauler2.length-1) && j == 0) {
-                if (celesTauler2[i-1][j].innerHTML == "1" || celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || 
-                celesTauler2[i-1][j+1].innerHTML == "1" || celesTauler2[i+1][j+1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if ((i > 0 && i < celesTauler2.length-1) && j == celesTauler2[i].length-1) {
-                if (celesTauler2[i-1][j].innerHTML == "1" || celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j-1].innerHTML == "1" || 
-                celesTauler2[i-1][j-1].innerHTML == "1" || celesTauler2[i+1][j-1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if (i == 0 && (j > 0 && j < celesTauler2[i].length-1)) {
-                if (celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i][j-1].innerHTML == "1" || 
-                celesTauler2[i+1][j-1].innerHTML == "1" || celesTauler2[i+1][j+1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else if (i == celesTauler2.length-1 && (j > 0 && j < celesTauler2[i].length-1)) {
-                if (celesTauler2[i-1][j].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i][j-1].innerHTML == "1" || 
-                celesTauler2[i-1][j-1].innerHTML == "1" || celesTauler2[i-1][j+1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            } else {
-                if (celesTauler2[i][j-1].innerHTML == "1" || celesTauler2[i][j+1].innerHTML == "1" || celesTauler2[i-1][j].innerHTML == "1" || 
-                celesTauler2[i+1][j].innerHTML == "1" || celesTauler2[i-1][j-1].innerHTML == "1" || celesTauler2[i+1][j+1].innerHTML == "1" || 
-                celesTauler2[i-1][j+1].innerHTML == "1" || celesTauler2[i+1][j-1].innerHTML == "1") {
-                    comptadorVeins++;
-                }
-            }*/
             try {
                 if (celesTauler2[i][j-1].innerHTML == "1") {
                     comptadorVeins++;
@@ -156,7 +113,15 @@ function setCanvisTauler() {
                 }
             } catch (error) {}
 
-            if (celesTauler2[i][j].innerHTML == "1") {
+            
+            if (comptadorVeins < 2 && comptadorVeins > 3) {
+                celesTauler[i][j].innerHTML = "0";
+            } else if (comptadorVeins == 2 && comptadorVeins == 3) {
+                celesTauler[i][j].innerHTML = "1";
+            } else if (comptadorVeins == 3) {
+                celesTauler[i][j].innerHTML = "1";
+            }
+            /*if (celesTauler2[i][j].innerHTML == "1") {
                 if (comptadorVeins < 2 && comptadorVeins > 3) {
                     celesTauler[i][j].innerHTML = "0";
                 } else if (comptadorVeins == 2 && comptadorVeins == 3) {
@@ -166,7 +131,7 @@ function setCanvisTauler() {
                 if (comptadorVeins == 3) {
                     celesTauler[i][j].innerHTML = "1";
                 }
-            }
+            }*/
             comptadorVeins = 0;
         }
     }
