@@ -4,9 +4,9 @@ var tauler;
 var files;
 var celes;
 var celesTauler;
+var velocitat;
 var generacio;
 var numGeneracio;
-var velocitat;
 var hores;
 var minuts;
 var segons;
@@ -142,19 +142,6 @@ function setPintaTauler() {
     }
 };
 
-function setTemps() {
-    segons++;
-    if (segons == 59) {
-        segons = 0;
-        minuts++;
-        if (minuts == 59) {
-            minuts = 0;
-            hores++;
-        }
-    }
-    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
-};
-
 function setComptarCelesVives() {
     document.getElementById("celesVives").innerHTML = "Cel·les Vives: "+getCelesVives();
     document.getElementById("celesMortes").innerHTML = "Cel·les Mortes: "+getCelesMortes();
@@ -187,4 +174,17 @@ function getCelesMortes() {
 function setSelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
     document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
+};
+
+function setTemps() {
+    segons++;
+    if (segons == 59) {
+        segons = 0;
+        minuts++;
+        if (minuts == 59) {
+            minuts = 0;
+            hores++;
+        }
+    }
+    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
 };
