@@ -198,12 +198,12 @@ div.containerIndex > form > input.boto:hover {
     color: #003200;
     transition: background-color 1s, color 1s;
 }
-div#errorRequired {
+div.error {
     padding: 10px;
     background-color: #970808;
     color: #ffffff;
 }
-div#errorRequired > p {
+div.error > p {
     text-align: center;
 }
 

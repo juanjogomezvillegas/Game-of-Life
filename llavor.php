@@ -6,13 +6,18 @@
 
     if (isset($amplada) && isset($alsada)) {
         if (($amplada == "" || $amplada == " ") || ($alsada == "" || $alsada == " ")) {
-            header("Location: index.php?error=1");
+            header("Location: index.php?errorRequired=1");
             die();
         } else {
-            $fitxa["alsada"] = $alsada;
-            $fitxa["amplada"] = $amplada;
+            if (($amplada >= 3 && $amplada <= 20) && ($alsada >= 3 && $alsada <= 20)) {
+                $fitxa["alsada"] = $alsada;
+                $fitxa["amplada"] = $amplada;
 
-            setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+                setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+            } else {
+                header("Location: index.php?errorValue=1");
+                die();
+            }
         }
     }
 
@@ -30,13 +35,6 @@
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
 
 ?>
-<script language="javascript">
-    var width = screen.width;
-    var height = screen.height;
-
-    <?=$width?> = width;
-    <?=$height?> = height;
-</script>
 
 <?php echo "$width - $height"?>
 

@@ -15,7 +15,8 @@
     }
     setcookie("visitesPortada", $visitesPortada, strtotime("+1 month"));
 
-    $errorRequired = $_GET["error"];
+    $errorRequired = $_GET["errorRequired"];
+    $errorValue = $_GET["errorValue"];
 
 ?>
 
@@ -33,8 +34,12 @@
     </header>
     <div class="containerIndex">
         <?php if (isset($errorRequired)) { ?>
-            <div id="errorRequired">
-                <p>Error! Els Camps "Alçada" i "Amplada" són obligatoris</p>
+            <div class="error">
+                <p>Error!!! Els Camps Alçada i Amplada són obligatoris.</p>
+            </div>
+        <?php } else if (isset($errorValue)) { ?>
+            <div class="error">
+                <p>Error!!! L'Alçada i L'Amplada han d'estar entre 3 i 20.</p>
             </div>
         <?php } ?>
         <form id="formulariInicial" action="llavor.php" method="POST">
