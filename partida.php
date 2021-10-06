@@ -35,6 +35,8 @@
                 <p id="celesVives"></p>
                 <p id="celesMortes"></p>
                 <p id="velocitat"></p>
+                <p id="comptadorPlay"></p>
+                <p id="comptadorPausa"></p>
             </div>
             <table id="tauler">
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>

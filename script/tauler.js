@@ -18,7 +18,7 @@ window.onload = function() {
     hores = 0;
     minuts = 0;
     segons = 0;
-    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
+    document.getElementById("temps").innerHTML = "Temps: "+hores+" : "+minuts+" : "+segons;
 
     generacio = document.getElementById("generacio");
     numGeneracio = 0;
@@ -54,6 +54,10 @@ function play() {
 function pause() {
     clearInterval(jocdelavida);
     clearInterval(tempsdejoc);
+
+    var sortir = confirm("Vols Sortir de la Partida? ");
+
+    console.log(sortir);
 };
 
 function setCanvisTauler() {
@@ -186,5 +190,5 @@ function setTemps() {
             hores++;
         }
     }
-    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
+    document.getElementById("temps").innerHTML = "Temps: "+hores+" : "+minuts+" : "+segons;
 };
