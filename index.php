@@ -54,6 +54,7 @@
     <footer>
         <div>
             <a href="info.php">Informació i Autors</a>
+            <a href="partidesDesades.php">Partides Desades</a>
         </div>
         <div>
             <p>Juan José Gómez Villegas</p>
