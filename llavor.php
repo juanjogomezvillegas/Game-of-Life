@@ -50,9 +50,9 @@
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
                             <?php if (isset($celesVives[$i][$j])) { ?>
-                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value="<?=$celesVives[$i][$j]?>"></td>
+                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" checked></td>
                             <?php } else { ?>
-                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value=""></td>
+                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]"></td>
                             <?php } ?>
                         <?php } ?>
                     </tr>
