@@ -5,10 +5,15 @@
     $alsada = trim($_POST["alsada"]);
 
     if (isset($amplada) && isset($alsada)) {
-        $fitxa["alsada"] = $alsada;
-        $fitxa["amplada"] = $amplada;
+        if (($amplada == "" || $amplada == " ") && ($alsada == "" || $alsada == " ")) {
+            header("Location: index.php?error=1");
+            die();
+        } else {
+            $fitxa["alsada"] = $alsada;
+            $fitxa["amplada"] = $amplada;
 
-        setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+            setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+        }
     }
 
     $celesVives = array();
