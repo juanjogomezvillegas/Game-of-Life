@@ -1,16 +1,19 @@
 <?php
-$cookieDefinida = false;
-if (isset($_COOKIE["fitxa"])) {
-    $cookieDefinida = true;
-}
+    $fitxa = array();
+    if (isset($_COOKIE["fitxa"])) {
+        $fitxa = json_decode($_COOKIE["fitxa"], true);
+    }
 
-$fitxa = array();
-if ($cookieDefinida) {
-    $fitxa = json_decode($_COOKIE["fitxa"], true);
-}
+    $alsada = trim($fitxa["alsada"]);
+    $amplada = trim($fitxa["amplada"]);
 
-$alsada = trim($fitxa["alsada"]);
-$amplada = trim($fitxa["amplada"]);
+    $visitesPortada = $_COOKIE["visitesPortada"];
+    if (isset($visitesPortada)) {
+        $visitesPortada = (int) $visitesPortada + 1;
+    } else {
+        $visitesPortada = 1;
+    }
+    setcookie("visitesPortada", $visitesPortada, strtotime("+1 month"));
 
 ?>
 

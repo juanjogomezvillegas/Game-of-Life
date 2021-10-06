@@ -1,3 +1,14 @@
+<?php
+    $visitesInfo = $_COOKIE["visitesInfo"];
+    if (isset($visitesInfo)) {
+        $visitesInfo = (int) $visitesInfo + 1;
+    } else {
+        $visitesInfo = 1;
+    }
+    setcookie("visitesInfo", $visitesInfo, strtotime("+1 month"));
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

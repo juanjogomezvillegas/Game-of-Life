@@ -3,6 +3,15 @@
     $alsada = trim($_POST["alsada"]);
 
     $tauler = $_POST["tauler"];
+
+    $visitesPartida = $_COOKIE["visitesPartida"];
+    if (isset($visitesPartida)) {
+        $visitesPartida = (int) $visitesPartida + 1;
+    } else {
+        $visitesPartida = 1;
+    }
+    setcookie("visitesPartida", $visitesPartida, strtotime("+1 month"));
+
 ?>
 
 <!DOCTYPE html>

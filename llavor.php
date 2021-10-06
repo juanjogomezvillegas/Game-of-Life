@@ -4,12 +4,21 @@
     $amplada = trim($_POST["amplada"]);
     $alsada = trim($_POST["alsada"]);
 
-    if ($amplada != "" && $alsada != "") {
+    if (isset($amplada) && isset($alsada)) {
         $fitxa["alsada"] = $alsada;
         $fitxa["amplada"] = $amplada;
+
+        setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
     }
 
-    setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
+    $visitesLlavor = $_COOKIE["visitesLlavor"];
+    if (isset($visitesLlavor)) {
+        $visitesLlavor = (int) $visitesLlavor + 1;
+    } else {
+        $visitesLlavor = 1;
+    }
+    setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
+
 ?>
 
 <!DOCTYPE html>
