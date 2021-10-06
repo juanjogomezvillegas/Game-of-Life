@@ -17,6 +17,7 @@
 
     $errorRequired = $_GET["errorRequired"];
     $errorValue = $_GET["errorValue"];
+    $errorMultiple = $_GET["errorMultiple"];
 
 ?>
 
@@ -40,6 +41,10 @@
         <?php } else if (isset($errorValue)) { ?>
             <div class="error">
                 <p>Error!!! L'Alçada i L'Amplada han d'estar entre 3 i 20.</p>
+            </div>
+        <?php } else if (isset($errorMultiple)) { ?>
+            <div class="error">
+                <p>Error!!! Els Camps Alçada i Amplada són obligatoris i han d'estar entre 3 i 20.</p>
             </div>
         <?php } ?>
         <form id="formulariInicial" action="llavor.php" method="POST">

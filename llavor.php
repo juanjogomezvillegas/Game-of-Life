@@ -9,14 +9,19 @@
             header("Location: index.php?errorRequired=1");
             die();
         } else {
-            if (($amplada >= 3 && $amplada <= 20) && ($alsada >= 3 && $alsada <= 20)) {
-                $fitxa["alsada"] = $alsada;
-                $fitxa["amplada"] = $amplada;
-
-                setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
-            } else {
+            if (($amplada < 3 && $amplada > 20) && ($alsada < 3 && $alsada > 20)) {
                 header("Location: index.php?errorValue=1");
                 die();
+            } else {
+                if ((($amplada < 3 && $amplada > 20) || ($amplada == "" || $alsada == " ")) || (($alsada < 3 && $alsada > 20) || ($alsada == "" || $alsada == " "))) {
+                    header("Location: index.php?errorMultiple=1");
+                    die();
+                } else {
+                    $fitxa["alsada"] = $alsada;
+                    $fitxa["amplada"] = $amplada;
+
+                    setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+                }
             }
         }
     }
