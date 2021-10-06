@@ -36,8 +36,6 @@
 
 ?>
 
-<?php echo "$width - $height"?>
-
 <!DOCTYPE html>
 <html lang="ca">
 <head>
