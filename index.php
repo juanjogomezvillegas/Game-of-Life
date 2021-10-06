@@ -1,8 +1,8 @@
 <?php
-/*$fitxa = json_decode($_COOKIE["fitxa"], true);
+$fitxa = json_decode($_COOKIE["fitxa"], true);
 
 $alsada = trim($fitxa["alsada"]);
-$amplada = trim($fitxa["amplada"]);*/
+$amplada = trim($fitxa["amplada"]);
 
 ?>
 
@@ -21,9 +21,9 @@ $amplada = trim($fitxa["amplada"]);*/
     </header>
     <div class="containerIndex">
         <form id="formulariInicial" method="POST">
-            <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="" id="inputAlsada" class="text">
+            <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">
             <br>
-            <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="" id="inputAmplada" class="text">
+            <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="text">
             <br>
             <input type="submit" name="seguent" value="Següent" id="botoSeguent" class="boto">
         </form>

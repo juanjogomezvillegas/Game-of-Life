@@ -9,8 +9,7 @@
         $fitxa["amplada"] = $amplada;
     }
 
-    print_r($fitxa);
-    //setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
+    setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
 ?>
 
 <!DOCTYPE html>
