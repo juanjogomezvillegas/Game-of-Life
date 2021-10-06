@@ -201,7 +201,7 @@ div.containerIndex > form > input.boto:hover {
 div.error {
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 8px 8px;
+    box-shadow: 1px 1px 3px 3px;
     background-color: #970808;
     color: #ffffff;
 }
