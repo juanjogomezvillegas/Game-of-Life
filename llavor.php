@@ -82,7 +82,7 @@
         </form>
         <div>
             <?php foreach ($taulers as $x => $celesVives) { ?>
-                <a href="llavor.php?escollit=<?=$x?>">Partida <?=$i?></a>
+                <a href="llavor.php?escollit=<?=$x?>">Partida <?=$i?></a><br>
             <?php } ?>
         </div>
     </div>
