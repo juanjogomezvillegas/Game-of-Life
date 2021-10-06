@@ -1,6 +1,24 @@
 <?php
-    $amplada = $_POST["amplada"];
-    $alsada = $_POST["alsada"];
+    $fitxa = array();
+
+    $amplada = trim($_POST["amplada"]);
+    $alsada = trim($_POST["alsada"]);
+
+    if (isset($amplada) && isset($alsada)) {
+        $fitxa["alsada"] = $alsada;
+        $fitxa["amplada"] = $amplada;
+
+        setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+    }
+
+    $visitesLlavor = $_COOKIE["visitesLlavor"];
+    if (isset($visitesLlavor)) {
+        $visitesLlavor = (int) $visitesLlavor + 1;
+    } else {
+        $visitesLlavor = 1;
+    }
+    setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +35,7 @@
     </header>
     <div class="containerLlavor">
         <h2>Selecciona les Caselles Vives</h2>
-        <form name="formulariLlavor" action="partida.php" method="POST">
+        <form id="formulariLlavor" action="partida.php" method="POST">
             <input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="ocult">
             <input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="ocult">
             <table id="tauler">

@@ -4,9 +4,90 @@
     50% {background-color: #790647; color: #790647;}
     100% {background-color: #970808; color: #970808;}
 }
+
 /*
 Estils del Joc
 */
+/* DESKTOP */
+@media screen and (min-width: 1001px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #1C1D20;
+        color: #ffffff;
+        box-shadow: 5px 5px 10px 10px #000000;
+    }
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    footer > div > p {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+    }
+    footer > div > a {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 1s;
+    }
+    footer > div > a:hover {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        text-decoration: none;
+        color: #EBC302;
+        transition: color 1s;
+    }
+}
+/* MOBILE */
+@media screen and (max-width: 1000px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #1C1D20;
+        color: #ffffff;
+        box-shadow: 5px 5px 10px 10px #000000;
+    }
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    footer > div > p {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+    footer > div > a {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 1s;
+    }
+    footer > div > a:hover {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        text-decoration: none;
+        color: #EBC302;
+        transition: color 1s;
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -30,34 +111,13 @@ h2 {
     text-align: center;
     color: #EBC302;
 }
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #1C1D20;
-    color: #ffffff;
-    box-shadow: 5px 5px 10px 10px #000000;
-}
-footer > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-footer > div > p {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-}
 .ocult {
     display: none;
 }
 .viva {
     background-color: #067806;
     color: #067806;
-    animation: keyTauler 10s infinite;
+    animation: keyTauler 1s;
 }
 .morta {
     background-color: #1C1D20;
@@ -67,12 +127,46 @@ footer > div > p {
 /*
 Estils de la Portada
 */
-div.containerIndex {
-    margin-left: 100px;
-    margin-right: 100px;
-    background-color: #071A47;
-    border-radius: 20px;
-    box-shadow: 5px 5px 8px 8px;
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    div.containerIndex {
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: #071A47;
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+}
+/* SMARTPHONE AND TABS */
+@media screen and (min-width: 1001px) and (max-width: 1023px) {
+    div.containerIndex {
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #071A47;
+        border-radius: 15px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+}
+/* MOBILE */
+@media screen and (max-width: 1000px) {
+    div.containerIndex {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #071A47;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+}
+div.containerIndex > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    color: #EBC302;
+}
+div.containerIndex > p > span {
+    padding-right: 10px;
+    font-weight: bold;
 }
 div.containerIndex > form {
     display: flex;
@@ -97,17 +191,84 @@ div.containerIndex > form > input.boto {
     border-radius: 10px;
     background-color: #1240AB;
     color: #FFD300;
+    transition: background-color 1s, color 1s;
+}
+div.containerIndex > form > input.boto:hover {
+    background-color: #018D8D;
+    color: #003200;
+    transition: background-color 1s, color 1s;
 }
 
 /*
 Estils de la Llavor
 */
-div.containerLlavor {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #071A47;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px 8px;
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    div.containerLlavor {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #071A47;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        margin-right: 100px;
+        padding: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+}
+/* SMARTPHONE AND TABS */
+@media screen and (min-width: 851px) and (max-width: 1023px) {
+    div.containerLlavor {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #071A47;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        margin-right: 75px;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+}
+/* MOBILE */
+@media screen and (max-width: 850px) {
+    div.containerLlavor {
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #071A47;
+        border-radius: 5px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerLlavor > form > input.boto {
+        display: flex;
+        align-self: center;
+        margin-top: 50px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
 }
 div.containerLlavor > form {
     display: flex;
@@ -116,37 +277,120 @@ div.containerLlavor > form {
     margin-bottom: 30px;
 }
 div.containerLlavor > form > table#tauler {
-    margin: 5px;
-    padding: 5px;
-    width: 100%;
-    height: 100%;
+    width: 50%;
 }
-div.containerLlavor > form > input.boto {
-    display: flex;
-    align-self: flex-end;
-    margin-top: 50px;
-    margin-right: 100px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 10px;
-    background-color: #1240AB;
-    color: #FFD300;
+div.containerLlavor > form > input.boto:hover {
+    background-color: #018D8D;
+    color: #003200;
+    transition: background-color 1s, color 1s;
 }
 .celesLlavor {
     text-align: center;
-    border: 1px solid black;
 }
 
 /*
 Estils de la Partida
 */
-div.containerPartida {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #071A47;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px 8px;
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    div.containerPartida {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #071A47;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: #FFD300;
+    }
+}
+/* SMARTPHONE AND TABS */
+@media screen and (min-width: 851px) and (max-width: 1023px) {
+    div.containerPartida {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #071A47;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 20px;
+        color: #FFD300;
+    }
+}
+/* MOBILE */
+@media screen and (max-width: 850px) {
+    div.containerPartida {
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #071A47;
+        border-radius: 5px;
+        box-shadow: 5px 5px 8px 8px;
+    }
+    div.containerPartida > form > div#inputs {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 20px;
+    }
+    div.containerPartida > form > div#inputs > input.boto {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        background-color: #1240AB;
+        color: #FFD300;
+        transition: background-color 1s, color 1s;
+    }
+    div.containerPartida > form > div#inputs > label {
+        margin-top: 20px;
+        margin-left: 10px;
+        color: #FFD300;
+    }
 }
 div.containerPartida > form {
     display: flex;
@@ -162,37 +406,13 @@ div.containerPartida > form > div#estadistiques {
     color: #FFD300;
 }
 div.containerPartida > form > table#tauler {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    width: 50%;
 }
-div.containerPartida > form > div#inputs {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    padding: 20px;
-}
-div.containerPartida > form > div#inputs > input.boto {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 10px;
-    background-color: #1240AB;
-    color: #FFD300;
-}
-div.containerPartida > form > div#inputs > label {
-    margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    color: #FFD300;
+div.containerPartida > form > div#inputs > input.boto:hover {
+    background-color: #018D8D;
+    color: #003200;
+    transition: background-color 1s, color 1s;
 }
 .celesPartida {
-    padding: 1%;
     text-align: center;
-    border: 1px solid black;
 }
