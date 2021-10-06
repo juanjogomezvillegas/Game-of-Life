@@ -435,14 +435,12 @@ div.containerPartida > form > div#estadistiques {
 div.containerPartida > form > table#tauler {
     width: 50%;
 }
-div.containerPartida > form > table#tauler > tr > td {
-    border-radius: 20px;
-}
 div.containerPartida > form > div#inputs > input.boto:hover {
     background-color: #018D8D;
     color: #003200;
     transition: background-color 1s, color 1s;
 }
 .celesPartida {
+    border-radius: 20px;
     text-align: center;
 }
