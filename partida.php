@@ -37,7 +37,7 @@
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
                 <?php if ($nomPartida =! "" || $nomPartida != " ") { ?>
-                    <p id="nomPartida"></p>
+                    <p id="nomPartida">Nom de la Partida: <?=$nomPartida?></p>
                 <?php } ?>
                 <p id="temps"></p>
                 <p id="generacio"></p>
@@ -67,7 +67,6 @@
             </div>
         </form>
     </div>
-    <p id="nomPartidaTauler" class="ocult"><?=$nomPartida?></p>
     <p id="ampladaTauler" class="ocult"><?=$amplada?></p>
     <p id="alsadaTauler" class="ocult"><?=$alsada?></p>
 </body>

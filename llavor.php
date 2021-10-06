@@ -28,7 +28,6 @@
         }
     }
 
-    print_r($fitxa);
     $celesVives = array();
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
