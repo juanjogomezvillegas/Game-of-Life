@@ -55,9 +55,7 @@ function pause() {
     clearInterval(jocdelavida);
     clearInterval(tempsdejoc);
 
-    var sortir = confirm("Vols Sortir de la Partida? ");
-
-    console.log(sortir);
+    setSortirPartida();
 };
 
 function setCanvisTauler() {
@@ -191,4 +189,12 @@ function setTemps() {
         }
     }
     document.getElementById("temps").innerHTML = "Temps: "+hores+" : "+minuts+" : "+segons;
+};
+
+function setSortirPartida() {
+    var sortir = confirm("Vols Sortir de la Partida? ");
+
+    if (sortir) {
+        history.back();
+    }
 };
