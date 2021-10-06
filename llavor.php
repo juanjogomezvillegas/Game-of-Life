@@ -30,6 +30,15 @@
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
 
 ?>
+<script language="javascript">
+    var width = screen.width;
+    var height = screen.height;
+
+    <?=$width?> = width;
+    <?=$height?> = height;
+</script>
+
+<?=$width." ".$height?>
 
 <!DOCTYPE html>
 <html lang="ca">

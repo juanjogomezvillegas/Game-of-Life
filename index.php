@@ -18,13 +18,6 @@
     $errorRequired = $_GET["error"];
 
 ?>
-<script language="javascript">
-    var width = screen.width;
-    var height = screen.height;
-
-    alert(width);
-    alert(height);
-</script>
 
 <!DOCTYPE html>
 <html lang="ca">
