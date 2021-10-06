@@ -38,7 +38,7 @@
     <?=$height?> = height;
 </script>
 
-<?=$width." ".$height?>
+<?php echo "$width - $height"?>
 
 <!DOCTYPE html>
 <html lang="ca">
