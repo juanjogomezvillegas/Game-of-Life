@@ -1,9 +1,7 @@
 var alsada;
 var amplada;
-var tauler;
-var files;
-var celes;
 var celesTauler;
+
 var generacio;
 var numGeneracio;
 var velocitat;
@@ -26,12 +24,13 @@ window.onload = function() {
 
     setSelectorVelocitat();
 
-    tauler = document.getElementById("tauler");
+    var tauler = document.getElementById("tauler");
 
-    files = tauler.getElementsByTagName("tr");
+    var files = tauler.getElementsByTagName("tr");
 
     celesTauler = new Array(files.length);
 
+    var celes;
     for (var i = 0; i < files.length; i++) {
         celes = files[i].getElementsByTagName("td");
         celesTauler[i] = celes;
@@ -72,7 +71,7 @@ function setCanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler2.length; i++) {
         for (var j = 0; j < celesTauler2[i].length; j++) {
-            try {
+            /*try {
                 if (celesTauler2[i][j-1].innerHTML == "1") {
                     comptadorVeins++;
                 }
@@ -111,23 +110,73 @@ function setCanvisTauler() {
                 if (celesTauler2[i+1][j-1].innerHTML == "1") {
                     comptadorVeins++;
                 }
-            } catch (error) {}
+            } catch (error) {}*/
+            comptadorVeins = getComptarVeins(celesTauler2. i, j);
 
-            if ((comptadorVeins < 2 || comptadorVeins > 3) && celesTauler2[i][j].innerHTML == "1") {
-                celesTauler[i][j].innerHTML = "0";
-            } else if (comptadorVeins == 3 && celesTauler2[i][j].innerHTML == "0") {
-                celesTauler[i][j].innerHTML = "1";
-            } else {
-                celesTauler[i][j].innerHTML;
-            }
+
+            setComprovarEstat(comptadorVeins, celesTauler[i][j], celesTauler2[i][j]);
 
             comptadorVeins = 0;
         }
     }
     setPintaTauler();
     setComptarCelesVives();
-    numGeneracio++;
-    generacio.innerHTML = "Generació: "+numGeneracio;
+    setGeneracio();
+};
+
+function getComptarVeins(celesTauler2, i, j) {
+    var comptadorVeins = 0;
+    try {
+        if (celesTauler2[i][j-1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i][j+1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i-1][j].innerHTML == "1") {
+            comptadorVeins++
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i+1][j].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i-1][j-1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i+1][j+1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i-1][j+1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    try {
+        if (celesTauler2[i+1][j-1].innerHTML == "1") {
+            comptadorVeins++;
+        }
+    } catch (error) {}
+    return comptadorVeins;
+}
+
+function setComprovarEstat(comptadorVeins, pCelesTauler, celesTauler2) {
+    if ((comptadorVeins < 2 || comptadorVeins > 3) && celesTauler2.innerHTML == "1") {
+        pCelesTauler.innerHTML = "0";
+    } else if (comptadorVeins == 3 && celesTauler2.innerHTML == "0") {
+        pCelesTauler.innerHTML = "1";
+    } else {
+        pCelesTauler.innerHTML;
+    }    
 };
 
 function setPintaTauler() {
@@ -140,19 +189,6 @@ function setPintaTauler() {
             }
         }
     }
-};
-
-function setTemps() {
-    segons++;
-    if (segons == 59) {
-        segons = 0;
-        minuts++;
-        if (minuts == 59) {
-            minuts = 0;
-            hores++;
-        }
-    }
-    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
 };
 
 function setComptarCelesVives() {
@@ -184,7 +220,25 @@ function getCelesMortes() {
     return celesMortes;
 };
 
+function setGeneracio() {
+    numGeneracio++;
+    generacio.innerHTML = "Generació: "+numGeneracio;
+}
+
 function setSelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
     document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
+};
+
+function setTemps() {
+    segons++;
+    if (segons == 59) {
+        segons = 0;
+        minuts++;
+        if (minuts == 59) {
+            minuts = 0;
+            hores++;
+        }
+    }
+    document.getElementById("temps").innerHTML = hores+" : "+minuts+" : "+segons;
 };
