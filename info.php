@@ -31,7 +31,7 @@
     </div>
     <footer>
         <div>
-            <a href="index.html">Portada del Joc</a>
+            <a href="index.php">Portada del Joc</a>
         </div>
         <div>
             <p>Juan José Gómez Villegas</p>

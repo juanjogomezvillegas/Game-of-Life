@@ -41,7 +41,7 @@
     </div>
     <footer>
         <div>
-            <a href="info.html">Informació i Autors</a>
+            <a href="info.php">Informació i Autors</a>
         </div>
         <div>
             <p>Juan José Gómez Villegas</p>
