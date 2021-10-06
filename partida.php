@@ -5,7 +5,7 @@
     $tauler = $_POST["tauler"];
 
     if (isset($tauler)) {
-        setcookie("tauler", json_encode($tauler), strtotime("+1 month"));
+        setcookie("tauler", json_encode($tauler), strtotime("+7 days"));
     }
 
     $visitesPartida = $_COOKIE["visitesPartida"];

@@ -21,9 +21,12 @@
         }
     }
 
+    $taulers = array();
     $celesVives = array();
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
+
+        $taulers[] = $celesVives;
     }
 
     $visitesLlavor = $_COOKIE["visitesLlavor"];
@@ -33,6 +36,15 @@
         $visitesLlavor = 1;
     }
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
+
+    $x = $_GET["escollit"];
+
+    $taulerEscollit = array();
+    foreach ($taulers as $y => $celesVives) {
+        if ($taulers[$x] == $taulers[$y]) {
+            $taulerEscollit = $taulers[$x];
+        }
+    }
 
 ?>
 
@@ -57,7 +69,7 @@
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <?php if (isset($celesVives[$i][$j])) { ?>
+                            <?php if (isset($taulerEscollit[$i][$j])) { ?>
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" checked></td>
                             <?php } else { ?>
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]"></td>
@@ -68,6 +80,11 @@
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
+        <div>
+            <?php foreach ($taulers as $x => $celesVives) { ?>
+                <a href="llavor.php?escollit=<?=$x?>">Partida <?=$i?></a>
+            <?php } ?>
+        </div>
     </div>
 </body>
 </html>
