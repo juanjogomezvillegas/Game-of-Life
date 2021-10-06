@@ -43,6 +43,11 @@
                 <p id="comptadorPlay"></p>
                 <p id="comptadorPausa"></p>
             </div>
+            <div id="inputs">
+                <input type="button" name="play" value="Play" class="boto" id="bPlay">
+                <input type="button" name="pause" value="Pause" class="boto" id="bPause">
+                <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="100" max="1000" default="500" id="inputvelocitat"></label>
+            </div>
             <table id="tauler">
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
@@ -56,11 +61,6 @@
                     </tr>
                 <?php } ?>
             </table>
-            <div id="inputs">
-                <input type="button" name="play" value="Play" class="boto" id="bPlay">
-                <input type="button" name="pause" value="Pause" class="boto" id="bPause">
-                <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="100" max="1000" default="500" id="inputvelocitat"></label>
-            </div>
         </form>
     </div>
     <p id="ampladaTauler" class="ocult"><?=$amplada?></p>
