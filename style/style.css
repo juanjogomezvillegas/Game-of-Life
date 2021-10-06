@@ -92,7 +92,7 @@ Estils del Joc
     margin: 0;
     padding: 0;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 15px;
 }
 html, body {
     display: flex;
@@ -441,6 +441,7 @@ div.containerPartida > form > div#inputs > input.boto:hover {
     transition: background-color 1s, color 1s;
 }
 .celesPartida {
-    border-radius: 100px;
+    border-radius: 100%;
+    font-size: 25px;
     text-align: center;
 }
