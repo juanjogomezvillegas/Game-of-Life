@@ -15,7 +15,7 @@
     }
     setcookie("visitesPortada", $visitesPortada, strtotime("+1 month"));
 
-    $error = $_POST["error"];
+    $error = $_GET["error"];
 
 ?>
 
@@ -36,7 +36,7 @@
         <form id="formulariInicial" method="POST">
             <?php if (isset($error)) { ?>
                 <div id="errorRequired">
-                    <p>Els Camps "Alçada" i "Amplada" són obligatoris</p>
+                    <p>Error! Els Camps "Alçada" i "Amplada" són obligatoris</p>
                 </div>
             <?php } ?>
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">

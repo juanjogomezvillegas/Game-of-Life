@@ -5,7 +5,7 @@
     $alsada = trim($_POST["alsada"]);
 
     if (isset($amplada) && isset($alsada)) {
-        if (($amplada == "" || $amplada == " ") && ($alsada == "" || $alsada == " ")) {
+        if (($amplada == "" || $amplada == " ") || ($alsada == "" || $alsada == " ")) {
             header("Location: index.php?error=1");
             die();
         } else {
@@ -20,8 +20,6 @@
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
     }
-
-    print_r($celesVives);
 
     $visitesLlavor = $_COOKIE["visitesLlavor"];
     if (isset($visitesLlavor)) {
