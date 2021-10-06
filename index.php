@@ -33,12 +33,12 @@
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="containerIndex">
+        <?php if (isset($error)) { ?>
+            <div id="errorRequired">
+                <p>Error! Els Camps "Alçada" i "Amplada" són obligatoris</p>
+            </div>
+        <?php } ?>
         <form id="formulariInicial" method="POST">
-            <?php if (isset($error)) { ?>
-                <div id="errorRequired">
-                    <p>Error! Els Camps "Alçada" i "Amplada" són obligatoris</p>
-                </div>
-            <?php } ?>
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">
             <br>
             <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="text">

@@ -198,6 +198,10 @@ div.containerIndex > form > input.boto:hover {
     color: #003200;
     transition: background-color 1s, color 1s;
 }
+div#errorRequired{
+    background-color: #970808;
+    color: #ffffff;
+}
 
 /*
 Estils de la Llavor
