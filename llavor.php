@@ -13,7 +13,7 @@
                 $fitxa["alsada"] = $alsada;
                 $fitxa["amplada"] = $amplada;
 
-                setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
+                setcookie("fitxa", json_encode($fitxa), strtotime("+7 days"));
             } else {
                 header("Location: index.php?errorValue=1");
                 die();
@@ -21,12 +21,10 @@
         }
     }
 
-    $taulers = array();
     $celesVives = array();
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
     }
-    $taulers[] = $celesVives;
 
     $visitesLlavor = $_COOKIE["visitesLlavor"];
     if (isset($visitesLlavor)) {
@@ -35,17 +33,6 @@
         $visitesLlavor = 1;
     }
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
-
-    $taulerEscollit = array();
-    if (isset($_GET["taulerEscollit"])) {
-        $x = $_GET["taulerEscollit"];
-
-        foreach ($taulers as $y => $celesVives) {
-            if ($x == $y) {
-                $taulerEscollit = $taulers[$x];
-            }
-        }
-    }
 
 ?>
 
@@ -70,7 +57,7 @@
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <?php if (isset($taulerEscollit[$i][$j])) { ?>
+                            <?php if (isset($celesVives[$i][$j])) { ?>
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" checked></td>
                             <?php } else { ?>
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]"></td>
@@ -81,11 +68,6 @@
             </table>
             <input type="submit" name="jugar" value="Jugar" class="boto">
         </form>
-        <div>
-            <?php foreach ($taulers as $x => $celesVives) { ?>
-                <a href="<?=header("Location: llavor.php?taulerEscollit=$i")?>">Partida <?=$i?></a><br>
-            <?php } ?>
-        </div>
     </div>
 </body>
 </html>
