@@ -441,6 +441,6 @@ div.containerPartida > form > div#inputs > input.boto:hover {
     transition: background-color 1s, color 1s;
 }
 .celesPartida {
-    border-radius: 1000px;
+    border-radius: 100px;
     text-align: center;
 }
