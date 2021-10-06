@@ -25,9 +25,8 @@
     $celesVives = array();
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
-
-        $taulers[] = $celesVives;
     }
+    $taulers[] = $celesVives;
 
     $visitesLlavor = $_COOKIE["visitesLlavor"];
     if (isset($visitesLlavor)) {
@@ -37,7 +36,7 @@
     }
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
 
-    $x = $_GET["escollit"];
+    $x = $_GET["taulerEscollit"];
 
     $taulerEscollit = array();
     foreach ($taulers as $y => $celesVives) {
@@ -82,7 +81,7 @@
         </form>
         <div>
             <?php foreach ($taulers as $x => $celesVives) { ?>
-                <a href="llavor.php?escollit=<?=$x?>">Partida <?=$i?></a><br>
+                <a href="<?=header("Location: llavor.php?taulerEscollit=$i")?>">Partida <?=$i?></a><br>
             <?php } ?>
         </div>
     </div>
