@@ -49,7 +49,9 @@
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value="<?=$celesVives[$i][$j]?>"></td>
+                            <?php if (isset($celesVives[$i][$j])) { ?>
+                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value="<?=$celesVives[$i][$j]?>"></td>
+                            <?php } ?>
                         <?php } ?>
                     </tr>
                 <?php } ?>
