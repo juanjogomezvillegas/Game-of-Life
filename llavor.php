@@ -16,8 +16,6 @@
         $celesVives = json_decode($_COOKIE["tauler"], true);
     }
 
-    print_r($celesVives);
-
     $visitesLlavor = $_COOKIE["visitesLlavor"];
     if (isset($visitesLlavor)) {
         $visitesLlavor = (int) $visitesLlavor + 1;
@@ -52,7 +50,7 @@
                             <?php if (isset($celesVives[$i][$j])) { ?>
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value="<?=$celesVives[$i][$j]?>"></td>
                             <?php } else { ?>
-                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value=""></td>
+                                <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" value="<?=$celesVives[$i][$j]?>"></td>
                             <?php } ?>
                         <?php } ?>
                     </tr>
