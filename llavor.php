@@ -1,8 +1,15 @@
 <?php
     $fitxa = array();
 
+    $nomPartida = trim($_POST["nomPartida"]);
     $amplada = trim($_POST["amplada"]);
     $alsada = trim($_POST["alsada"]);
+
+    if (isset($nomPartida)) {
+        if ($nomPartida != "" || $nomPartida != " ") {
+            $fitxa["nomPartida"] = $nomPartida;
+        }
+    }
 
     if (isset($amplada) && isset($alsada)) {
         if (($amplada == "" || $amplada == " ") || ($alsada == "" || $alsada == " ")) {
@@ -21,6 +28,7 @@
         }
     }
 
+    print_r($fitxa);
     $celesVives = array();
     if (isset($_COOKIE["tauler"])) {
         $celesVives = json_decode($_COOKIE["tauler"], true);
@@ -53,6 +61,7 @@
     <div class="containerLlavor">
         <h2>Selecciona les Caselles Vives</h2>
         <form id="formulariLlavor" action="partida.php" method="POST">
+            <input type="number" name="nomPartida" value="<?=$nomPartida?>" id="inputNomPartida" class="ocult">
             <input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="ocult">
             <input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="ocult">
             <table id="tauler">

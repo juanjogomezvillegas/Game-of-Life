@@ -4,6 +4,7 @@
         $fitxa = json_decode($_COOKIE["fitxa"], true);
     }
 
+    $nomPartida = trim($fitxa["nomPartida"]);
     $alsada = trim($fitxa["alsada"]);
     $amplada = trim($fitxa["amplada"]);
 
@@ -44,6 +45,8 @@
             </div>
         <?php } ?>
         <form id="formulariInicial" action="llavor.php" method="POST">
+            <label for="inputNomPartida">Nom de la Partida</label><input type="text" name="nomPartida" value="<?=$nomPartida?>" id="inputNomPartida" class="text">
+            <br>
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">
             <br>
             <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="text">

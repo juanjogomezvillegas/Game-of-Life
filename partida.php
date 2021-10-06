@@ -1,4 +1,5 @@
 <?php
+    $nomPartida = trim($_POST["nomPartida"]);
     $amplada = trim($_POST["amplada"]);
     $alsada = trim($_POST["alsada"]);
 
@@ -25,7 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <script src="script/tauler.js"></script>
+    <script src="script/partida.js"></script>
 </head>
 <body>
     <header>
@@ -35,6 +36,9 @@
     <div class="containerPartida">
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
+                <?php if ($nomPartida =! "" || $nomPartida != " ") { ?>
+                    <p id="nomPartida"></p>
+                <?php } ?>
                 <p id="temps"></p>
                 <p id="generacio"></p>
                 <p id="celesVives"></p>
@@ -63,6 +67,7 @@
             </div>
         </form>
     </div>
+    <p id="nomPartidaTauler" class="ocult"><?=$nomPartida?></p>
     <p id="ampladaTauler" class="ocult"><?=$amplada?></p>
     <p id="alsadaTauler" class="ocult"><?=$alsada?></p>
 </body>

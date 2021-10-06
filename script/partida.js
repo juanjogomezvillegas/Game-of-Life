@@ -1,3 +1,4 @@
+var nomPartida;
 var alsada;
 var amplada;
 var tauler;
@@ -12,6 +13,11 @@ var minuts;
 var segons;
 
 window.onload = function() {
+    nomPartida = document.getElementById("nomPartidaTauler").value;
+    if (nomPartida != "" || nomPartida != " ") {
+        document.getElementById("nomPartida").innerHTML = nomPartida;
+    }
+
     alsada = document.getElementById("alsadaTauler").value
     amplada = document.getElementById("ampladaTauler").value;
 
