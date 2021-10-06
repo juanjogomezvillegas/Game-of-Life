@@ -1,5 +1,4 @@
 <?php
-    $nomPartida = trim($_POST["nomPartida"]);
     $amplada = trim($_POST["amplada"]);
     $alsada = trim($_POST["alsada"]);
 
@@ -36,9 +35,6 @@
     <div class="containerPartida">
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
-                <?php if ($nomPartida =! "" || $nomPartida != " ") { ?>
-                    <p id="nomPartida">Nom de la Partida: <?=$nomPartida?></p>
-                <?php } ?>
                 <p id="temps"></p>
                 <p id="generacio"></p>
                 <p id="celesVives"></p>
