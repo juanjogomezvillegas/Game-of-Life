@@ -1,3 +1,8 @@
+var alsada;
+var amplada;
+var tauler;
+var files;
+var celes;
 var celesTauler;
 var velocitat;
 var generacio;
@@ -7,6 +12,9 @@ var minuts;
 var segons;
 
 window.onload = function() {
+    alsada = document.getElementById("alsadaTauler").value
+    amplada = document.getElementById("ampladaTauler").value;
+
     hores = 0;
     minuts = 0;
     segons = 0;
@@ -18,13 +26,12 @@ window.onload = function() {
 
     setSelectorVelocitat();
 
-    var tauler = document.getElementById("tauler");
+    tauler = document.getElementById("tauler");
 
-    var files = tauler.getElementsByTagName("tr");
+    files = tauler.getElementsByTagName("tr");
 
     celesTauler = new Array(files.length);
 
-    var celes;
     for (var i = 0; i < files.length; i++) {
         celes = files[i].getElementsByTagName("td");
         celesTauler[i] = celes;
@@ -106,13 +113,12 @@ function setCanvisTauler() {
                 }
             } catch (error) {}
 
-
             if ((comptadorVeins < 2 || comptadorVeins > 3) && celesTauler2[i][j].innerHTML == "1") {
-                CelesTauler[i][j].innerHTML = "0";
+                celesTauler[i][j].innerHTML = "0";
             } else if (comptadorVeins == 3 && celesTauler2[i][j].innerHTML == "0") {
-                CelesTauler[i][j].innerHTML = "1";
+                celesTauler[i][j].innerHTML = "1";
             } else {
-                CelesTauler[i][j].innerHTML;
+                celesTauler[i][j].innerHTML;
             }
 
             comptadorVeins = 0;
@@ -120,7 +126,8 @@ function setCanvisTauler() {
     }
     setPintaTauler();
     setComptarCelesVives();
-    setGeneracio();
+    numGeneracio++;
+    generacio.innerHTML = "Generació: "+numGeneracio;
 };
 
 function setPintaTauler() {
@@ -163,11 +170,6 @@ function getCelesMortes() {
     }
     return celesMortes;
 };
-
-function setGeneracio() {
-    numGeneracio++;
-    generacio.innerHTML = "Generació: "+numGeneracio;
-}
 
 function setSelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
