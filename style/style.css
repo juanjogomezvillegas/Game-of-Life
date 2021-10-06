@@ -430,6 +430,7 @@ div.containerPartida > form > div#estadistiques {
     align-self: flex-start;
     margin-bottom: 10px;
     padding: 20px;
+    border-radius: 20px;
     color: #FFD300;
 }
 div.containerPartida > form > table#tauler {
