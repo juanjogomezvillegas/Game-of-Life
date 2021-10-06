@@ -1,18 +1,12 @@
-var alsada;
-var amplada;
 var celesTauler;
-
+var velocitat;
 var generacio;
 var numGeneracio;
-var velocitat;
 var hores;
 var minuts;
 var segons;
 
 window.onload = function() {
-    alsada = document.getElementById("alsadaTauler").value
-    amplada = document.getElementById("ampladaTauler").value;
-
     hores = 0;
     minuts = 0;
     segons = 0;
@@ -71,7 +65,7 @@ function setCanvisTauler() {
     var comptadorVeins = 0;
     for (var i = 0; i < celesTauler2.length; i++) {
         for (var j = 0; j < celesTauler2[i].length; j++) {
-            /*try {
+            try {
                 if (celesTauler2[i][j-1].innerHTML == "1") {
                     comptadorVeins++;
                 }
@@ -110,11 +104,16 @@ function setCanvisTauler() {
                 if (celesTauler2[i+1][j-1].innerHTML == "1") {
                     comptadorVeins++;
                 }
-            } catch (error) {}*/
-            comptadorVeins = getComptarVeins(celesTauler2. i, j);
+            } catch (error) {}
 
 
-            setComprovarEstat(comptadorVeins, celesTauler[i][j], celesTauler2[i][j]);
+            if ((comptadorVeins < 2 || comptadorVeins > 3) && celesTauler2[i][j].innerHTML == "1") {
+                CelesTauler[i][j].innerHTML = "0";
+            } else if (comptadorVeins == 3 && celesTauler2[i][j].innerHTML == "0") {
+                CelesTauler[i][j].innerHTML = "1";
+            } else {
+                CelesTauler[i][j].innerHTML;
+            }
 
             comptadorVeins = 0;
         }
@@ -122,61 +121,6 @@ function setCanvisTauler() {
     setPintaTauler();
     setComptarCelesVives();
     setGeneracio();
-};
-
-function getComptarVeins(celesTauler2, i, j) {
-    var comptadorVeins = 0;
-    try {
-        if (celesTauler2[i][j-1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i][j+1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i-1][j].innerHTML == "1") {
-            comptadorVeins++
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i+1][j].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i-1][j-1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i+1][j+1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i-1][j+1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    try {
-        if (celesTauler2[i+1][j-1].innerHTML == "1") {
-            comptadorVeins++;
-        }
-    } catch (error) {}
-    return comptadorVeins;
-}
-
-function setComprovarEstat(comptadorVeins, pCelesTauler, celesTauler2) {
-    if ((comptadorVeins < 2 || comptadorVeins > 3) && celesTauler2.innerHTML == "1") {
-        pCelesTauler.innerHTML = "0";
-    } else if (comptadorVeins == 3 && celesTauler2.innerHTML == "0") {
-        pCelesTauler.innerHTML = "1";
-    } else {
-        pCelesTauler.innerHTML;
-    }    
 };
 
 function setPintaTauler() {
