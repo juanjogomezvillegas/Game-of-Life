@@ -1,5 +1,13 @@
 <?php
-$fitxa = json_decode($_COOKIE["fitxa"], true);
+$cookieDefinida = false;
+if (isset($_COOKIE["fitxa"])) {
+    $cookieDefinida = true;
+}
+
+$fitxa = array();
+if ($cookieDefinida) {
+    $fitxa = json_decode($_COOKIE["fitxa"], true);
+}
 
 $alsada = trim($fitxa["alsada"]);
 $amplada = trim($fitxa["amplada"]);
