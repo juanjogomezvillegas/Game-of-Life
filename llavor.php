@@ -1,11 +1,16 @@
 <?php
+    $fitxa = array();
+
     $amplada = trim($_POST["amplada"]);
     $alsada = trim($_POST["alsada"]);
 
-    $fitxa["alsada"] = $alsada;
-    $fitxa["amplada"] = $amplada;
+    if ($amplada != "" && $alsada != "") {
+        $fitxa["alsada"] = $alsada;
+        $fitxa["amplada"] = $amplada;
+    }
 
-    setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
+    print_r($fitxa);
+    //setcookie("fitxa", json_encode($fitxa), strtotime("+1 month"));
 ?>
 
 <!DOCTYPE html>
