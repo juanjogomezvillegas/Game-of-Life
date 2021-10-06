@@ -4,6 +4,10 @@
 
     $tauler = $_POST["tauler"];
 
+    if (isset($tauler)) {
+        setcookie("tauler", json_encode($tauler), strtotime("+1 month"));
+    }
+
     $visitesPartida = $_COOKIE["visitesPartida"];
     if (isset($visitesPartida)) {
         $visitesPartida = (int) $visitesPartida + 1;
@@ -25,6 +29,7 @@
 </head>
 <body>
     <header>
+        
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="containerPartida">

@@ -11,6 +11,13 @@
         setcookie("fitxa", json_encode($fitxa), strtotime("+15 days"));
     }
 
+    $celesVives = array();
+    if (isset($_COOKIE["tauler"])) {
+        $celesVives = json_decode($_COOKIE["tauler"], true);
+    }
+
+    print_r($celesVives);
+
     $visitesLlavor = $_COOKIE["visitesLlavor"];
     if (isset($visitesLlavor)) {
         $visitesLlavor = (int) $visitesLlavor + 1;
