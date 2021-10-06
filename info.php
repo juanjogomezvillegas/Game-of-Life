@@ -7,6 +7,11 @@
     }
     setcookie("visitesInfo", $visitesInfo, strtotime("+1 month"));
 
+    $nomJoc = "Game of Life";
+    $versioJoc = "1.0";
+    $any = 2021;
+    $curs = "DAW2";
+    $autor = "Juan José Gómez Villegas";
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +28,11 @@
         <h2>Informació i Autors</h2>
     </header>
     <div class="containerIndex">
-        <p><span>Nom Real del Joc: </span> Game of Life</p>
-        <p><span>Versió del Joc: </span> 1.0</p>
-        <p><span>Any: </span> 2021</p>
-        <p><span>Curs: </span> DAW2</p>
-        <p><span>Autor: </span> Juan José Gómez Villegas</p>
+        <p><span>Nom del Joc: </span><?=$nomJoc?></p>
+        <p><span>Versió del Joc: </span><?=$versioJoc?></p>
+        <p><span>Any de Creació: </span><?=$any?></p>
+        <p><span>Curs: </span><?=$curs?></p>
+        <p><span>Autor: </span><?=$autor?></p>
     </div>
     <footer>
         <div>
