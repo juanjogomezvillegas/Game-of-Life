@@ -36,12 +36,14 @@
     }
     setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
 
-    $x = $_GET["taulerEscollit"];
-
     $taulerEscollit = array();
-    foreach ($taulers as $y => $celesVives) {
-        if ($taulers[$x] == $taulers[$y]) {
-            $taulerEscollit = $taulers[$x];
+    if (isset($_GET["taulerEscollit"])) {
+        $x = $_GET["taulerEscollit"];
+
+        foreach ($taulers as $y => $celesVives) {
+            if ($x == $y) {
+                $taulerEscollit = $taulers[$x];
+            }
         }
     }
 
