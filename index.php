@@ -15,9 +15,16 @@
     }
     setcookie("visitesPortada", $visitesPortada, strtotime("+1 month"));
 
-    $error = $_GET["error"];
+    $errorRequired = $_GET["error"];
 
 ?>
+<script language="javascript">
+    var width = screen.width;
+    var height = screen.height;
+
+    alert(width);
+    alert(height);
+</script>
 
 <!DOCTYPE html>
 <html lang="ca">
@@ -26,19 +33,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Joc de la Vida</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <script src="script/formInicial.js"></script>
 </head>
 <body>
     <header>
         <h1 class="titol">El Joc de la Vida</h1>
     </header>
     <div class="containerIndex">
-        <?php if (isset($error)) { ?>
+        <?php if (isset($errorRequired)) { ?>
             <div id="errorRequired">
                 <p>Error! Els Camps "Alçada" i "Amplada" són obligatoris</p>
             </div>
         <?php } ?>
-        <form id="formulariInicial" method="POST">
+        <form id="formulariInicial" action="llavor.php" method="POST">
             <label for="inputAlsada">Alçada</label><input type="number" name="alsada" value="<?=$alsada?>" id="inputAlsada" class="text">
             <br>
             <label for="inputAmplada">Amplada</label><input type="number" name="amplada" value="<?=$amplada?>" id="inputAmplada" class="text">
