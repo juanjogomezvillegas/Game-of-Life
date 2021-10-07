@@ -9,7 +9,7 @@
         $data = getdate();
         $dataActual = $data["mday"]."/".$data["mon"]."/".$data["year"];
 
-        $nomPartida = "Partida_".$data["seconds"]."-".$data["minutes"]."-".$data["hours"]."_".$data["mday"]."-".$data["mon"]."-".$data["year"];
+        $nomPartida = "Partida_".$data["hours"]."-".$data["minutes"]."-".$data["seconds"]."_".$data["mday"]."-".$data["mon"]."-".$data["year"];
 
         $partides["nomPartida"] = $nomPartida;
         $partides["dataPartida"] = $dataActual;
