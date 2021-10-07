@@ -1,3 +1,4 @@
+/*Creem les variables següents: */
 var alsada;
 var amplada;
 var tauler;
@@ -11,6 +12,7 @@ var hores;
 var minuts;
 var segons;
 
+/*Funció principal, que s'executara quan la pàgina de la partida estigui totalment carregada*/
 window.onload = function() {
     alsada = document.getElementById("alsadaTauler").value
     amplada = document.getElementById("ampladaTauler").value;
