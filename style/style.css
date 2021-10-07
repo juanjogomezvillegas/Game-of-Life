@@ -9,13 +9,13 @@
 Estils del Joc
 */
 /* DESKTOP */
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 951px) {
     footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        position: absolute;
         bottom: 0;
+        margin-top: 50px;
         width: 100%;
         background-color: #1C1D20;
         color: #ffffff;
@@ -34,37 +34,28 @@ Estils del Joc
     footer > div > a {
         display: flex;
         justify-content: flex-end;
-        padding: 15px;
+        padding: 20px;
         text-decoration: none;
         color: #ffffff;
         transition: color 1s;
     }
     footer > div > a:hover {
-        display: flex;
-        justify-content: flex-end;
-        padding: 15px;
-        text-decoration: none;
         color: #EBC302;
         transition: color 1s;
     }
 }
 /* MOBILE */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
     footer {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        position: absolute;
+        justify-content: space-between;
         bottom: 0;
+        margin-top: 50px;
         width: 100%;
         background-color: #1C1D20;
         color: #ffffff;
         box-shadow: 5px 5px 10px 10px #000000;
-    }
-    footer > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
     }
     footer > div > p {
         display: flex;
@@ -80,10 +71,6 @@ Estils del Joc
         transition: color 1s;
     }
     footer > div > a:hover {
-        display: flex;
-        justify-content: center;
-        padding: 15px;
-        text-decoration: none;
         color: #EBC302;
         transition: color 1s;
     }
@@ -114,18 +101,9 @@ h2 {
 .ocult {
     display: none;
 }
-.viva {
-    background-color: #067806;
-    color: #067806;
-    animation: keyTauler 1s;
-}
-.morta {
-    background-color: #1C1D20;
-    color: #1C1D20;
-}
 
 /*
-Estils de la Portada
+Estils de la Portada i de la Pagina d'Informació i Autors
 */
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
@@ -334,7 +312,6 @@ Estils de la Partida
         padding: 20px;
     }
     div.containerPartida > form > div#inputs > input.boto {
-        display: flex;
         margin-top: 20px;
         margin-left: 20px;
         padding: 10px;
@@ -368,7 +345,6 @@ Estils de la Partida
         padding: 20px;
     }
     div.containerPartida > form > div#inputs > input.boto {
-        display: flex;
         margin-top: 20px;
         margin-left: 20px;
         padding: 5px;
@@ -402,7 +378,6 @@ Estils de la Partida
         padding: 20px;
     }
     div.containerPartida > form > div#inputs > input.boto {
-        display: flex;
         margin-top: 20px;
         margin-left: 10px;
         padding: 5px;
@@ -443,4 +418,13 @@ div.containerPartida > form > div#inputs > input.boto:hover {
 .celesPartida {
     border-radius: 20px;
     text-align: center;
+}
+.viva {
+    background-color: #067806;
+    color: #067806;
+    animation: keyTauler 1s;
+}
+.morta {
+    background-color: #1C1D20;
+    color: #1C1D20;
 }
