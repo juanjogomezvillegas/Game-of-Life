@@ -4,7 +4,9 @@
 
     $tauler = $_POST["tauler"];
 
+    $partides = array();
     if (isset($tauler)) {
+
         setcookie("tauler", json_encode($tauler), strtotime("+7 days"));
     }
 
@@ -15,6 +17,12 @@
         $visitesPartida = 1;
     }
     setcookie("visitesPartida", $visitesPartida, strtotime("+1 month"));
+
+
+    $data = getdate();
+
+    $dataActual = $data["mday"]." / ".$data["mon"]." / ".$data["year"];
+    echo $dataActual;
 
 ?>
 
