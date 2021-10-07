@@ -39,13 +39,12 @@
 </head>
 <body>
     <header>
-        
         <h1 class="titol">El Joc de la Vida</h1>
+        <h2 id="nomPartida"><?=$partides["nomPartida"]?></h2>
     </header>
     <div class="containerPartida">
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
-                <p id="nomPartida">Nom de la Partida: <?=$partides["nomPartida"]?></p>
                 <p id="temps"></p>
                 <p id="generacio"></p>
                 <p id="celesVives"></p>
