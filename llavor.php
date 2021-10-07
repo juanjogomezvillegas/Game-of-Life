@@ -23,11 +23,15 @@
         }
     }
 
+    /*Creem els arrays $partides i $celesVives*/
     $partides = array();
     $celesVives = array();
+    /*Si la cookie "partides" esta definida*/
     if (isset($_COOKIE["partides"])) {
+        /*guarda la cookie "partides" en l'array $partides*/
         $partides = json_decode($_COOKIE["partides"], true);
 
+        /*I el tauler el guarda en l'array $celesVives*/
         $celesVives = $partides["tauler"];
     }
 
@@ -73,10 +77,12 @@
                 <?php for ($i = 1; $i <= $alsada; $i++) { ?>
                     <tr>
                         <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <!-- i si el valor  -->
+                            <!-- i si el valor [$i][$j] del array $celesVives esta definit -->
                             <?php if (isset($celesVives[$i][$j])) { ?>
+                                <!-- afegeix un checkbox activat (checked) -->
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]" checked></td>
                             <?php } else { ?>
+                                <!-- si no esta definit, afegeix un checkbox desactivat -->
                                 <td class="celesLlavor"><input type="checkbox" name="tauler[<?=$i?>][<?=$j?>]"></td>
                             <?php } ?>
                         <?php } ?>
