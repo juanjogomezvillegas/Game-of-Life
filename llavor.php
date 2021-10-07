@@ -26,7 +26,7 @@
     $partides = array();
     $celesVives = array();
     if (isset($_COOKIE["partides"])) {
-        $partides = json_decode($_COOKIE["tauler"], true);
+        $partides = json_decode($_COOKIE["partides"], true);
 
         $celesVives = $partides["tauler"];
     }
