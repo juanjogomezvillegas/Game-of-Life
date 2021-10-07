@@ -6,8 +6,16 @@
 
     $partides = array();
     if (isset($tauler)) {
+        $data = getdate();
+        $dataActual = $data["mday"]."/".$data["mon"]."/".$data["year"];
 
-        setcookie("tauler", json_encode($tauler), strtotime("+7 days"));
+        $nomPartida = "Partida_".$data["mday"]."-".$data["mon"]."-".$data["year"];
+
+        $partides["nomPartida"] = $nomPartida;
+        $partides["dataPartida"] = $dataActual;
+        $partides["tauler"] = $tauler;
+
+        setcookie("partides", json_encode($partides), strtotime("+20 days"));
     }
 
     $visitesPartida = $_COOKIE["visitesPartida"];
@@ -17,12 +25,6 @@
         $visitesPartida = 1;
     }
     setcookie("visitesPartida", $visitesPartida, strtotime("+1 month"));
-
-
-    $data = getdate();
-
-    $dataActual = $data["mday"]." / ".$data["mon"]." / ".$data["year"];
-    echo $dataActual;
 
 ?>
 
@@ -43,6 +45,7 @@
     <div class="containerPartida">
         <form id="formulariPartida" action="" method="POST">
             <div id="estadistiques">
+                <p id="nomPartida">Nom de la Partida: <?=$partides["nomPartida"]?></p>
                 <p id="temps"></p>
                 <p id="generacio"></p>
                 <p id="celesVives"></p>

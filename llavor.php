@@ -23,9 +23,12 @@
         }
     }
 
+    $partides = array();
     $celesVives = array();
-    if (isset($_COOKIE["tauler"])) {
-        $celesVives = json_decode($_COOKIE["tauler"], true);
+    if (isset($_COOKIE["partides"])) {
+        $partides = json_decode($_COOKIE["tauler"], true);
+
+        $celesVives = $partides["tauler"];
     }
 
     /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari la llavor*/
