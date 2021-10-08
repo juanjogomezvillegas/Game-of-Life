@@ -64,8 +64,6 @@ window.onload = function() {
 i la variable "velocitat" serà la velocitat en que s'executa la funció "setCanvisTauler".
 I també, cada 1 segon s'executara la funció "setTemps"*/
 function play() {
-    clearInterval(jocdelavida);
-    clearInterval(tempsdejoc);
     jocdelavida = setInterval(setCanvisTauler, velocitat);
     tempsdejoc = setInterval(setTemps, 1000);
 };
