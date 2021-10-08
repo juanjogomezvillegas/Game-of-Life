@@ -17,7 +17,7 @@
             Si es compleix guardem l'alsada i l'amplada en les cookies "alsada" i "amplada" durant 3 dias*/
             if (($amplada >= 3 && $amplada <= 50) && ($alsada >= 3 && $alsada <= 50)) {
                 /*Si l'amplada i l'alsada son majors que 20, redireccionara a la pàgina llavor.php enviant per $_GET un error "errorResponsive"*/
-                if ($amplada > 20 || $alsada > 20) {
+                if ($amplada > 20 && $alsada > 20) {
                     header("Location: llavor.php?errorResponsive=1");
                 }
                 setcookie("alsada", json_encode($alsada), strtotime("+3 days"));
