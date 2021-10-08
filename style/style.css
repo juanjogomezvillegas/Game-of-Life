@@ -47,6 +47,26 @@ Estils del Joc
         color: #EBC302;
         transition: color 1s;
     }
+    /*Classe per a missatges de error*/
+    div.error {
+        padding: 15px;
+        border-radius: 20px;
+        background-color: #970808;
+        color: #ffffff;
+    }
+    div.error > p {
+        text-align: center;
+    }
+    /*Classe per a missatges d'advertència*/
+    div.danger {
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #974908;
+        color: #ffffff;
+    }
+    div.danger > p {
+        text-align: center;
+    }
 }
 /* MOBILE */
 @media screen and (max-width: 950px) {
@@ -78,6 +98,26 @@ Estils del Joc
     footer > div > a:hover {
         color: #EBC302;
         transition: color 1s;
+    }
+    /*Classe per a missatges de error*/
+    div.error {
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #970808;
+        color: #ffffff;
+    }
+    div.error > p {
+        text-align: center;
+    }
+    /*Classe per a missatges d'advertència*/
+    div.danger {
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #974908;
+        color: #ffffff;
+    }
+    div.danger > p {
+        text-align: center;
     }
 }
 * {
@@ -120,15 +160,6 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         border-radius: 20px;
         box-shadow: 5px 5px 8px 8px;
     }
-    div.error {
-        padding: 15px;
-        border-radius: 20px;
-        background-color: #970808;
-        color: #ffffff;
-    }
-    div.error > p {
-        text-align: center;
-    }
 }
 /* SMARTPHONE AND TABS */
 @media screen and (min-width: 1001px) and (max-width: 1023px) {
@@ -139,15 +170,6 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         border-radius: 15px;
         box-shadow: 5px 5px 8px 8px;
     }
-    div.error {
-        padding: 10px;
-        border-radius: 15px;
-        background-color: #970808;
-        color: #ffffff;
-    }
-    div.error > p {
-        text-align: center;
-    }
 }
 /* MOBILE */
 @media screen and (max-width: 1000px) {
@@ -157,15 +179,6 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         background-color: #071A47;
         border-radius: 10px;
         box-shadow: 5px 5px 8px 8px;
-    }
-    div.error {
-        padding: 5px;
-        border-radius: 10px;
-        background-color: #970808;
-        color: #ffffff;
-    }
-    div.error > p {
-        text-align: center;
     }
 }
 div.containerIndex > p {

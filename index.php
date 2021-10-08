@@ -49,7 +49,7 @@
             <div class="error">
                 <p>Error!!! Els Camps Alçada i Amplada són obligatoris.</p>
             </div>
-        <!-- I si la variable $errorRequired no està definida, comprova si la variable $errorValue està definida, i si ho està mostra un missatge d'error:
+        <!-- I si la variable $errorValue no està definida, comprova si la variable $errorValue està definida, i si ho està mostra un missatge d'error:
         "Error!!! L'Alçada i L'Amplada han d'estar entre 3 i 20." -->
         <?php } else if (isset($errorValue)) { ?>
             <div class="error">
