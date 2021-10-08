@@ -3,8 +3,8 @@
     $alsada = trim($_POST["alsada"]);
     $amplada = trim($_POST["amplada"]);
 
-    /*Llegueix el parametre $_GET "errorResponsive", i guarda el valor en la variable $errorResponsive*/
-    $errorResponsive = $_GET["errorResponsive"];
+    /*Crea la variable $errorResponsive amb el valor false*/
+    $errorResponsive = false;
 
     /*Si les variables $alsada i $amplada estan definides*/
     if (isset($amplada) && isset($alsada)) {
@@ -18,10 +18,9 @@
             if (($amplada >= 3 && $amplada <= 50) && ($alsada >= 3 && $alsada <= 50)) {
                 setcookie("alsada", json_encode($alsada), strtotime("+3 days"));
                 setcookie("amplada", json_encode($amplada), strtotime("+3 days"));
-                /*Si l'amplada i l'alsada son majors que 20, redireccionara a la pàgina llavor.php enviant per $_GET un error "errorResponsive"*/
+                /*Si l'amplada i l'alsada son majors que 20, la variable $errorResponsive sera igual a true*/
                 if ($amplada > 20 && $alsada > 20) {
-                    header("Location: llavor.php?errorResponsive=1");
-                    die();
+                    $errorResponsive = true;
                 }
             } else {
                 /*Si la condicio anterior no es compleix, redirecciona al fitxer "index.php" enviant per $_GET el parametre "errorValue"*/
@@ -74,7 +73,7 @@
     <div class="containerLlavor">
         <!-- Comprova si la variable $errorResponsive està definida, i si ho està mostra un missatge d'advertència:
         "Danger!!! L'amplada o L'alsada són més grans de 20." -->
-        <?php if (isset($errorResponsive)) { ?>
+        <?php if ($errorResponsive) { ?>
             <div class="danger">
                 <p>Danger!!! L'amplada o L'alsada són més grans de 20.<br>Aixo pot causar que l'aplicació no funcioni correctament.</p>
             </div>
