@@ -21,7 +21,7 @@
                 /*Si l'amplada i l'alsada son majors que 20, redireccionara a la pàgina llavor.php enviant per $_GET un error "errorResponsive"*/
                 if ($amplada > 20 && $alsada > 20) {
                     header("Location: llavor.php?errorResponsive=1");
-                    die()
+                    die();
                 }
             } else {
                 /*Si la condicio anterior no es compleix, redirecciona al fitxer "index.php" enviant per $_GET el parametre "errorValue"*/
