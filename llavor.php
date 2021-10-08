@@ -19,7 +19,7 @@
                 setcookie("alsada", json_encode($alsada), strtotime("+3 days"));
                 setcookie("amplada", json_encode($amplada), strtotime("+3 days"));
                 /*Si l'amplada i l'alsada son majors que 20, la variable $errorResponsive sera igual a true*/
-                if ($amplada > 20 && $alsada > 20) {
+                if ($amplada > 20 || $alsada > 20) {
                     $errorResponsive = true;
                 }
             } else {
