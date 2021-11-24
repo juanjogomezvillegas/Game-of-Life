@@ -12,7 +12,7 @@
 
     /*guarda en variables les dades que es mostraran en el contingut de la pàgina*/
     $nomJoc = "Game of Life";
-    $versioJoc = "1.0";
+    $versioJoc = "1.0.1";
     $any = 2021;
     $curs = "DAW2";
     $autor = "Juan José Gómez Villegas";
