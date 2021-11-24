@@ -226,7 +226,7 @@ i convertir-lo a integer per fer-lo servir en el setInterval de la funció "play
 function setSelectorVelocitat() {
     velocitat = parseInt(document.getElementById("inputvelocitat").value);
     /*I també mostra el valor de la variable "velocitat" a l'element html amb l'id "velocitat"*/
-    document.getElementById("velocitat").innerHTML = "Velocitat: "+velocitat;
+    document.getElementById("velocitat").innerHTML = "Velocitat: "+(velocitat / 1000)+" segons";
 };
 
 /*Funció setTemps, es la funció que s'encarregara de actualitzar cada 1 segon el valor de l'element html amb l'id "temps"*/
