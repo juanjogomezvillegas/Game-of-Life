@@ -12,8 +12,9 @@
 
     /*guarda en variables les dades que es mostraran en el contingut de la pàgina*/
     $nomJoc = "Game of Life";
-    $versioJoc = "1.0.1";
+    $versioJoc = "2.0.0";
     $any = 2021;
+    $any2 = 2022;
     $curs = "DAW2";
     $autor = "Juan José Gómez Villegas";
     
@@ -40,6 +41,7 @@
         <p><span>Nom del Joc: </span><?=$nomJoc?></p>
         <p><span>Versió del Joc: </span><?=$versioJoc?></p>
         <p><span>Any de Creació: </span><?=$any?></p>
+        <p><span>Última Actualització: </span><?=$any2?></p>
         <p><span>Curs: </span><?=$curs?></p>
         <p><span>Autor: </span><?=$autor?></p>
     </div>
