@@ -12,6 +12,18 @@ var hores;
 var minuts;
 var segons;
 
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 1000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+});
+
 /*Funció principal, que s'executara quan la pàgina de la partida estigui totalment carregada*/
 window.onload = function() {
     /*Assigna a les variables "alsada" i "amplada" el valors dels elements amb id "alsadaTauler" i "ampladaTauler"*/
@@ -57,13 +69,19 @@ window.onload = function() {
     /*Defineix les accions que passaran si es fa clic als inputs "bPlay", "bPause" o "inputvelocitat"*/
     document.getElementById("bPlay").addEventListener("click", play);
     document.getElementById("bPause").addEventListener("click", pause);
+    document.getElementById("bSortir").addEventListener("click", setSortirPartida);
     document.getElementById("inputvelocitat").addEventListener("click", setSelectorVelocitat);
 };
-
+ç
 /*Funció play, que executara la funció "setCanvisTauler" fins que no s'executi la funció "pause", 
 i la variable "velocitat" serà la velocitat en que s'executa la funció "setCanvisTauler".
 I també, cada 1 segon s'executara la funció "setTemps"*/
 function play() {
+    Toast.fire({
+        icon: 'success',
+        title: 'Partida Iniciada'
+    });
+
     jocdelavida = setInterval(setCanvisTauler, velocitat);
     tempsdejoc = setInterval(setTemps, 1000);
 };
@@ -73,8 +91,10 @@ function pause() {
     clearInterval(jocdelavida);
     clearInterval(tempsdejoc);
 
-    /*També executara la funció "setSortirPartida"*/
-    setSortirPartida();
+    Toast.fire({
+        icon: 'success',
+        title: 'Partida Pausada'
+    });
 };
 
 /*Funció setCanvisTauler, es la funció que executara el funcionament del joc*/
@@ -250,10 +270,17 @@ function setTemps() {
 /*Funció setSortirPartida, es la funció que s'executara quan l'usuari faci clic al boto "pause"*/
 function setSortirPartida() {
     /*I preguntara a l'usuari si vol sortir de la partida*/
-    var sortir = confirm("Vols Sortir de la Partida? ");
-
-    /*Si l'usuari fa clic a "d'acord", torna a la pàgina anterior que hi ha a l'historial (llavor.php)*/
-    if (sortir) {
-        history.back();
-    }
+    Swal.fire({
+        title: 'Vols Sortir de la Partida? ',
+        text: '',
+        icon: 'info',
+        showDenyButton: true,
+        confirmButtonText: 'Sí', 
+        denyButtonText: 'No',
+    }).then((result) => {
+        /*Torna a la pàgina anterior que hi ha a l'historial (llavor.php)*/
+        if (result.isConfirmed) {
+            history.back();
+        }
+    });
 };

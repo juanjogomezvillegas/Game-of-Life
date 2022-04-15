@@ -46,6 +46,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Joc de la Vida</title>
+    <script src="script/sweetalert2@11"></script>
     <!-- Afegim el full d'estils "style.css" -->
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Afegim el script "partida.js" -->
@@ -98,8 +99,25 @@
                 - i un input de tipus "range" que sera un selector de velocitat, el valor minim es 100 (mil·lisegons) i el maxim 1000 (mil·lisegons), 
                     i el valor per defecte es 500 (mil·lisegons) -->
             <div id="inputs">
-                <input type="button" name="play" value="Play" class="boto" id="bPlay">
-                <input type="button" name="pause" value="Pause" class="boto" id="bPause">
+                <button type="button" name="play" value="Play" class="boto" id="bPlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 4v16l13 -8z"></path>
+                    </svg>
+                </button>
+                <button type="button" name="pause" value="Pause" class="boto" id="bPause">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-stop" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="5" y="5" width="14" height="14" rx="2"></rect>
+                    </svg>
+                </button>
+                <button type="button" name="sortir" value="Sortir" class="boto" id="bSortir">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                        <path d="M10 10l4 4m0 -4l-4 4"></path>
+                    </svg>
+                </button>
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="3000" default="1000" id="inputvelocitat"></label>
             </div>
         </form>
