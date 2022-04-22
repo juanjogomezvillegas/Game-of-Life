@@ -23,20 +23,10 @@
         $partides["dataPartida"] = $dataActual;
         $partides["tauler"] = $tauler;
 
-        /*I guarda l'array $partides en una cookie durant 20 dies*/
-        setcookie("partides", json_encode($partides), strtotime("+20 days"));
+        /*I guarda l'array $partides en una cookie durant 7 dies*/
+        setcookie("partides", json_encode($partides), strtotime("+7 days"));
     }
 
-    /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari la pagina de la partida*/
-    $visitesPartida = $_COOKIE["visitesPartida"];
-    /*Si la cookie "visitesPartida" està definida, suma 1 a la cookie*/
-    if (isset($visitesPartida)) {
-        $visitesPartida = (int) $visitesPartida + 1;
-    } else {/*Si no està definida, l'assigna el valor 1*/
-        $visitesPartida = 1;
-    }
-    /*I guarda la variable $visitesPartida en una cookie durant 1 mes*/
-    setcookie("visitesPartida", $visitesPartida, strtotime("+1 month"));
 
 ?>
 

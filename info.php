@@ -1,18 +1,7 @@
 <?php
-    /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari la pagina d'informació*/
-    $visitesInfo = $_COOKIE["visitesInfo"];
-    /*Si la cookie "visitesInfo" està definida, suma 1 a la cookie*/
-    if (isset($visitesInfo)) {
-        $visitesInfo = (int) $visitesInfo + 1;
-    } else {/*Si no està definida, l'assigna el valor 1*/
-        $visitesInfo = 1;
-    }
-    /*I guarda la variable $visitesInfo en una cookie durant 1 mes*/
-    setcookie("visitesInfo", $visitesInfo, strtotime("+1 month"));
-
     /*guarda en variables les dades que es mostraran en el contingut de la pàgina*/
     $nomJoc = "Game of Life";
-    $versioJoc = "2.0.0";
+    $versioJoc = "2.0.1";
     $any = 2021;
     $any2 = 2022;
     $curs = "DAW2";

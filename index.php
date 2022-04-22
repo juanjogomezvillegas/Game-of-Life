@@ -14,16 +14,16 @@
         $amplada = json_decode($_COOKIE["amplada"], true);
     }
 
-    /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari la portada del joc*/
-    $visitesPortada = $_COOKIE["visitesPortada"];
-    /*Si la cookie "visitesPortada" està definida, suma 1 a la cookie*/
-    if (isset($visitesPortada)) {
-        $visitesPortada = (int) $visitesPortada + 1;
+    /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari el joc*/
+    $visites = $_COOKIE["visites"];
+    /*Si la cookie "visites" està definida, suma 1 a la cookie*/
+    if (isset($visites)) {
+        $visites = (int) $visites + 1;
     } else {/*Si no està definida, l'assigna el valor 1*/
-        $visitesPortada = 1;
+        $visites = 1;
     }
-    /*I guarda la variable $visitesPortada en una cookie durant 1 mes*/
-    setcookie("visitesPortada", $visitesPortada, strtotime("+1 month"));
+    /*I guarda la variable $visites en una cookie durant 1 mes*/
+    setcookie("visites", $visites, strtotime("+1 month"));
 
 ?>
 
