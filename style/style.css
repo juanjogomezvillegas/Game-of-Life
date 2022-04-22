@@ -55,16 +55,6 @@ Estils del Joc
     div.error > p {
         text-align: center;
     }
-    /*Classe per a missatges d'advertència*/
-    div.danger {
-        padding: 10px;
-        border-radius: 15px;
-        background-color: rgb(194 65 12);
-        color: rgb(255 255 255);
-    }
-    div.danger > p {
-        text-align: center;
-    }
 }
 /* MOBILE */
 @media screen and (max-width: 950px) {
@@ -103,16 +93,6 @@ Estils del Joc
         color: rgb(255 255 255);
     }
     div.error > p {
-        text-align: center;
-    }
-    /*Classe per a missatges d'advertència*/
-    div.danger {
-        padding: 5px;
-        border-radius: 10px;
-        background-color: rgb(194 65 12);
-        color: rgb(255 255 255);
-    }
-    div.danger > p {
         text-align: center;
     }
 }
@@ -154,7 +134,7 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         margin-right: 100px;
         background-color: rgb(30 41 59);
         border-radius: 20px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
 }
 /* SMARTPHONE AND TABS */
@@ -164,7 +144,7 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         margin-right: 50px;
         background-color: rgb(30 41 59);
         border-radius: 15px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
 }
 /* MOBILE */
@@ -174,7 +154,7 @@ Estils de la Portada i de la Pagina d'Informació i Autors
         margin-right: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
 }
 div.containerIndex > p {
@@ -232,7 +212,7 @@ Estils de la Llavor
         margin-right: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
         display: flex;
@@ -256,7 +236,7 @@ Estils de la Llavor
         margin-right: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
         display: flex;
@@ -280,7 +260,7 @@ Estils de la Llavor
         margin-right: 5px;
         background-color: rgb(30 41 59);
         border-radius: 5px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
         display: flex;
@@ -329,7 +309,7 @@ Estils de la Partida
         margin-right: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerPartida > form > div#inputs {
         display: flex;
@@ -363,7 +343,7 @@ Estils de la Partida
         margin-right: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerPartida > form > div#inputs {
         display: flex;
@@ -397,7 +377,7 @@ Estils de la Partida
         margin-right: 5px;
         background-color: rgb(30 41 59);
         border-radius: 5px;
-        box-shadow: 5px 5px 8px 8px;
+        box-shadow: 4px 4px 5px 5px;
     }
     div.containerPartida > form > div#inputs {
         display: flex;

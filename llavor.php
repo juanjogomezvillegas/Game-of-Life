@@ -3,9 +3,6 @@
     $alsada = trim($_POST["alsada"]);
     $amplada = trim($_POST["amplada"]);
 
-    /*Crea la variable $errorResponsive amb el valor false*/
-    $errorResponsive = false;
-
     /*Si les variables $alsada i $amplada estan definides*/
     if (isset($amplada) && isset($alsada)) {
         /*Comprova si son igual a "" o " ", si es compleix redirecciona al fitxer "index.php" enviant per $_GET el parametre "errorRequired"*/
@@ -13,15 +10,11 @@
             header("Location: index.php?errorRequired=1");
             die();
         } else {
-            /*Si no es compleix la condicio anterior, comprova si les variables $amplada i $alsada estan entre 3 i 50
-            Si es compleix guardem l'alsada i l'amplada en les cookies "alsada" i "amplada" durant 3 dias*/
-            if (($amplada >= 3 && $amplada <= 50) && ($alsada >= 3 && $alsada <= 50)) {
-                setcookie("alsada", json_encode($alsada), strtotime("+3 days"));
-                setcookie("amplada", json_encode($amplada), strtotime("+3 days"));
-                /*Si l'amplada i l'alsada son majors que 20, la variable $errorResponsive sera igual a true*/
-                if ($amplada > 20 || $alsada > 20) {
-                    $errorResponsive = true;
-                }
+            /*Si no es compleix la condicio anterior, comprova si les variables $amplada i $alsada estan entre 3 i 20
+            Si es compleix guardem l'alsada i l'amplada en les cookies "alsada" i "amplada" durant 4 hores*/
+            if (($amplada >= 3 && $amplada <= 20) && ($alsada >= 3 && $alsada <= 20)) {
+                setcookie("alsada", json_encode($alsada), strtotime("+4 hours"));
+                setcookie("amplada", json_encode($amplada), strtotime("+4 hours"));
             } else {
                 /*Si la condicio anterior no es compleix, redirecciona al fitxer "index.php" enviant per $_GET el parametre "errorValue"*/
                 header("Location: index.php?errorValue=1");
@@ -42,17 +35,6 @@
         $celesVives = $partides["tauler"];
     }
 
-    /*Creem una variable on guardarem cuantes vegades ha visitat l'usuari la llavor*/
-    $visitesLlavor = $_COOKIE["visitesLlavor"];
-    /*Si la cookie "visitesLlavor" està definida, suma 1 a la cookie*/
-    if (isset($visitesLlavor)) {
-        $visitesLlavor = (int) $visitesLlavor + 1;
-    } else {/*Si no està definida, l'assigna el valor 1*/
-        $visitesLlavor = 1;
-    }
-    /*I guarda la variable $visitesLlavor en una cookie durant 1 mes*/
-    setcookie("visitesLlavor", $visitesLlavor, strtotime("+1 month"));
-
 ?>
 
 <!DOCTYPE html>
@@ -71,13 +53,6 @@
     </header>
     <!-- Contingut central de la llavor, on estara el formulari on configurarem el tauler -->
     <div class="containerLlavor">
-        <!-- Comprova si la variable $errorResponsive està definida, i si ho està mostra un missatge d'advertència:
-        "Danger!!! L'amplada o L'alsada són més grans de 20." -->
-        <?php if ($errorResponsive) { ?>
-            <div class="danger">
-                <p>Danger!!! L'amplada o L'alsada són més grans de 20.<br>Aixo pot causar que l'aplicació no funcioni correctament.</p>
-            </div>
-        <?php } ?>
         <h2>Selecciona les Caselles Vives</h2>
         <!-- Afagueix el formulari on configurarem el tauler, on l'usuari haura de marcar les caselles del tauler que estaran vives -->
         <form id="formulariLlavor" action="partida.php" method="POST">
