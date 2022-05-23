@@ -185,6 +185,7 @@ div.containerIndex > form > input.text {
     background-color: rgb(203 213 225);
     border: 1px solid rgb(148 163 184);
     color: #000000;
+    text-align: center;
 }
 div.containerIndex > form > input.boto {
     padding: 10px;
@@ -208,6 +209,7 @@ Estils de la Llavor
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     div.containerLlavor {
+        margin-bottom: 20px;
         margin-left: 10px;
         margin-right: 10px;
         background-color: rgb(30 41 59);
@@ -215,10 +217,11 @@ Estils de la Llavor
         box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
+        position: fixed;
+        bottom: 40px;
         display: flex;
         align-self: flex-end;
-        margin-top: 50px;
-        margin-right: 100px;
+        margin-right: 20px;
         padding: 10px;
         padding-left: 35px;
         padding-right: 35px;
@@ -232,6 +235,7 @@ Estils de la Llavor
 /* SMARTPHONE AND TABS */
 @media screen and (min-width: 851px) and (max-width: 1023px) {
     div.containerLlavor {
+        margin-bottom: 20px;
         margin-left: 10px;
         margin-right: 10px;
         background-color: rgb(30 41 59);
@@ -239,10 +243,11 @@ Estils de la Llavor
         box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
+        position: fixed;
+        bottom: 40px;
         display: flex;
         align-self: flex-end;
-        margin-top: 50px;
-        margin-right: 75px;
+        margin-right: 10px;
         padding: 10px;
         padding-left: 30px;
         padding-right: 30px;
@@ -256,6 +261,7 @@ Estils de la Llavor
 /* MOBILE */
 @media screen and (max-width: 850px) {
     div.containerLlavor {
+        margin-bottom: 20px;
         margin-left: 5px;
         margin-right: 5px;
         background-color: rgb(30 41 59);
@@ -263,9 +269,11 @@ Estils de la Llavor
         box-shadow: 4px 4px 5px 5px;
     }
     div.containerLlavor > form > input.boto {
+        position: fixed;
+        bottom: 40px;
         display: flex;
-        align-self: center;
-        margin-top: 50px;
+        align-self: flex-end;
+        margin-right: 10px;
         padding: 10px;
         padding-left: 20px;
         padding-right: 20px;
@@ -305,8 +313,10 @@ Estils de la Partida
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     div.containerPartida {
+        margin-bottom: 20px;
         margin-left: 10px;
         margin-right: 10px;
+        padding-bottom: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
         box-shadow: 4px 4px 5px 5px;
@@ -339,8 +349,10 @@ Estils de la Partida
 /* SMARTPHONE AND TABS */
 @media screen and (min-width: 851px) and (max-width: 1023px) {
     div.containerPartida {
+        margin-bottom: 20px;
         margin-left: 10px;
         margin-right: 10px;
+        padding-bottom: 10px;
         background-color: rgb(30 41 59);
         border-radius: 10px;
         box-shadow: 4px 4px 5px 5px;
@@ -373,8 +385,10 @@ Estils de la Partida
 /* MOBILE */
 @media screen and (max-width: 850px) {
     div.containerPartida {
+        margin-bottom: 20px;
         margin-left: 5px;
         margin-right: 5px;
+        padding-bottom: 10px;
         background-color: rgb(30 41 59);
         border-radius: 5px;
         box-shadow: 4px 4px 5px 5px;
