@@ -35,6 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
     <title>El Joc de la Vida</title>
     <script src="script/sweetalert2@11"></script>
     <!-- Afegim el full d'estils "style.css" -->
@@ -65,29 +66,10 @@
                 <p id="celesMortes"></p>
                 <p id="velocitat"></p>
             </div>
-            <!-- Afagueix la taula que sera el tauler on es produira la partida -->
-            <table id="tauler">
-                <!-- I per fer apareixer el tauler (amb totes les caselles mortes), 
-                un for recorrera des de 1 fins al valor de $alsada i per cada valor de $i un altre for recorrera des de 1 fins al valor de $amplada-->
-                <?php for ($i = 1; $i <= $alsada; $i++) { ?>
-                    <tr>
-                        <?php for ($j = 1; $j <= $amplada; $j++) { ?>
-                            <!-- i si el valor [$i][$j] del array $tauler esta definit -->
-                            <?php if (isset($tauler[$i][$j])) { ?>
-                                <!-- escriura a dins del <td> un "1" (que significa que esta aquesta cel·la esta viva) -->
-                                <td>1</td>
-                            <?php } else { ?>
-                                <!-- si no, escriura a dins del <td> un "0" (que significa que esta aquesta cel·la esta morta) -->
-                                <td>0</td>
-                            <?php } ?>
-                        <?php } ?>
-                    </tr>
-                <?php } ?>
-            </table>
+
             <!-- I al final del formulari hi han tres inputs:
-                - dos butons de tipus "button" que seran el Play i el Pause
-                - i un input de tipus "range" que sera un selector de velocitat, el valor minim es 100 (mil·lisegons) i el maxim 1000 (mil·lisegons), 
-                    i el valor per defecte es 500 (mil·lisegons) -->
+            - dos butons de tipus "button" que seran el Play i el Pause
+            - i un input de tipus "range" que sera un selector de velocitat, el valor minim es 100 (mil·lisegons) i el maxim 1000 (mil·lisegons), i el valor per defecte es 500 (mil·lisegons) -->
             <div id="inputs">
                 <button type="button" name="play" value="Play" class="boto" id="bPlay">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -110,6 +92,26 @@
                 </button>
                 <label for="inputvelocitat" id="labelvelocitat">Velocitat<br><input type="range" name="velocitat" min="1" max="3000" default="1000" id="inputvelocitat"></label>
             </div>
+
+            <!-- Afagueix la taula que sera el tauler on es produira la partida -->
+            <table id="tauler">
+                <!-- I per fer apareixer el tauler (amb totes les caselles mortes), 
+                un for recorrera des de 1 fins al valor de $alsada i per cada valor de $i un altre for recorrera des de 1 fins al valor de $amplada-->
+                <?php for ($i = 1; $i <= $alsada; $i++) { ?>
+                    <tr>
+                        <?php for ($j = 1; $j <= $amplada; $j++) { ?>
+                            <!-- i si el valor [$i][$j] del array $tauler esta definit -->
+                            <?php if (isset($tauler[$i][$j])) { ?>
+                                <!-- escriura a dins del <td> un "1" (que significa que esta aquesta cel·la esta viva) -->
+                                <td>1</td>
+                            <?php } else { ?>
+                                <!-- si no, escriura a dins del <td> un "0" (que significa que esta aquesta cel·la esta morta) -->
+                                <td>0</td>
+                            <?php } ?>
+                        <?php } ?>
+                    </tr>
+                <?php } ?>
+            </table>
         </form>
     </div>
     <!-- Al final de la pagina hi han dos paragraf que estaran ocults a la vista de l'usuari -->

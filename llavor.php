@@ -10,9 +10,9 @@
             header("Location: index.php?errorRequired=1");
             die();
         } else {
-            /*Si no es compleix la condicio anterior, comprova si les variables $amplada i $alsada estan entre 3 i 20
+            /*Si no es compleix la condicio anterior, comprova si les variables $amplada i $alsada estan entre 3 i 500
             Si es compleix guardem l'alsada i l'amplada en les cookies "alsada" i "amplada" durant 4 hores*/
-            if (($amplada >= 3 && $amplada <= 20) && ($alsada >= 3 && $alsada <= 20)) {
+            if (($amplada >= 3 && $amplada <= 20) && ($alsada >= 3 && $alsada <= 500)) {
                 setcookie("alsada", json_encode($alsada), strtotime("+4 hours"));
                 setcookie("amplada", json_encode($amplada), strtotime("+4 hours"));
             } else {
@@ -42,6 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
     <title>El Joc de la Vida</title>
     <!-- Afegim el full d'estils "style.css" -->
     <link rel="stylesheet" type="text/css" href="style/style.css">

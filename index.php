@@ -32,6 +32,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
     <title>El Joc de la Vida</title>
     <!-- Afegim el full d'estils "style.css" -->
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -53,7 +54,7 @@
         "Error!!! L'Alçada i L'Amplada han d'estar entre 3 i 20." -->
         <?php } else if (isset($errorValue)) { ?>
             <div class="error">
-                <p>Error!!! L'Alçada i L'Amplada han d'estar entre 3 i 20.</p>
+                <p>Error!!! L'Alçada ha d'estar entre 3 i 500 i L'Amplada ha d'estar entre 3 i 20.</p>
             </div>
         <?php } ?>
         <!-- Afagueix el formulari inicial, on l'usuari haura d'entrar l'alsada i l'amplada del tauler -->

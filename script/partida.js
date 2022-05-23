@@ -72,7 +72,7 @@ window.onload = function() {
     document.getElementById("bSortir").addEventListener("click", setSortirPartida);
     document.getElementById("inputvelocitat").addEventListener("click", setSelectorVelocitat);
 };
-ç
+
 /*Funció play, que executara la funció "setCanvisTauler" fins que no s'executi la funció "pause", 
 i la variable "velocitat" serà la velocitat en que s'executa la funció "setCanvisTauler".
 I també, cada 1 segon s'executara la funció "setTemps"*/
