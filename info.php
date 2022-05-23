@@ -1,7 +1,7 @@
 <?php
     /*guarda en variables les dades que es mostraran en el contingut de la pàgina*/
     $nomJoc = "Game of Life";
-    $versioJoc = "2.0.1";
+    $versioJoc = "2.0.5";
     $any = 2021;
     $any2 = 2022;
     $curs = "DAW2";
