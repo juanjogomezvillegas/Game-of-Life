@@ -22,10 +22,10 @@ And to access the application, in your browser we access the address ({SERVER_IP
 
 {SERVER_IP} => The IP address of your Server.
 
-
+![imatge](https://user-images.githubusercontent.com/83291394/169884301-13ead5b8-d75d-46f6-aafb-71b35cce04e5.png)
 
 # License
 
-![MIT License]()
+![MIT License](https://github.com/juanjogomezvillegas/Game-of-Life/blob/develop/LICENSE)
 
 Copyright (c) 2022 Juan José Gómez Villegas
